@@ -14,6 +14,9 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -49,21 +52,66 @@
                                                         <rect key="frame" x="16" y="24" width="240" height="148"/>
                                                         <color key="backgroundColor" red="0.38353967195141092" green="0.42226688774129356" blue="0.51135345965309209" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="oLS-SD-3GN">
-                                                            <size key="itemSize" width="149" height="49"/>
+                                                            <size key="itemSize" width="194" height="49"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jXr-Su-CKB" customClass="CustomCollectionViewCell" customModule="crcard" customModuleProvider="target">
-                                                                <rect key="frame" x="46" y="0.0" width="149" height="49"/>
+                                                                <rect key="frame" x="23" y="0.0" width="194" height="49"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="149" height="49"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="49"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-6H-uEc">
+                                                                            <rect key="frame" x="3" y="3" width="43" height="43"/>
+                                                                            <color key="backgroundColor" red="0.41833757490000001" green="0.46057844520000002" blue="0.55774769040000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="R4j-6H-uEc" secondAttribute="height" multiplier="1:1" id="Mra-O2-9tK"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-a7-bvk">
+                                                                            <rect key="frame" x="48" y="0.0" width="146" height="12"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="8"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52m-4T-DUf">
+                                                                            <rect key="frame" x="48" y="31" width="146" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <size key="shadowOffset" width="1" height="1"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-eH-2Jl">
+                                                                            <rect key="frame" x="48" y="31" width="146" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <size key="shadowOffset" width="-1" height="-1"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 </view>
                                                                 <color key="backgroundColor" red="0.82786543218128528" green="0.88117563022702827" blue="0.88953148567119156" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="52m-4T-DUf" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="8Aj-EJ-5cp"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="leading" secondItem="jXr-Su-CKB" secondAttribute="leadingMargin" constant="-5" id="9Qe-Gx-lvM"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-5" id="Abm-Qg-Md5"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="R4j-6H-uEc" secondAttribute="bottom" constant="-5" id="JGe-4I-y1q"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="i7v-a7-bvk" secondAttribute="trailing" constant="-8" id="NDd-lD-qKf"/>
+                                                                    <constraint firstItem="4NY-eH-2Jl" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="gOU-kr-Hpb"/>
+                                                                    <constraint firstItem="i7v-a7-bvk" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="i8H-uv-Mre"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="52m-4T-DUf" secondAttribute="trailing" constant="-8" id="jUN-rc-K0F"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="4NY-eH-2Jl" secondAttribute="bottom" constant="-8" id="m1c-xs-rXe"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="4NY-eH-2Jl" secondAttribute="trailing" constant="-8" id="rcq-ma-hUY"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="52m-4T-DUf" secondAttribute="bottom" constant="-8" id="w0e-m4-buY"/>
+                                                                    <constraint firstItem="i7v-a7-bvk" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-8" id="wCZ-ZI-okr"/>
+                                                                </constraints>
                                                             </collectionViewCell>
                                                         </cells>
                                                         <connections>
