@@ -17,6 +17,8 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -35,17 +37,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-3Q-Qxz">
                                 <rect key="frame" x="16" y="72" width="288" height="399"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="azam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROC-h3-1ET">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROC-h3-1ET">
                                         <rect key="frame" x="8" y="0.0" width="272" height="30"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="-1" height="-1"/>
                                     </label>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-Tz-52N">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-Tz-52N">
                                         <rect key="frame" x="8" y="32" width="272" height="359"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-90-3Xn">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-90-3Xn">
                                                 <rect key="frame" x="0.0" y="157" width="272" height="202"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-eG-aeP">
@@ -66,19 +69,19 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-6H-uEc">
-                                                                            <rect key="frame" x="3" y="3" width="43" height="43"/>
+                                                                            <rect key="frame" x="1" y="1" width="47" height="47"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="R4j-6H-uEc" secondAttribute="height" multiplier="1:1" id="Mra-O2-9tK"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-a7-bvk">
-                                                                            <rect key="frame" x="48" y="0.0" width="146" height="12"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-a7-bvk">
+                                                                            <rect key="frame" x="50" y="0.0" width="144" height="12"/>
                                                                             <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="8"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52m-4T-DUf">
-                                                                            <rect key="frame" x="48" y="31" width="146" height="18"/>
+                                                                            <rect key="frame" x="50" y="31" width="144" height="18"/>
                                                                             <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
@@ -86,7 +89,7 @@
                                                                             <size key="shadowOffset" width="1" height="1"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-eH-2Jl">
-                                                                            <rect key="frame" x="48" y="31" width="146" height="18"/>
+                                                                            <rect key="frame" x="50" y="31" width="144" height="18"/>
                                                                             <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
@@ -99,9 +102,9 @@
                                                                 <color key="backgroundColor" red="0.82786543218128528" green="0.88117563022702827" blue="0.88953148567119156" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="52m-4T-DUf" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="8Aj-EJ-5cp"/>
-                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="leading" secondItem="jXr-Su-CKB" secondAttribute="leadingMargin" constant="-5" id="9Qe-Gx-lvM"/>
-                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-5" id="Abm-Qg-Md5"/>
-                                                                    <constraint firstAttribute="bottomMargin" secondItem="R4j-6H-uEc" secondAttribute="bottom" constant="-5" id="JGe-4I-y1q"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="leading" secondItem="jXr-Su-CKB" secondAttribute="leadingMargin" constant="-7" id="9Qe-Gx-lvM"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-7" id="Abm-Qg-Md5"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="R4j-6H-uEc" secondAttribute="bottom" constant="-7" id="JGe-4I-y1q"/>
                                                                     <constraint firstAttribute="trailingMargin" secondItem="i7v-a7-bvk" secondAttribute="trailing" constant="-8" id="NDd-lD-qKf"/>
                                                                     <constraint firstItem="4NY-eH-2Jl" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="gOU-kr-Hpb"/>
                                                                     <constraint firstItem="i7v-a7-bvk" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="i8H-uv-Mre"/>
@@ -114,7 +117,8 @@
                                                                 <connections>
                                                                     <outlet property="imageView" destination="R4j-6H-uEc" id="Nth-82-44H"/>
                                                                     <outlet property="name" destination="i7v-a7-bvk" id="JZl-qj-ymj"/>
-                                                                    <outlet property="points" destination="4NY-eH-2Jl" id="rN4-gh-4O2"/>
+                                                                    <outlet property="points" destination="52m-4T-DUf" id="NqP-pX-9sB"/>
+                                                                    <outlet property="pointsd" destination="4NY-eH-2Jl" id="HBD-2r-F9L"/>
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
@@ -133,18 +137,18 @@
                                                     <constraint firstAttribute="bottom" secondItem="jmb-eG-aeP" secondAttribute="bottom" constant="30" id="yvk-BA-3Tz"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-zv-AQt">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-zv-AQt">
                                                 <rect key="frame" x="8" y="23" width="81" height="111"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="U5z-zv-AQt" secondAttribute="height" multiplier="27:37" id="DOc-RC-gr2"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ha-NM-18D">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ha-NM-18D">
                                                 <rect key="frame" x="117" y="8" width="147" height="33"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVf-Ao-UcB">
-                                                        <rect key="frame" x="8" y="3" width="42" height="10"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rarity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVf-Ao-UcB">
+                                                        <rect key="frame" x="8" y="3" width="60" height="10"/>
                                                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -176,7 +180,7 @@
                                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <size key="shadowOffset" width="1" height="2"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-4O-Oob">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-4O-Oob">
                                                         <rect key="frame" x="85" y="3" width="62" height="10"/>
                                                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +206,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="eAV-zc-eZn" secondAttribute="bottom" constant="2" id="hYA-st-UIC"/>
                                                     <constraint firstItem="AM2-IF-7kx" firstAttribute="leading" secondItem="1Ha-NM-18D" secondAttribute="leading" constant="8" id="iBy-Hr-P8B"/>
                                                     <constraint firstAttribute="bottom" secondItem="x9D-fu-giA" secondAttribute="bottom" constant="2" id="jXB-nV-d2R"/>
-                                                    <constraint firstItem="WwQ-4O-Oob" firstAttribute="leading" secondItem="AVf-Ao-UcB" secondAttribute="trailing" constant="35" id="kPX-SX-XWM"/>
+                                                    <constraint firstItem="WwQ-4O-Oob" firstAttribute="leading" secondItem="AVf-Ao-UcB" secondAttribute="trailing" constant="17" id="kPX-SX-XWM"/>
                                                     <constraint firstItem="59k-9U-Rck" firstAttribute="leading" secondItem="eAV-zc-eZn" secondAttribute="trailing" constant="35" id="l07-LH-bCS"/>
                                                     <constraint firstAttribute="width" secondItem="1Ha-NM-18D" secondAttribute="height" multiplier="147:29" constant="-20.275862068965495" id="l35-cM-ZHH"/>
                                                     <constraint firstItem="x9D-fu-giA" firstAttribute="leading" secondItem="AM2-IF-7kx" secondAttribute="trailing" constant="35" id="oq0-ll-qR1"/>
@@ -234,6 +238,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-gL-bhC">
+                                        <rect key="frame" x="8" y="0.0" width="272" height="30"/>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38353967195141092" green="0.42226688774129356" blue="0.51135345965309209" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -243,7 +255,10 @@
                                     <constraint firstItem="RR3-Tz-52N" firstAttribute="top" secondItem="ROC-h3-1ET" secondAttribute="bottom" constant="2" id="OFS-6n-6Q9"/>
                                     <constraint firstAttribute="trailing" secondItem="ROC-h3-1ET" secondAttribute="trailing" constant="8" id="P6M-jz-etn"/>
                                     <constraint firstItem="ROC-h3-1ET" firstAttribute="top" secondItem="yuW-3Q-Qxz" secondAttribute="top" id="YIg-Gn-Yma"/>
+                                    <constraint firstItem="dEr-gL-bhC" firstAttribute="leading" secondItem="yuW-3Q-Qxz" secondAttribute="leading" constant="8" id="d6r-Uu-VKo"/>
+                                    <constraint firstItem="dEr-gL-bhC" firstAttribute="top" secondItem="yuW-3Q-Qxz" secondAttribute="top" id="l2A-vQ-ulD"/>
                                     <constraint firstItem="RR3-Tz-52N" firstAttribute="trailing" secondItem="yuW-3Q-Qxz" secondAttribute="trailingMargin" id="l7x-k8-4Ff"/>
+                                    <constraint firstAttribute="trailing" secondItem="dEr-gL-bhC" secondAttribute="trailing" constant="8" id="pME-3C-4yd"/>
                                     <constraint firstItem="RR3-Tz-52N" firstAttribute="bottom" secondItem="yuW-3Q-Qxz" secondAttribute="bottomMargin" id="pgx-Ym-avW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

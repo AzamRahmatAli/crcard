@@ -13,7 +13,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var points: UILabel!
-    
+    @IBOutlet weak var pointsd: UILabel!
     /*override func awakeFromNib() {
         imageView.layer.shadowColor = UIColor.blackColor().CGColor
         imageView.layer.shadowOffset = CGSizeMake(-1, -1)
