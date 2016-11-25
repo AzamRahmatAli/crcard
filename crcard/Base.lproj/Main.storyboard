@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="62o-OD-2Kb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Supercell-magic-webfont.ttf">
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="crcard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-3Q-Qxz">
+                                <rect key="frame" x="16" y="72" width="288" height="399"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROC-h3-1ET">
+                                        <rect key="frame" x="8" y="0.0" width="272" height="30"/>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="-1" height="-1"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-Tz-52N">
+                                        <rect key="frame" x="8" y="32" width="272" height="359"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-90-3Xn">
+                                                <rect key="frame" x="0.0" y="157" width="272" height="202"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-eG-aeP">
+                                                        <rect key="frame" x="16" y="24" width="240" height="148"/>
+                                                        <color key="backgroundColor" red="0.38353967195141092" green="0.42226688774129356" blue="0.51135345965309209" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="oLS-SD-3GN">
+                                                            <size key="itemSize" width="194" height="49"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jXr-Su-CKB" customClass="CustomCollectionViewCell" customModule="crcard" customModuleProvider="target">
+                                                                <rect key="frame" x="23" y="0.0" width="194" height="49"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="49"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-6H-uEc">
+                                                                            <rect key="frame" x="1" y="1" width="47" height="47"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="R4j-6H-uEc" secondAttribute="height" multiplier="1:1" id="Mra-O2-9tK"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-a7-bvk">
+                                                                            <rect key="frame" x="50" y="0.0" width="144" height="12"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="8"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52m-4T-DUf">
+                                                                            <rect key="frame" x="50" y="31" width="144" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <size key="shadowOffset" width="1" height="1"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-eH-2Jl">
+                                                                            <rect key="frame" x="50" y="31" width="144" height="18"/>
+                                                                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <size key="shadowOffset" width="-1" height="-1"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </view>
+                                                                <color key="backgroundColor" red="0.82786543218128528" green="0.88117563022702827" blue="0.88953148567119156" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="52m-4T-DUf" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="8Aj-EJ-5cp"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="leading" secondItem="jXr-Su-CKB" secondAttribute="leadingMargin" constant="-7" id="9Qe-Gx-lvM"/>
+                                                                    <constraint firstItem="R4j-6H-uEc" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-7" id="Abm-Qg-Md5"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="R4j-6H-uEc" secondAttribute="bottom" constant="-7" id="JGe-4I-y1q"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="i7v-a7-bvk" secondAttribute="trailing" constant="-8" id="NDd-lD-qKf"/>
+                                                                    <constraint firstItem="4NY-eH-2Jl" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="gOU-kr-Hpb"/>
+                                                                    <constraint firstItem="i7v-a7-bvk" firstAttribute="leading" secondItem="R4j-6H-uEc" secondAttribute="trailing" constant="2" id="i8H-uv-Mre"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="52m-4T-DUf" secondAttribute="trailing" constant="-8" id="jUN-rc-K0F"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="4NY-eH-2Jl" secondAttribute="bottom" constant="-8" id="m1c-xs-rXe"/>
+                                                                    <constraint firstAttribute="trailingMargin" secondItem="4NY-eH-2Jl" secondAttribute="trailing" constant="-8" id="rcq-ma-hUY"/>
+                                                                    <constraint firstAttribute="bottomMargin" secondItem="52m-4T-DUf" secondAttribute="bottom" constant="-8" id="w0e-m4-buY"/>
+                                                                    <constraint firstItem="i7v-a7-bvk" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-8" id="wCZ-ZI-okr"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="imageView" destination="R4j-6H-uEc" id="Nth-82-44H"/>
+                                                                    <outlet property="name" destination="i7v-a7-bvk" id="JZl-qj-ymj"/>
+                                                                    <outlet property="points" destination="52m-4T-DUf" id="NqP-pX-9sB"/>
+                                                                    <outlet property="pointsd" destination="4NY-eH-2Jl" id="HBD-2r-F9L"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="bgI-jI-izx"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="s5R-Vr-BMd"/>
+                                                        </connections>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.8784313725490196" green="0.92156862745098034" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="jmb-eG-aeP" firstAttribute="top" secondItem="SEO-90-3Xn" secondAttribute="top" constant="24" id="8n2-YB-RWE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jmb-eG-aeP" secondAttribute="trailing" constant="16" id="CwN-g2-FsK"/>
+                                                    <constraint firstItem="jmb-eG-aeP" firstAttribute="leading" secondItem="SEO-90-3Xn" secondAttribute="leading" constant="16" id="Xk5-Db-Eg6"/>
+                                                    <constraint firstAttribute="width" secondItem="SEO-90-3Xn" secondAttribute="height" multiplier="136:101" id="lQ8-AH-2Gq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jmb-eG-aeP" secondAttribute="bottom" constant="30" id="yvk-BA-3Tz"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-zv-AQt">
+                                                <rect key="frame" x="8" y="23" width="81" height="111"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="U5z-zv-AQt" secondAttribute="height" multiplier="27:37" id="DOc-RC-gr2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ha-NM-18D">
+                                                <rect key="frame" x="117" y="8" width="147" height="33"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rarity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVf-Ao-UcB">
+                                                        <rect key="frame" x="8" y="3" width="60" height="10"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Troop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59k-9U-Rck">
+                                                        <rect key="frame" x="85" y="21" width="62" height="10"/>
+                                                        <color key="tintColor" red="0.1960784314" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="shadowOffset" width="1" height="2"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM2-IF-7kx">
+                                                        <rect key="frame" x="8" y="21" width="42" height="10"/>
+                                                        <color key="tintColor" red="0.1960784314" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <size key="shadowOffset" width="-1" height="-1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-zc-eZn">
+                                                        <rect key="frame" x="8" y="21" width="42" height="10"/>
+                                                        <color key="tintColor" red="0.1960784314" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <size key="shadowOffset" width="1" height="2"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-4O-Oob">
+                                                        <rect key="frame" x="85" y="3" width="62" height="10"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Troop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9D-fu-giA">
+                                                        <rect key="frame" x="85" y="21" width="62" height="10"/>
+                                                        <color key="tintColor" red="0.1960784314" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="shadowOffset" width="-1" height="-1"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86967147435897441" green="0.43743255093077898" blue="0.0024694140847034821" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="AVf-Ao-UcB" firstAttribute="leading" secondItem="1Ha-NM-18D" secondAttribute="leading" constant="8" id="2gm-D1-faQ"/>
+                                                    <constraint firstItem="WwQ-4O-Oob" firstAttribute="top" secondItem="1Ha-NM-18D" secondAttribute="top" constant="3" id="Adt-j2-dxP"/>
+                                                    <constraint firstItem="AVf-Ao-UcB" firstAttribute="top" secondItem="1Ha-NM-18D" secondAttribute="top" constant="3" id="Dlc-Zm-hEk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="59k-9U-Rck" secondAttribute="bottom" constant="2" id="ZUR-DH-7HF"/>
+                                                    <constraint firstItem="59k-9U-Rck" firstAttribute="leading" secondItem="AM2-IF-7kx" secondAttribute="trailing" constant="35" id="bWx-bl-QQT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eAV-zc-eZn" secondAttribute="bottom" constant="2" id="hYA-st-UIC"/>
+                                                    <constraint firstItem="AM2-IF-7kx" firstAttribute="leading" secondItem="1Ha-NM-18D" secondAttribute="leading" constant="8" id="iBy-Hr-P8B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="x9D-fu-giA" secondAttribute="bottom" constant="2" id="jXB-nV-d2R"/>
+                                                    <constraint firstItem="WwQ-4O-Oob" firstAttribute="leading" secondItem="AVf-Ao-UcB" secondAttribute="trailing" constant="17" id="kPX-SX-XWM"/>
+                                                    <constraint firstItem="59k-9U-Rck" firstAttribute="leading" secondItem="eAV-zc-eZn" secondAttribute="trailing" constant="35" id="l07-LH-bCS"/>
+                                                    <constraint firstAttribute="width" secondItem="1Ha-NM-18D" secondAttribute="height" multiplier="147:29" constant="-20.275862068965495" id="l35-cM-ZHH"/>
+                                                    <constraint firstItem="x9D-fu-giA" firstAttribute="leading" secondItem="AM2-IF-7kx" secondAttribute="trailing" constant="35" id="oq0-ll-qR1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AM2-IF-7kx" secondAttribute="bottom" constant="2" id="q0W-ML-DgA"/>
+                                                    <constraint firstItem="eAV-zc-eZn" firstAttribute="leading" secondItem="1Ha-NM-18D" secondAttribute="leading" constant="8" id="z8T-4t-GKy"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="SEO-90-3Xn" firstAttribute="top" secondItem="U5z-zv-AQt" secondAttribute="bottom" constant="23" id="Fdj-QT-hTA"/>
+                                            <constraint firstItem="U5z-zv-AQt" firstAttribute="top" secondItem="RR3-Tz-52N" secondAttribute="top" constant="23" id="If9-eM-Ll3"/>
+                                            <constraint firstItem="SEO-90-3Xn" firstAttribute="leading" secondItem="RR3-Tz-52N" secondAttribute="leading" id="Jxh-9G-AEm"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ha-NM-18D" secondAttribute="trailing" constant="8" id="Xau-8o-KBD"/>
+                                            <constraint firstAttribute="bottom" secondItem="SEO-90-3Xn" secondAttribute="bottom" id="c0V-b0-9nY"/>
+                                            <constraint firstItem="U5z-zv-AQt" firstAttribute="leading" secondItem="RR3-Tz-52N" secondAttribute="leading" constant="8" id="dMu-mx-gme"/>
+                                            <constraint firstItem="1Ha-NM-18D" firstAttribute="leading" secondItem="U5z-zv-AQt" secondAttribute="trailing" constant="28" id="kqb-EF-LDa"/>
+                                            <constraint firstItem="1Ha-NM-18D" firstAttribute="top" secondItem="RR3-Tz-52N" secondAttribute="top" constant="8" id="oH4-sT-AiG"/>
+                                            <constraint firstAttribute="trailing" secondItem="SEO-90-3Xn" secondAttribute="trailing" id="qWp-h6-Vjj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="azam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-gL-bhC">
+                                        <rect key="frame" x="8" y="0.0" width="272" height="30"/>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38353967195141092" green="0.42226688774129356" blue="0.51135345965309209" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ROC-h3-1ET" firstAttribute="leading" secondItem="yuW-3Q-Qxz" secondAttribute="leading" constant="8" id="6xd-HK-EvI"/>
+                                    <constraint firstAttribute="width" secondItem="yuW-3Q-Qxz" secondAttribute="height" multiplier="70:97" id="A64-pW-I2h"/>
+                                    <constraint firstItem="RR3-Tz-52N" firstAttribute="leading" secondItem="yuW-3Q-Qxz" secondAttribute="leadingMargin" id="F7K-jL-f76"/>
+                                    <constraint firstItem="RR3-Tz-52N" firstAttribute="top" secondItem="ROC-h3-1ET" secondAttribute="bottom" constant="2" id="OFS-6n-6Q9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ROC-h3-1ET" secondAttribute="trailing" constant="8" id="P6M-jz-etn"/>
+                                    <constraint firstItem="ROC-h3-1ET" firstAttribute="top" secondItem="yuW-3Q-Qxz" secondAttribute="top" id="YIg-Gn-Yma"/>
+                                    <constraint firstItem="dEr-gL-bhC" firstAttribute="leading" secondItem="yuW-3Q-Qxz" secondAttribute="leading" constant="8" id="d6r-Uu-VKo"/>
+                                    <constraint firstItem="dEr-gL-bhC" firstAttribute="top" secondItem="yuW-3Q-Qxz" secondAttribute="top" id="l2A-vQ-ulD"/>
+                                    <constraint firstItem="RR3-Tz-52N" firstAttribute="trailing" secondItem="yuW-3Q-Qxz" secondAttribute="trailingMargin" id="l7x-k8-4Ff"/>
+                                    <constraint firstAttribute="trailing" secondItem="dEr-gL-bhC" secondAttribute="trailing" constant="8" id="pME-3C-4yd"/>
+                                    <constraint firstItem="RR3-Tz-52N" firstAttribute="bottom" secondItem="yuW-3Q-Qxz" secondAttribute="bottomMargin" id="pgx-Ym-avW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yuW-3Q-Qxz" secondAttribute="trailing" id="3vi-am-vjl"/>
+                            <constraint firstItem="yuW-3Q-Qxz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="K5e-1t-1Mk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yuW-3Q-Qxz" secondAttribute="leading" id="WcW-EJ-VlV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="neP-dF-fdQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="jmb-eG-aeP" id="Jx3-qx-Ktz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="293"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E0q-SI-dAg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="62o-OD-2Kb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CBS-sH-dVx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SBx-mD-eeZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UER-Gd-FXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="293"/>
+        </scene>
+    </scenes>
+</document>
