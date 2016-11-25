@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F722697A1DE838B4005DC76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72269791DE838B4005DC76B /* AppDelegate.swift */; };
+		F722697C1DE838B4005DC76B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722697B1DE838B4005DC76B /* ViewController.swift */; };
+		F722697F1DE838B4005DC76B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F722697D1DE838B4005DC76B /* Main.storyboard */; };
+		F72269821DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F72269801DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld */; };
+		F72269841DE838B4005DC76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72269831DE838B4005DC76B /* Assets.xcassets */; };
+		F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72269851DE838B4005DC76B /* LaunchScreen.storyboard */; };
+		F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F72269761DE838B3005DC76B /* CR Card Creater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CR Card Creater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72269791DE838B4005DC76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F722697B1DE838B4005DC76B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F722697E1DE838B4005DC76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F72269811DE838B4005DC76B /* CR_Card_Creater.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CR_Card_Creater.xcdatamodel; sourceTree = "<group>"; };
+		F72269831DE838B4005DC76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F72269861DE838B4005DC76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F72269881DE838B4005DC76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F72269731DE838B3005DC76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F722696D1DE838B3005DC76B = {
+			isa = PBXGroup;
+			children = (
+				F72269781DE838B4005DC76B /* CR Card Creater */,
+				F72269771DE838B3005DC76B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F72269771DE838B3005DC76B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F72269761DE838B3005DC76B /* CR Card Creater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F72269781DE838B4005DC76B /* CR Card Creater */ = {
+			isa = PBXGroup;
+			children = (
+				F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */,
+				F72269791DE838B4005DC76B /* AppDelegate.swift */,
+				F722697B1DE838B4005DC76B /* ViewController.swift */,
+				F722697D1DE838B4005DC76B /* Main.storyboard */,
+				F72269831DE838B4005DC76B /* Assets.xcassets */,
+				F72269851DE838B4005DC76B /* LaunchScreen.storyboard */,
+				F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */,
+				F72269881DE838B4005DC76B /* Info.plist */,
+				F72269801DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld */,
+			);
+			path = "CR Card Creater";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F72269751DE838B3005DC76B /* CR Card Creater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "CR Card Creater" */;
+			buildPhases = (
+				F72269721DE838B3005DC76B /* Sources */,
+				F72269731DE838B3005DC76B /* Frameworks */,
+				F72269741DE838B3005DC76B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CR Card Creater";
+			productName = "CR Card Creater";
+			productReference = F72269761DE838B3005DC76B /* CR Card Creater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F722696E1DE838B3005DC76B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Brainload Technologies";
+				TargetAttributes = {
+					F72269751DE838B3005DC76B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 85GZ53PG6H;
+					};
+				};
+			};
+			buildConfigurationList = F72269711DE838B3005DC76B /* Build configuration list for PBXProject "CR Card Creater" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F722696D1DE838B3005DC76B;
+			productRefGroup = F72269771DE838B3005DC76B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F72269751DE838B3005DC76B /* CR Card Creater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F72269741DE838B3005DC76B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */,
+				F72269841DE838B4005DC76B /* Assets.xcassets in Resources */,
+				F722697F1DE838B4005DC76B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F72269721DE838B3005DC76B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F722697C1DE838B4005DC76B /* ViewController.swift in Sources */,
+				F72269821DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld in Sources */,
+				F722697A1DE838B4005DC76B /* AppDelegate.swift in Sources */,
+				F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F722697D1DE838B4005DC76B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F722697E1DE838B4005DC76B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F72269851DE838B4005DC76B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72269861DE838B4005DC76B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F72269891DE838B4005DC76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F722698A1DE838B4005DC76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F722698C1DE838B4005DC76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "CR Card Creater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F722698D1DE838B4005DC76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "CR Card Creater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F72269711DE838B3005DC76B /* Build configuration list for PBXProject "CR Card Creater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72269891DE838B4005DC76B /* Debug */,
+				F722698A1DE838B4005DC76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "CR Card Creater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F722698C1DE838B4005DC76B /* Debug */,
+				F722698D1DE838B4005DC76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F72269801DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F72269811DE838B4005DC76B /* CR_Card_Creater.xcdatamodel */,
+			);
+			currentVersion = F72269811DE838B4005DC76B /* CR_Card_Creater.xcdatamodel */;
+			path = CR_Card_Creater.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F722696E1DE838B3005DC76B /* Project object */;
+}
