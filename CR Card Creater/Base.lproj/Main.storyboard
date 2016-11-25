@@ -11,6 +11,7 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -127,17 +128,50 @@
                                             <constraint firstAttribute="width" secondItem="8UZ-cs-Xca" secondAttribute="height" multiplier="16:11" id="lDn-3D-0EW"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-HE-yt6">
+                                        <rect key="frame" x="8" y="8" width="272" height="27"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_creator_close_button" translatesAutoresizingMaskIntoConstraints="NO" id="acn-Va-ztg">
+                                                <rect key="frame" x="237" y="0.0" width="45" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="acn-Va-ztg" secondAttribute="height" multiplier="5:3" id="GXe-kZ-n3b"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inu-OE-IL7">
+                                                <rect key="frame" x="42" y="0.0" width="187" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Inu-OE-IL7" secondAttribute="height" multiplier="221:27" constant="-34" id="gO1-sd-8vA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.76468349359999999" green="0.16645772789999999" blue="0.1789590271" alpha="0.089628232734482727" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Inu-OE-IL7" firstAttribute="centerX" secondItem="JhY-HE-yt6" secondAttribute="centerX" id="Gq3-32-Bp6"/>
+                                            <constraint firstItem="acn-Va-ztg" firstAttribute="leading" secondItem="Inu-OE-IL7" secondAttribute="trailing" constant="8" id="Had-93-fUs"/>
+                                            <constraint firstAttribute="width" secondItem="JhY-HE-yt6" secondAttribute="height" multiplier="272:27" id="Zpx-iQ-iWT"/>
+                                            <constraint firstAttribute="bottom" secondItem="Inu-OE-IL7" secondAttribute="bottom" id="ayz-2e-jkS"/>
+                                            <constraint firstAttribute="bottom" secondItem="acn-Va-ztg" secondAttribute="bottom" id="bf9-bb-pjg"/>
+                                            <constraint firstItem="Inu-OE-IL7" firstAttribute="top" secondItem="JhY-HE-yt6" secondAttribute="top" id="m2U-aV-PJy"/>
+                                            <constraint firstItem="acn-Va-ztg" firstAttribute="top" secondItem="JhY-HE-yt6" secondAttribute="top" id="sCe-cf-ntZ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8872534982957806" green="0.89731570512820513" blue="0.0" alpha="0.36150323275862067" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="mDf-Ge-KNV" firstAttribute="top" secondItem="AuP-fu-G3l" secondAttribute="top" id="1QC-gx-cAp"/>
                                     <constraint firstAttribute="trailing" secondItem="mDf-Ge-KNV" secondAttribute="trailing" id="4c4-3u-v3g"/>
+                                    <constraint firstItem="JhY-HE-yt6" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="6Sx-MB-46k"/>
                                     <constraint firstItem="8UZ-cs-Xca" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="DVd-r9-foX"/>
+                                    <constraint firstItem="JhY-HE-yt6" firstAttribute="top" secondItem="AuP-fu-G3l" secondAttribute="top" constant="8" id="RJV-M4-9EP"/>
                                     <constraint firstAttribute="bottom" secondItem="mDf-Ge-KNV" secondAttribute="bottom" id="U6m-TV-Y3m"/>
                                     <constraint firstAttribute="width" secondItem="AuP-fu-G3l" secondAttribute="height" multiplier="280:347" id="c1A-O5-Fik"/>
                                     <constraint firstItem="mDf-Ge-KNV" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" id="p6N-qn-Iu2"/>
                                     <constraint firstAttribute="bottom" secondItem="8UZ-cs-Xca" secondAttribute="bottom" constant="8" id="ruI-DM-Jwm"/>
                                     <constraint firstAttribute="trailing" secondItem="8UZ-cs-Xca" secondAttribute="trailing" constant="8" id="tbs-LZ-29m"/>
+                                    <constraint firstAttribute="trailing" secondItem="JhY-HE-yt6" secondAttribute="trailing" constant="8" id="zHe-XW-1WB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -160,6 +194,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="card_creator_close_button" width="147" height="67"/>
         <image name="card_template" width="1080" height="1340"/>
         <image name="dark_blue_background" width="702" height="1248"/>
     </resources>
