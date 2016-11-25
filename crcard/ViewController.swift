@@ -62,6 +62,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         default:
             break
         }
+        cell.imageView.image = UIImage(named:"icons_stats_range")
+        
         //cell.img?.tintColor = Helper.colors[indexPath.row % 5]
         return cell
     }

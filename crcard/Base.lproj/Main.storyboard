@@ -67,7 +67,6 @@
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-6H-uEc">
                                                                             <rect key="frame" x="3" y="3" width="43" height="43"/>
-                                                                            <color key="backgroundColor" red="0.41833757490000001" green="0.46057844520000002" blue="0.55774769040000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="R4j-6H-uEc" secondAttribute="height" multiplier="1:1" id="Mra-O2-9tK"/>
                                                                             </constraints>
@@ -112,6 +111,11 @@
                                                                     <constraint firstAttribute="bottomMargin" secondItem="52m-4T-DUf" secondAttribute="bottom" constant="-8" id="w0e-m4-buY"/>
                                                                     <constraint firstItem="i7v-a7-bvk" firstAttribute="top" secondItem="jXr-Su-CKB" secondAttribute="topMargin" constant="-8" id="wCZ-ZI-okr"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outlet property="imageView" destination="R4j-6H-uEc" id="Nth-82-44H"/>
+                                                                    <outlet property="name" destination="i7v-a7-bvk" id="JZl-qj-ymj"/>
+                                                                    <outlet property="points" destination="4NY-eH-2Jl" id="rN4-gh-4O2"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                         <connections>
@@ -264,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="300"/>
+            <point key="canvasLocation" x="1444" y="293"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0q-SI-dAg">
