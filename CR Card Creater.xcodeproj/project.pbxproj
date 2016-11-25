@@ -14,6 +14,7 @@
 		F72269841DE838B4005DC76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72269831DE838B4005DC76B /* Assets.xcassets */; };
 		F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72269851DE838B4005DC76B /* LaunchScreen.storyboard */; };
 		F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */; };
+		F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */,
 				F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */,
 				F72269841DE838B4005DC76B /* Assets.xcassets in Resources */,
 				F722697F1DE838B4005DC76B /* Main.storyboard in Resources */,
