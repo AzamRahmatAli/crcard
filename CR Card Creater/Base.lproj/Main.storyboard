@@ -158,6 +158,24 @@
                                             <constraint firstAttribute="width" secondItem="8UZ-cs-Xca" secondAttribute="height" multiplier="16:11" constant="5.0909090909090651" id="zP4-6l-vDJ"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="so0-YC-rOt">
+                                        <rect key="frame" x="8" y="43" width="312" height="135"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Capture" translatesAutoresizingMaskIntoConstraints="NO" id="uRx-re-OTU">
+                                                <rect key="frame" x="23" y="28" width="67" height="79"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_rare_troop" translatesAutoresizingMaskIntoConstraints="NO" id="1cv-Mj-O1Z">
+                                                <rect key="frame" x="140" y="8" width="164" height="30"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_creator_icon_overlay_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-NS-Mpp">
+                                                <rect key="frame" x="23" y="28" width="67" height="79"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.40768310699148247" green="0.66491825126401061" blue="1" alpha="0.29649784482758623" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="so0-YC-rOt" secondAttribute="height" multiplier="104:45" id="OSt-Lw-5Wz"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8872534982957806" green="0.89731570512820513" blue="0.0" alpha="0.36150323275862067" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -165,6 +183,8 @@
                                     <constraint firstItem="JhY-HE-yt6" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="E07-n8-gCc"/>
                                     <constraint firstAttribute="trailing" secondItem="JhY-HE-yt6" secondAttribute="trailing" constant="8" id="H7h-YX-cAw"/>
                                     <constraint firstAttribute="bottom" secondItem="8UZ-cs-Xca" secondAttribute="bottom" constant="8" id="Iof-4f-fbO"/>
+                                    <constraint firstAttribute="trailing" secondItem="so0-YC-rOt" secondAttribute="trailing" constant="8" id="LgR-Yq-ybB"/>
+                                    <constraint firstItem="8UZ-cs-Xca" firstAttribute="top" secondItem="so0-YC-rOt" secondAttribute="bottom" constant="8" id="Q1c-GY-Qm2"/>
                                     <constraint firstAttribute="width" secondItem="AuP-fu-G3l" secondAttribute="height" multiplier="80:99" id="R9k-hi-TeL"/>
                                     <constraint firstAttribute="trailing" secondItem="mDf-Ge-KNV" secondAttribute="trailing" id="VFD-UN-mcL"/>
                                     <constraint firstItem="JhY-HE-yt6" firstAttribute="top" secondItem="AuP-fu-G3l" secondAttribute="top" constant="8" id="dgS-aU-oxf"/>
@@ -172,6 +192,7 @@
                                     <constraint firstItem="8UZ-cs-Xca" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="jQS-Zm-x8F"/>
                                     <constraint firstAttribute="trailing" secondItem="8UZ-cs-Xca" secondAttribute="trailing" constant="8" id="n13-Wr-kqF"/>
                                     <constraint firstItem="mDf-Ge-KNV" firstAttribute="top" secondItem="AuP-fu-G3l" secondAttribute="top" constant="-1" id="wfK-WW-0kf"/>
+                                    <constraint firstItem="so0-YC-rOt" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="ysH-EF-tIi"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -194,8 +215,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Capture" width="241" height="266"/>
         <image name="card_creator_close_button" width="147" height="67"/>
+        <image name="card_creator_icon_overlay_normal" width="350" height="422"/>
         <image name="card_template" width="1080" height="1340"/>
         <image name="dark_blue_background" width="702" height="1248"/>
+        <image name="label_rare_troop" width="579" height="118"/>
     </resources>
 </document>
