@@ -8,28 +8,62 @@
 
 import UIKit
 
-class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class CreateCardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Do any additional setup after loading the view, typically from a nib.
+        /* for family: String in UIFont.familyNames()
+         {
+         print("\(family)")
+         for names: String in UIFont.fontNamesForFamilyName(family)
+         {
+         print("== \(names)")
+         }
+         }*/
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    {
+        var collectionViewSize = collectionView.frame.size
+        collectionViewSize.width = collectionViewSize.width/1.1 //Display Three elements in a row.
+        collectionViewSize.height = collectionViewSize.height/2
+        return collectionViewSize
     }
-    */
-
+    
+    
+    
+    //
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 5
+    }
+    /*
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        
+        return 0
+    }*/
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
+        /*switch indexPath.row
+        {
+        case 2,3,6,7,10,11:
+            cell.backgroundColor = UIColor.whiteColor();
+        default:
+            break
+        }
+        cell.imageView.image = UIImage(named:"icons_stats_range")
+        */
+        //cell.img?.tintColor = Helper.colors[indexPath.row % 5]
+        return cell
+    }
+    
 }
+
