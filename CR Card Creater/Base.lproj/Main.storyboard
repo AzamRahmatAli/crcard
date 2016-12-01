@@ -332,13 +332,13 @@
                                         <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-xM-0HU">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-xM-0HU">
                                         <rect key="frame" x="8" y="160" width="101" height="121"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_card_icon_background" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-UQ-ehE">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="121"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_card_icon_background" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-UQ-ehE">
+                                                <rect key="frame" x="8" y="0.0" width="85" height="121"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_card_icon_overlay_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-19-GLd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_card_icon_overlay_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-19-GLd">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="121"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkV-wo-uSm">
@@ -354,15 +354,15 @@
                                             <constraint firstItem="Ty0-19-GLd" firstAttribute="top" secondItem="eTH-xM-0HU" secondAttribute="top" id="6Pm-iT-Hth"/>
                                             <constraint firstAttribute="width" secondItem="eTH-xM-0HU" secondAttribute="height" multiplier="101:121" id="Ksy-Sr-j9a"/>
                                             <constraint firstAttribute="bottom" secondItem="5Bm-UQ-ehE" secondAttribute="bottom" id="Qvu-Bv-FA3"/>
-                                            <constraint firstAttribute="trailing" secondItem="5Bm-UQ-ehE" secondAttribute="trailing" id="U8b-Ro-Pja"/>
-                                            <constraint firstItem="5Bm-UQ-ehE" firstAttribute="leading" secondItem="eTH-xM-0HU" secondAttribute="leading" id="Z0X-h3-cu1"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Bm-UQ-ehE" secondAttribute="trailing" constant="8" id="U8b-Ro-Pja"/>
+                                            <constraint firstItem="5Bm-UQ-ehE" firstAttribute="leading" secondItem="eTH-xM-0HU" secondAttribute="leading" constant="8" id="Z0X-h3-cu1"/>
                                             <constraint firstAttribute="trailing" secondItem="Ty0-19-GLd" secondAttribute="trailing" id="ibD-PE-Wqm"/>
                                             <constraint firstAttribute="bottom" secondItem="Ty0-19-GLd" secondAttribute="bottom" id="j5z-Rh-6Mt"/>
                                             <constraint firstItem="XkV-wo-uSm" firstAttribute="top" secondItem="Ty0-19-GLd" secondAttribute="top" id="jqA-Wo-pXb"/>
                                             <constraint firstItem="Ty0-19-GLd" firstAttribute="leading" secondItem="eTH-xM-0HU" secondAttribute="leading" id="r4C-Gh-3Bd"/>
                                             <constraint firstItem="5Bm-UQ-ehE" firstAttribute="top" secondItem="eTH-xM-0HU" secondAttribute="top" id="uiQ-cd-QES"/>
-                                            <constraint firstItem="XkV-wo-uSm" firstAttribute="trailing" secondItem="5Bm-UQ-ehE" secondAttribute="trailing" id="wl9-5k-HPg"/>
-                                            <constraint firstItem="XkV-wo-uSm" firstAttribute="leading" secondItem="5Bm-UQ-ehE" secondAttribute="leading" id="zCe-Hk-he0"/>
+                                            <constraint firstItem="XkV-wo-uSm" firstAttribute="trailing" secondItem="5Bm-UQ-ehE" secondAttribute="trailing" constant="8" id="wl9-5k-HPg"/>
+                                            <constraint firstItem="XkV-wo-uSm" firstAttribute="leading" secondItem="5Bm-UQ-ehE" secondAttribute="leading" constant="-8" id="zCe-Hk-he0"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8A-1G-ysB">
