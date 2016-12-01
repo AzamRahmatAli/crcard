@@ -11,6 +11,7 @@ import UIKit
 class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
 
+    @IBOutlet weak var border: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cardName: UITextField!
     @IBOutlet weak var discription: UITextField!
@@ -18,7 +19,9 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var createUpdate: UIImageView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var rarity: UIImageView!
+    @IBOutlet weak var rarityBackground: UIImageView!
     @IBOutlet weak var type: UIImageView!
+    @IBOutlet weak var typeBackground: UIImageView!
     @IBOutlet weak var elixirCost: UIImageView!
     
     
@@ -33,8 +36,85 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     @IBAction func editRarity(sender: UIButton) {
+        //Create the AlertController and add Its action like button in Actionsheet
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Card Rarity", preferredStyle: .ActionSheet)
+        
+        
+        
+        let Common: UIAlertAction = UIAlertAction(title: "Common", style: .Default)
+        { action -> Void in
+            self.rarityBackground.image = UIImage(named: "edit_rarity_background_common")
+            //self.type.image = UIImage(named: "edit_rarity_common")
+            self.rarity.image = UIImage(named: "edit_rarity_common")
+            self.typeBackground.image = UIImage(named: "edit_rarity_background_common")
+        }
+        actionSheetControllerIOS8.addAction(Common)
+        
+        let Rare: UIAlertAction = UIAlertAction(title: "Rare", style: .Default)
+        { action -> Void in
+            self.rarity.image = UIImage(named: "edit_rarity_rare")
+            //self.type.image = UIImage(named: "edit_rarity_background_rare")
+            self.rarityBackground.image = UIImage(named: "edit_rarity_background_rare")
+            self.typeBackground.image = UIImage(named: "edit_rarity_background_rare")
+        }
+        actionSheetControllerIOS8.addAction(Rare)
+        let Epic: UIAlertAction = UIAlertAction(title: "Epic", style: .Default)
+        { action -> Void in
+            self.rarity.image = UIImage(named: "edit_rarity_epic")
+            //self.type.image = UIImage(named: "edit_rarity_background_epic")
+            self.rarityBackground.image = UIImage(named: "edit_rarity_background_epic")
+            self.typeBackground.image = UIImage(named: "edit_rarity_background_epic")
+        }
+        actionSheetControllerIOS8.addAction(Epic)
+        
+        let Legendary: UIAlertAction = UIAlertAction(title: "Legendary", style: .Default)
+        { action -> Void in
+            self.rarity.image = UIImage(named: "edit_rarity_legendary")
+            //self.type.image = UIImage(named: "edit_rarity_background_legendary")
+            self.rarityBackground.image = UIImage(named: "edit_rarity_background_legendary")
+            self.typeBackground.image = UIImage(named: "edit_rarity_background_legendary")
+            self.border.image = UIImage(named: "edit_card_icon_overlay_legendary")
+        }
+        actionSheetControllerIOS8.addAction(Legendary)
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
     }
     @IBAction func editType(sender: UIButton) {
+        //Create the AlertController and add Its action like button in Actionsheet
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Card Type", preferredStyle: .ActionSheet)
+        
+        
+        
+        let Troop: UIAlertAction = UIAlertAction(title: "Troop", style: .Default)
+        { action -> Void in
+            
+            self.type.image = UIImage(named: "edit_type_troop")
+           
+        }
+        actionSheetControllerIOS8.addAction(Troop)
+        
+        let Building: UIAlertAction = UIAlertAction(title: "Building", style: .Default)
+        { action -> Void in
+            self.type.image = UIImage(named: "edit_type_building")
+        }
+        actionSheetControllerIOS8.addAction(Building)
+        let Spell: UIAlertAction = UIAlertAction(title: "Spell", style: .Default)
+        { action -> Void in
+            self.type.image = UIImage(named: "edit_type_spell")
+        }
+        actionSheetControllerIOS8.addAction(Spell)
+        
+        
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
     }
 
     @IBAction func costEdit(sender: UIButton) {
