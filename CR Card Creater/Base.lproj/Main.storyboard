@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-fu-G3l">
@@ -201,7 +201,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbl-5b-GYP">
                                                 <rect key="frame" x="27" y="21" width="78" height="93"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture" translatesAutoresizingMaskIntoConstraints="NO" id="uRx-re-OTU">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capture" translatesAutoresizingMaskIntoConstraints="NO" id="uRx-re-OTU">
                                                         <rect key="frame" x="8" y="0.0" width="62" height="94"/>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_creator_icon_overlay_legendary" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-NS-Mpp">
@@ -292,7 +292,7 @@
                         <outlet property="discription" destination="eco-d5-1pj" id="z4a-J9-L3r"/>
                         <outlet property="dp" destination="uRx-re-OTU" id="wyl-bc-InP"/>
                         <outlet property="name1" destination="chU-hr-UUY" id="uO2-ad-iay"/>
-                        <outlet property="name2" destination="chU-hr-UUY" id="XZx-bd-ESo"/>
+                        <outlet property="name2" destination="Inu-OE-IL7" id="0lf-3v-Hcs"/>
                         <outlet property="number" destination="ql2-1h-jLB" id="6PI-aW-Wap"/>
                         <outlet property="rarity" destination="1cv-Mj-O1Z" id="o96-6A-yK9"/>
                     </connections>
@@ -710,7 +710,6 @@
                                         <rect key="frame" x="8" y="684" width="304" height="33"/>
                                         <connections>
                                             <action selector="CreateUpdate:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="mvk-ps-2YP"/>
-                                            <action selector="createCard:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="7Ed-1R-DXJ"/>
                                         </connections>
                                     </button>
                                 </subviews>

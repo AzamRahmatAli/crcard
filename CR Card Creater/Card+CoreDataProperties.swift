@@ -14,12 +14,12 @@ import CoreData
 
 extension Card {
 
-    @NSManaged var name: String?
+    @NSManaged var detail: String?
     @NSManaged var dp: NSData?
+    @NSManaged var name: String?
+    @NSManaged var cost: String?
     @NSManaged var rarity: String?
     @NSManaged var type: String?
-    @NSManaged var points: String?
-    @NSManaged var detail: String?
     @NSManaged var attributes: NSSet?
 
 }

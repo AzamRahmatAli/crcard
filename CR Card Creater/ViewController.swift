@@ -21,9 +21,43 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var dp: UIImageView!
     @IBOutlet weak var border: UIImageView!
     @IBOutlet weak var rarity: UIImageView!
+    
+    var card : Card!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+     name1.text = card.name
+        name2.text = card.name
+        discription.text = card.detail
+        dp.image = UIImage(data: card.dp!)
+        
+        
+        rarity.image = UIImage(named: "label_" + card.rarity! + "_" + card.type!)
+        if card.rarity != "legendary"
+        {
+            border.image = UIImage(named: "card_creator_icon_overlay_normal")
+        }
+        number.image = UIImage(named: "elixir_" + String(card.cost!) + "_icon")
+        /*
+        if card.rarity == "common"
+        {
+            
+        }
+        else if card.rarity == "rare"
+        {
+            
+        }
+        else if card.rarity == "epic"
+        {
+            
+        }
+        else if card.rarity == "legendary"
+        {
+            
+        }*/
+        
+        
+        
     }
     
   

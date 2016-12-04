@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
@@ -24,6 +25,9 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var typeBackground: UIImageView!
     @IBOutlet weak var elixirCost: UIImageView!
     
+    var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    
+    var newCard : Card!
     
     
     var imagePicker: UIImagePickerController = UIImagePickerController()
@@ -31,6 +35,18 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        
+        if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
+        {
+        entity.rarity = "common"
+        entity.type = "troop"
+        entity.cost = "5"
+            newCard = entity
+        }
+        
+        
+        
+        
        reloadTable() 
         // Do any additional setup after loading the view.
     }
@@ -43,32 +59,39 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         let Common: UIAlertAction = UIAlertAction(title: "Common", style: .Default)
         { action -> Void in
+            self.newCard.rarity = "common"
             self.rarityBackground.image = UIImage(named: "edit_rarity_background_common")
             //self.type.image = UIImage(named: "edit_rarity_common")
             self.rarity.image = UIImage(named: "edit_rarity_common")
             self.typeBackground.image = UIImage(named: "edit_rarity_background_common")
+            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
         }
         actionSheetControllerIOS8.addAction(Common)
         
         let Rare: UIAlertAction = UIAlertAction(title: "Rare", style: .Default)
         { action -> Void in
+            self.newCard.rarity = "rare"
             self.rarity.image = UIImage(named: "edit_rarity_rare")
             //self.type.image = UIImage(named: "edit_rarity_background_rare")
             self.rarityBackground.image = UIImage(named: "edit_rarity_background_rare")
             self.typeBackground.image = UIImage(named: "edit_rarity_background_rare")
+            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
         }
         actionSheetControllerIOS8.addAction(Rare)
         let Epic: UIAlertAction = UIAlertAction(title: "Epic", style: .Default)
         { action -> Void in
+            self.newCard.rarity = "epic"
             self.rarity.image = UIImage(named: "edit_rarity_epic")
             //self.type.image = UIImage(named: "edit_rarity_background_epic")
             self.rarityBackground.image = UIImage(named: "edit_rarity_background_epic")
             self.typeBackground.image = UIImage(named: "edit_rarity_background_epic")
+            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
         }
         actionSheetControllerIOS8.addAction(Epic)
         
         let Legendary: UIAlertAction = UIAlertAction(title: "Legendary", style: .Default)
         { action -> Void in
+            self.newCard.rarity = "legendary"
             self.rarity.image = UIImage(named: "edit_rarity_legendary")
             //self.type.image = UIImage(named: "edit_rarity_background_legendary")
             self.rarityBackground.image = UIImage(named: "edit_rarity_background_legendary")
@@ -83,14 +106,12 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
         actionSheetControllerIOS8.addAction(cancelActionButton)
     }
-    @IBAction func createCard(sender: UIButton) {
-        performSegueWithIdentifier("createCard", sender: nil)
-    }
+  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue == "createCard"
+        if segue.identifier == "createCard"
         {
             let dvc = segue.destinationViewController as! ViewController
-            dvc.rarity = "";
+            dvc.card = newCard
         }
     }
     @IBAction func editType(sender: UIButton) {
@@ -101,7 +122,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         let Troop: UIAlertAction = UIAlertAction(title: "Troop", style: .Default)
         { action -> Void in
-            
+            self.newCard.type = "troop"
             self.type.image = UIImage(named: "edit_type_troop")
            
         }
@@ -109,11 +130,14 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         let Building: UIAlertAction = UIAlertAction(title: "Building", style: .Default)
         { action -> Void in
+            self.newCard.type = "building"
             self.type.image = UIImage(named: "edit_type_building")
         }
         actionSheetControllerIOS8.addAction(Building)
         let Spell: UIAlertAction = UIAlertAction(title: "Spell", style: .Default)
         { action -> Void in
+            
+            self.newCard.type = "spell"
             self.type.image = UIImage(named: "edit_type_spell")
         }
         actionSheetControllerIOS8.addAction(Spell)
@@ -135,7 +159,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
         let Troop: UIAlertAction = UIAlertAction(title: String(value), style: .Default)
         { action -> Void in
-            
+            self.newCard.cost = String(value)
             self.elixirCost.image = UIImage(named: "elixir_" + String(value) + "_icon")
             
         }
@@ -179,6 +203,9 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func CreateUpdate(sender: UIButton) {
+        newCard.name = cardName.text
+        newCard.detail = discription.text
+        performSegueWithIdentifier("createCard", sender: nil)
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -238,6 +265,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
        /* performUIUpdatesOnMain
             {*/
         self.userImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        newCard.dp = UIImageJPEGRepresentation(self.userImage.image!, 1.0)//back by UIImage(data: imageData)
         //}
     }
 }
