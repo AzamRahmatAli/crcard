@@ -89,7 +89,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue == "createCard"
         {
-            
+            let dvc = segue.destinationViewController as! ViewController
+            dvc.rarity = "";
         }
     }
     @IBAction func editType(sender: UIButton) {

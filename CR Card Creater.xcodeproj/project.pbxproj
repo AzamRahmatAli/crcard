@@ -17,6 +17,10 @@
 		F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */; };
 		F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */; };
 		F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */; };
+		F7FAA42D1DF40457004316BE /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA4291DF40457004316BE /* Card+CoreDataProperties.swift */; };
+		F7FAA42E1DF40457004316BE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA42A1DF40457004316BE /* Card.swift */; };
+		F7FAA42F1DF40457004316BE /* Attribute+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA42B1DF40457004316BE /* Attribute+CoreDataProperties.swift */; };
+		F7FAA4301DF40457004316BE /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA42C1DF40457004316BE /* Attribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardViewController.swift; sourceTree = "<group>"; };
 		F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
+		F7FAA4291DF40457004316BE /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7FAA42A1DF40457004316BE /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F7FAA42B1DF40457004316BE /* Attribute+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attribute+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7FAA42C1DF40457004316BE /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,10 @@
 		F72269781DE838B4005DC76B /* CR Card Creater */ = {
 			isa = PBXGroup;
 			children = (
+				F7FAA4291DF40457004316BE /* Card+CoreDataProperties.swift */,
+				F7FAA42A1DF40457004316BE /* Card.swift */,
+				F7FAA42B1DF40457004316BE /* Attribute+CoreDataProperties.swift */,
+				F7FAA42C1DF40457004316BE /* Attribute.swift */,
 				F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */,
 				F72269791DE838B4005DC76B /* AppDelegate.swift */,
 				F722697B1DE838B4005DC76B /* ViewController.swift */,
@@ -152,12 +164,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FAA4301DF40457004316BE /* Attribute.swift in Sources */,
 				F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */,
+				F7FAA42D1DF40457004316BE /* Card+CoreDataProperties.swift in Sources */,
+				F7FAA42F1DF40457004316BE /* Attribute+CoreDataProperties.swift in Sources */,
 				F722697C1DE838B4005DC76B /* ViewController.swift in Sources */,
 				F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */,
 				F72269821DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld in Sources */,
 				F722697A1DE838B4005DC76B /* AppDelegate.swift in Sources */,
 				F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */,
+				F7FAA42E1DF40457004316BE /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
