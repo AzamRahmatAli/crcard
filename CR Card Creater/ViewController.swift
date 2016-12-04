@@ -13,17 +13,17 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var number: UIImageView!
+    @IBOutlet weak var name2: UILabel!
+    @IBOutlet weak var name1: UILabel!
+    @IBOutlet weak var discription: UILabel!
+   
+    @IBOutlet weak var dp: UIImageView!
+    @IBOutlet weak var border: UIImageView!
+    @IBOutlet weak var rarity: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       /* for family: String in UIFont.familyNames()
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
-            {
-                print("== \(names)")
-            }
-        }*/
+     
     }
     
   

@@ -287,6 +287,15 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="border" destination="Ah6-NS-Mpp" id="Az8-HE-xDO"/>
+                        <outlet property="discription" destination="eco-d5-1pj" id="z4a-J9-L3r"/>
+                        <outlet property="dp" destination="uRx-re-OTU" id="wyl-bc-InP"/>
+                        <outlet property="name1" destination="chU-hr-UUY" id="uO2-ad-iay"/>
+                        <outlet property="name2" destination="chU-hr-UUY" id="XZx-bd-ESo"/>
+                        <outlet property="number" destination="ql2-1h-jLB" id="6PI-aW-Wap"/>
+                        <outlet property="rarity" destination="1cv-Mj-O1Z" id="o96-6A-yK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -701,6 +710,7 @@
                                         <rect key="frame" x="8" y="684" width="304" height="33"/>
                                         <connections>
                                             <action selector="CreateUpdate:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="mvk-ps-2YP"/>
+                                            <action selector="createCard:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="7Ed-1R-DXJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -830,11 +840,12 @@
                         <outlet property="type" destination="vgh-0s-5H5" id="3sp-u1-hBh"/>
                         <outlet property="typeBackground" destination="MbR-bQ-g61" id="eXZ-gY-4E0"/>
                         <outlet property="userImage" destination="5Bm-UQ-ehE" id="tcs-rM-MBt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="createCard" id="DmO-SD-q7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCA-GZ-h9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682" y="377.5"/>
+            <point key="canvasLocation" x="769" y="377.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KuT-mt-ec4">

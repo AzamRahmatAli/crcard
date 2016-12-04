@@ -83,6 +83,15 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
         actionSheetControllerIOS8.addAction(cancelActionButton)
     }
+    @IBAction func createCard(sender: UIButton) {
+        performSegueWithIdentifier("createCard", sender: nil)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue == "createCard"
+        {
+            
+        }
+    }
     @IBAction func editType(sender: UIButton) {
         //Create the AlertController and add Its action like button in Actionsheet
         let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Card Type", preferredStyle: .ActionSheet)
@@ -118,6 +127,27 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     @IBAction func costEdit(sender: UIButton) {
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Elixir Cost", preferredStyle: .ActionSheet)
+        
+        
+        for value in 1...10
+        {
+        let Troop: UIAlertAction = UIAlertAction(title: String(value), style: .Default)
+        { action -> Void in
+            
+            self.elixirCost.image = UIImage(named: "elixir_" + String(value) + "_icon")
+            
+        }
+        actionSheetControllerIOS8.addAction(Troop)
+        
+        }
+        
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
     }
     @IBAction func addImage(sender: UIButton) {
         //Create the AlertController and add Its action like button in Actionsheet
