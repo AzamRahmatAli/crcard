@@ -45,8 +45,6 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         
-        
-        
        reloadTable() 
         // Do any additional setup after loading the view.
     }
@@ -59,44 +57,25 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         let Common: UIAlertAction = UIAlertAction(title: "Common", style: .Default)
         { action -> Void in
-            self.newCard.rarity = "common"
-            self.rarityBackground.image = UIImage(named: "edit_rarity_background_common")
-            //self.type.image = UIImage(named: "edit_rarity_common")
-            self.rarity.image = UIImage(named: "edit_rarity_common")
-            self.typeBackground.image = UIImage(named: "edit_rarity_background_common")
-            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
+            self.changeRarity("common")
         }
         actionSheetControllerIOS8.addAction(Common)
         
         let Rare: UIAlertAction = UIAlertAction(title: "Rare", style: .Default)
         { action -> Void in
-            self.newCard.rarity = "rare"
-            self.rarity.image = UIImage(named: "edit_rarity_rare")
-            //self.type.image = UIImage(named: "edit_rarity_background_rare")
-            self.rarityBackground.image = UIImage(named: "edit_rarity_background_rare")
-            self.typeBackground.image = UIImage(named: "edit_rarity_background_rare")
-            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
+            self.changeRarity("rare")
+            
         }
         actionSheetControllerIOS8.addAction(Rare)
         let Epic: UIAlertAction = UIAlertAction(title: "Epic", style: .Default)
         { action -> Void in
-            self.newCard.rarity = "epic"
-            self.rarity.image = UIImage(named: "edit_rarity_epic")
-            //self.type.image = UIImage(named: "edit_rarity_background_epic")
-            self.rarityBackground.image = UIImage(named: "edit_rarity_background_epic")
-            self.typeBackground.image = UIImage(named: "edit_rarity_background_epic")
-            self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
+           self.changeRarity("epic")
         }
         actionSheetControllerIOS8.addAction(Epic)
         
         let Legendary: UIAlertAction = UIAlertAction(title: "Legendary", style: .Default)
         { action -> Void in
-            self.newCard.rarity = "legendary"
-            self.rarity.image = UIImage(named: "edit_rarity_legendary")
-            //self.type.image = UIImage(named: "edit_rarity_background_legendary")
-            self.rarityBackground.image = UIImage(named: "edit_rarity_background_legendary")
-            self.typeBackground.image = UIImage(named: "edit_rarity_background_legendary")
-            self.border.image = UIImage(named: "edit_card_icon_overlay_legendary")
+            self.changeRarity("legendary")
         }
         actionSheetControllerIOS8.addAction(Legendary)
         self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
@@ -107,6 +86,22 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         actionSheetControllerIOS8.addAction(cancelActionButton)
     }
   
+    func changeRarity(rarity : String)
+    {
+        
+        newCard.rarity = rarity
+        self.rarity.image = UIImage(named: "edit_rarity_" + rarity)
+        
+        self.rarityBackground.image = UIImage(named: "edit_rarity_background_" + rarity)
+        self.typeBackground.image = UIImage(named: "edit_rarity_background_" + rarity)
+        if  rarity == "legendary"
+        {
+            self.border.image = UIImage(named: "edit_card_icon_overlay_legendary")
+        }
+        else{
+        self.border.image = UIImage(named: "edit_card_icon_overlay_normal")
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "createCard"
         {
@@ -247,19 +242,17 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
      func performUIUpdatesOnMain(updates: () -> Void) {
         dispatch_async(dispatch_get_main_queue()) {
-            updates()
+        updates()
         }
     }
     
     
     func getImageFromCamera() {
-        
-        
-        
         imagePicker.sourceType = .Camera
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
        /* performUIUpdatesOnMain

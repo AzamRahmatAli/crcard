@@ -16,7 +16,7 @@
         <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attribute" inverseName="card" inverseEntity="Attribute" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Attribute" positionX="-54" positionY="36" width="128" height="103"/>
+        <element name="Attribute" positionX="-54" positionY="36" width="128" height="105"/>
         <element name="Card" positionX="-245" positionY="45" width="128" height="148"/>
     </elements>
 </model>

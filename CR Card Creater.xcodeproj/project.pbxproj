@@ -14,6 +14,7 @@
 		F72269841DE838B4005DC76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72269831DE838B4005DC76B /* Assets.xcassets */; };
 		F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72269851DE838B4005DC76B /* LaunchScreen.storyboard */; };
 		F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */; };
+		F777E7881DF57C9D003F4960 /* AttributesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */; };
 		F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */; };
 		F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */; };
 		F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */; };
@@ -33,6 +34,7 @@
 		F72269861DE838B4005DC76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72269881DE838B4005DC76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesTableViewController.swift; sourceTree = "<group>"; };
 		F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardViewController.swift; sourceTree = "<group>"; };
 		F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F72269801DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld */,
 				F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */,
 				F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */,
+				F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */,
 			);
 			path = "CR Card Creater";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */,
 				F72269821DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld in Sources */,
 				F722697A1DE838B4005DC76B /* AppDelegate.swift in Sources */,
+				F777E7881DF57C9D003F4960 /* AttributesTableViewController.swift in Sources */,
 				F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */,
 				F7FAA42E1DF40457004316BE /* Card.swift in Sources */,
 			);
