@@ -28,7 +28,9 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     var newCard : Card!
-    
+    var atrName : [String] = []
+    var atrImage: [String] = []
+    var value : [String] = ["500", "150", "1.5sec", "Ground", "5"]
     
     var imagePicker: UIImagePickerController = UIImagePickerController()
     
@@ -43,7 +45,14 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         entity.cost = "5"
             newCard = entity
         }
-        
+        for (index, value) in Attributes.attriutesAdded.enumerate()
+        {
+            if value
+            {
+                atrName.append(Attributes.name[index])
+                atrImage.append(Attributes.image[index])
+            }
+        }
         
        reloadTable() 
         // Do any additional setup after loading the view.
@@ -211,21 +220,26 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return 5
+        return Attributes.attriutesAdded.filter{$0 == true}.count
     }
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+     let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! CustomTableViewCell
      
      // Configure the cell...
+        
+            cell.imgView.image = UIImage(named: atrImage[indexPath.row])
+            cell.name.text = atrName[indexPath.row]
+            cell.value.text = value[indexPath.row]
+         
      
      return cell
      }
     
     
     func reloadTable() {
-        
-        tableHeight.constant = 2.5 * tableHeight.constant
+        let rows : Double  = Double(Attributes.attriutesAdded.filter{$0 == true}.count )
+        tableHeight.constant = CGFloat(rows / 2) * tableHeight.constant
         tableView.reloadData()
         //plus anything else you want to accomplish
     }

@@ -42,7 +42,14 @@ class AttributesTableViewController: UITableViewController {
             cell.addBtn.tag = indexPath.row
         cell.imgView.image = UIImage(named: Attributes.image[indexPath.row])
         cell.name.text = Attributes.name[indexPath.row]
-        cell.addAttribute.image = UIImage(named: "attribute_selection_add_button")
+        if Attributes.attriutesAdded[indexPath.row]
+        {
+        cell.addAttribute.image = UIImage(named: "attribute_selection_add_button_inactive")
+        }
+        else
+        {
+           cell.addAttribute.image = UIImage(named: "attribute_selection_add_button")
+        }
         // Configure the cell...
 
         return cell
