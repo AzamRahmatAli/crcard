@@ -13,7 +13,13 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var value: UILabel!
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var addAttribute: UIImageView!
 
+    @IBOutlet weak var addBtn: UIButton!
+    @IBAction func testAction(sender: UIButton) {
+        print(sender.tag)
+        
+    }
 
     @IBAction func deleteAttribute(sender: UIButton) {
     }
