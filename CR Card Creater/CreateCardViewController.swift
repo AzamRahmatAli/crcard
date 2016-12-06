@@ -10,8 +10,12 @@ import UIKit
 import CoreData
 
 class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    
+    
 
+    
+    
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var border: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cardName: UITextField!
@@ -28,9 +32,10 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     var newCard : Card!
-    var atrName : [String] = []
-    var atrImage: [String] = []
-    var value : [String] = ["500", "150", "1.5sec", "Ground", "5"]
+    let attributes = Attributes()
+   // var atrName : [String] = []
+    //var atrImage: [String] = []
+    //var value : [String] = ["500", "150", "1.5sec", "Ground", "5"]
     
     var imagePicker: UIImagePickerController = UIImagePickerController()
     
@@ -45,19 +50,23 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         entity.cost = "5"
             newCard = entity
         }
-        for (index, value) in Attributes.attriutesAdded.enumerate()
+        /*for (index, value) in attributes.attriutesAdded.enumerate()
         {
             if value
             {
-                atrName.append(Attributes.name[index])
-                atrImage.append(Attributes.image[index])
+                
+                atrName.append(attributes.name[index])
+                atrImage.append(attributes.image[index])
             }
-        }
-        
+        }*/
+        //print(atrName)
+        //print(atrImage)
        reloadTable() 
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        reloadTable()
+    }
     @IBAction func editRarity(sender: UIButton) {
         //Create the AlertController and add Its action like button in Actionsheet
         let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Card Rarity", preferredStyle: .ActionSheet)
@@ -116,6 +125,11 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
             let dvc = segue.destinationViewController as! ViewController
             dvc.card = newCard
+        }
+        else if segue.identifier == "addAttribute"
+        {
+            let dvc = segue.destinationViewController as! AttributesTableViewController
+            dvc.attributes = attributes
         }
     }
     @IBAction func editType(sender: UIButton) {
@@ -220,7 +234,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return Attributes.attriutesAdded.filter{$0 == true}.count
+        return attributes.name.count
     }
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -228,9 +242,9 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
      
      // Configure the cell...
         
-            cell.imgView.image = UIImage(named: atrImage[indexPath.row])
-            cell.name.text = atrName[indexPath.row]
-            cell.value.text = value[indexPath.row]
+            cell.imgView.image = UIImage(named: attributes.image[indexPath.row])
+            cell.name.text = attributes.name[indexPath.row]
+            cell.value.text = attributes.value[indexPath.row]
          
      
      return cell
@@ -238,8 +252,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func reloadTable() {
-        let rows : Double  = Double(Attributes.attriutesAdded.filter{$0 == true}.count )
-        tableHeight.constant = CGFloat(rows / 2) * tableHeight.constant
+        print(attributes.name)
+        tableHeight.constant = CGFloat(attributes.name.count * 70 )
         tableView.reloadData()
         //plus anything else you want to accomplish
     }
