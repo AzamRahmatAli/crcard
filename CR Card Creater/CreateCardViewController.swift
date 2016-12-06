@@ -125,6 +125,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
             let dvc = segue.destinationViewController as! ViewController
             dvc.card = newCard
+            dvc.attributes = attributes
         }
         else if segue.identifier == "addAttribute"
         {
