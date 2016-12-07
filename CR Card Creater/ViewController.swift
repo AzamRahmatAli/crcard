@@ -101,7 +101,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.name.text = attributes.name[indexPath.row]
         cell.points.text = attributes.value[indexPath.row]
         cell.pointsd.text = attributes.value[indexPath.row]
-        //cell.img?.tintColor = Helper.colors[indexPath.row % 5]
+        
         return cell
     }
     
