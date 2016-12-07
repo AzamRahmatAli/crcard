@@ -55,8 +55,11 @@ class AttributesTableViewController: UITableViewController {
             
             cell.name.text = name[indexPath.row]
             
-            if !attributes.name.contains(name[indexPath.row])
+            if attributes.name.contains(name[indexPath.row])
             {
+                cell.addAttribute.image = UIImage(named: "attribute_selection_add_button_inactive")
+            }
+            else{
                 cell.addAttribute.image = UIImage(named: "attribute_selection_add_button")
             }
             
@@ -147,16 +150,77 @@ class AttributesTableViewController: UITableViewController {
         
         switch atrName
         {
-        case name[1],name[2], name[3], name[4], name[5], name[6], name[7], name[8], name[10], name[13],  name[14], name[15], name[6], name[17], name[18], name[19], name[20], name[21]  :
+            
+        case name[1],name[2], name[3], name[4], name[5], name[6], name[7], name[8], name[10], name[13],  name[14], name[15], name[16], name[17], name[18], name[19], name[20], name[21]  :
             
             getValue(index)
             
+        case name[9] :
+            
+            getOtherValue(index)
+            
+        case name[11] :
+            
+            getOtherValue(index)
+            
+            
+        case name[12] :
+            
+            getOtherValue(index)
+           
+            
+    
         default :
             break
         }
     }
     
-    
+    func getOtherValue(index : Int)
+    {
+        var values : [String] = []
+        
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Elixir Cost", preferredStyle: .ActionSheet)
+        if index == 9
+        {
+        values = ["Air", "Ground", "Air + Ground", "Buildings"]
+        }
+        else if index == 11
+        {
+        values = ["Very Slow", "Slow", "Medium", "Fast", "Very Fast"]
+        }
+        else if index == 12
+        {
+        values = ["Melee", "Range"]
+        }
+        for value in values
+        {
+            let Troop: UIAlertAction = UIAlertAction(title: value, style: .Default)
+            { action -> Void in
+                if value != "Melee"
+                {
+                self.attributes.name.append(self.name[index])
+                self.attributes.image.append(self.image[index])
+                
+                self.attributes.value.append(value)
+                     self.navigationController?.popViewControllerAnimated(true)
+                }
+                else{
+                   self.getValue(index)
+                }
+               
+                
+                
+            }
+            actionSheetControllerIOS8.addAction(Troop)
+            
+        }
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

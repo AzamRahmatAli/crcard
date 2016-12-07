@@ -186,12 +186,11 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         }
         
-        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
-        
         let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             
         }
         actionSheetControllerIOS8.addAction(cancelActionButton)
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
     }
     @IBAction func addImage(sender: UIButton) {
         //Create the AlertController and add Its action like button in Actionsheet
