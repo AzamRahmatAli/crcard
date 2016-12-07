@@ -11,8 +11,7 @@ import UIKit
 class AttributesTableViewController: UITableViewController {
     
     
-    let name : [String] = ["custom","Hitpoints","Shield Hitpoints", "Damage Per Second", "Damage", "Area Damage", "Death Damage", "Crown Tower Damage", "Hit Speed", "Targets", "Deploy Time", "Speed", "Range", "Duration", "Radius", "Lifetime" , "Stun Duration", "Spawn Speed", "Count", "Boost", "Rage Effect", "Freeze Duration"]
-    let image : [String] = ["custom","icons_stats_hitpoints","icons_stats_shield_hitpoints", "icons_stats_damage_per_second", "icons_stats_damage", "icons_stats_area_damage", "icons_stats_death_damage", "icons_stats_crown_tower_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_deploy_time", "icons_stats_speed", "icons_stats_range", "icons_stats_spawn_speed", "icons_stats_radius", "icons_stats_spawn_speed" , "icons_stats_freeze_duration", "icons_stats_spawn_speed", "icons_stats_count", "icons_stats_boost", "icons_stats_rage_effect", "icons_stats_freeze_duration"]
+   
     var attributes : Attributes!
     
     override func viewDidLoad() {
@@ -36,7 +35,7 @@ class AttributesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return name.count
+        return attributes.nameAll.count
     }
     /*override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
      return 80.0
@@ -51,11 +50,11 @@ class AttributesTableViewController: UITableViewController {
         if indexPath.row != 0
         {
             let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! CustomTableViewCell
-            cell.imgView.image = UIImage(named: image[indexPath.row])
+            cell.imgView.image = UIImage(named: attributes.imageAll[indexPath.row])
             
-            cell.name.text = name[indexPath.row]
+            cell.name.text = attributes.nameAll[indexPath.row]
             
-            if attributes.name.contains(name[indexPath.row])
+            if attributes.names.contains(attributes.nameAll[indexPath.row])
             {
                 cell.addAttribute.image = UIImage(named: "attribute_selection_add_button_inactive")
             }
@@ -82,146 +81,26 @@ class AttributesTableViewController: UITableViewController {
         
        
     }
-    func getValue(index : Int)
-    {
-        print(index)
-        let alert = UIAlertController(title: name[index],  message: "", preferredStyle: .Alert)
-        
-        //2. Add the text field. You can configure it however you need.
-        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-            textField.text = ""
-            textField.placeholder = "Value"
-            textField.keyboardType = UIKeyboardType.NumberPad
-        })
-        let saveAction = UIAlertAction(title: "Save",
-                                       style: .Default) { (action: UIAlertAction!) -> Void in
-                                        
-                                        let textField = alert.textFields![0] as UITextField
-                                        
-                                        if textField.text != ""
-                                        {
-                                            self.attributes.name.append(self.name[index])
-                                            self.attributes.image.append(self.image[index])
-                                            self.attributes.value.append(textField.text!)
-                                            self.navigationController?.popViewControllerAnimated(true)
-                                        }
-                                        else
-                                        {
-                                            
-                                        }
-        }
-        
-        saveAction.enabled = false
-        NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object:alert.textFields?[0],
-                                                                queue: NSOperationQueue.mainQueue()) {
-                                                                    (notification) -> Void in
-                                                                    
-                                                                    let textFieldValue = alert.textFields?[0]
-                                                                    
-                                                                    saveAction.enabled = !textFieldValue!.text!.isEmpty
-        }
-        
-        //3. Grab the value from the text field, and print it when the user clicks OK.
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
-        alert.addAction(saveAction)
-        // 4. Present the alert.
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
+    
     
     func buttonHandler(sender : UIButton)
     {
-        if attributes.name.contains( name[sender.tag])
+        if attributes.names.contains( attributes.nameAll[sender.tag])
         {
-            
+           print(sender.tag) 
         }
         else if sender.tag != 0
         {
-            getValueType(sender.tag)
+            attributes.getValueType(attributes.nameAll[ sender.tag], controller : self)
         }
         else{
             print(sender.tag)
         }
     }
     
-    func getValueType(index : Int)
-    {
-        let atrName = name[index]
-        
-        switch atrName
-        {
-            
-        case name[1],name[2], name[3], name[4], name[5], name[6], name[7], name[8], name[10], name[13],  name[14], name[15], name[16], name[17], name[18], name[19], name[20], name[21]  :
-            
-            getValue(index)
-            
-        case name[9] :
-            
-            getOtherValue(index)
-            
-        case name[11] :
-            
-            getOtherValue(index)
-            
-            
-        case name[12] :
-            
-            getOtherValue(index)
-           
-            
     
-        default :
-            break
-        }
-    }
     
-    func getOtherValue(index : Int)
-    {
-        var values : [String] = []
-        
-        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: "Elixir Cost", preferredStyle: .ActionSheet)
-        if index == 9
-        {
-        values = ["Air", "Ground", "Air + Ground", "Buildings"]
-        }
-        else if index == 11
-        {
-        values = ["Very Slow", "Slow", "Medium", "Fast", "Very Fast"]
-        }
-        else if index == 12
-        {
-        values = ["Melee", "Range"]
-        }
-        for value in values
-        {
-            let Troop: UIAlertAction = UIAlertAction(title: value, style: .Default)
-            { action -> Void in
-                if value != "Melee"
-                {
-                self.attributes.name.append(self.name[index])
-                self.attributes.image.append(self.image[index])
-                
-                self.attributes.value.append(value)
-                     self.navigationController?.popViewControllerAnimated(true)
-                }
-                else{
-                   self.getValue(index)
-                }
-               
-                
-                
-            }
-            actionSheetControllerIOS8.addAction(Troop)
-            
-        }
-        
-        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
-            
-        }
-        actionSheetControllerIOS8.addAction(cancelActionButton)
-        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
-    }
-    /*
+        /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.

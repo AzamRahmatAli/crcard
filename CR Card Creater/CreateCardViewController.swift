@@ -30,7 +30,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var elixirCost: UIImageView!
     
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
-    
+    var index = 0
     var newCard : Card!
     let attributes = Attributes()
    // var atrName : [String] = []
@@ -45,11 +45,15 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
         {
+            
         entity.rarity = "common"
         entity.type = "troop"
         entity.cost = "5"
-            newCard = entity
+        newCard = entity
+            
         }
+        
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CreateCardViewController.receivedDataNotification(_:)), name: "ReceivedData", object: nil)
         /*for (index, value) in attributes.attriutesAdded.enumerate()
         {
             if value
@@ -61,8 +65,16 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }*/
         //print(atrName)
         //print(atrImage)
-       reloadTable() 
-        // Do any additional setup after loading the view.
+              // Do any additional setup after loading the view.
+    }
+    func receivedDataNotification(object: AnyObject) {
+        let name = attributes.names.removeLast()
+        let image = attributes.images.removeLast()
+        let value = attributes.values.removeLast()
+        attributes.names[index] = name
+        attributes.images[index] = image
+        attributes.values[index] = value
+        reloadTable()
     }
     override func viewWillAppear(animated: Bool) {
         reloadTable()
@@ -234,26 +246,46 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return attributes.name.count
+        return attributes.names.count
     }
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! CustomTableViewCell
      
      // Configure the cell...
+        cell.deleteButton.tag = indexPath.row
+        cell.editButton.tag = indexPath.row
         
-            cell.imgView.image = UIImage(named: attributes.image[indexPath.row])
-            cell.name.text = attributes.name[indexPath.row]
-            cell.value.text = attributes.value[indexPath.row]
-         
-     
-     return cell
+        cell.deleteButton.addTarget(self, action: #selector(CreateCardViewController.deleteRow(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        cell.editButton.addTarget(self, action: #selector(CreateCardViewController.editRow(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+            cell.imgView.image = UIImage(named: attributes.images[indexPath.row])
+            cell.name.text = attributes.names[indexPath.row]
+            cell.value.text = attributes.values[indexPath.row]
+        
+        return cell
      }
+    func deleteRow(sender : UIButton)
+    {
+        attributes.names.removeAtIndex(sender.tag)
+        attributes.images.removeAtIndex(sender.tag)
+        attributes.values.removeAtIndex(sender.tag)
+        reloadTable()
+       
+    }
     
-    
+    func editRow(sender : UIButton)
+    {
+        index = sender.tag
+        self.attributes.getValueType(attributes.names[ sender.tag], controller : self)
+        
+        
+        
+    }
     func reloadTable() {
-        print(attributes.name)
-        tableHeight.constant = CGFloat(attributes.name.count * 70 )
+        print(attributes.names)
+        tableHeight.constant = CGFloat(attributes.names.count * 70 )
         tableView.reloadData()
         //plus anything else you want to accomplish
     }

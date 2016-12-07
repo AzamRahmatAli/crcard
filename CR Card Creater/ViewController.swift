@@ -83,7 +83,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 0
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return attributes.name.count
+        return attributes.names.count
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -97,10 +97,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         default:
             break
         }
-        cell.imageView.image = UIImage(named: attributes.image[indexPath.row])
-        cell.name.text = attributes.name[indexPath.row]
-        cell.points.text = attributes.value[indexPath.row]
-        cell.pointsd.text = attributes.value[indexPath.row]
+        cell.imageView.image = UIImage(named: attributes.images[indexPath.row])
+        cell.name.text = attributes.names[indexPath.row]
+        cell.points.text = attributes.values[indexPath.row]
+        cell.pointsd.text = attributes.values[indexPath.row]
         
         return cell
     }

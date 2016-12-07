@@ -15,6 +15,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var addAttribute: UIImageView!
 
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var addBtn: UIButton!
     @IBAction func testAction(sender: UIButton) {
         print(sender.tag)

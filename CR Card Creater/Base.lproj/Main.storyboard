@@ -186,7 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTn-2b-Hxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="378"/>
+            <point key="canvasLocation" x="1166" y="364"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -860,6 +860,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="deleteButton" destination="w3F-cK-sJd" id="6Zg-cD-rkO"/>
+                                                    <outlet property="editButton" destination="vJC-7t-CQI" id="2h5-y0-yWg"/>
                                                     <outlet property="imgView" destination="0mg-QJ-pxC" id="Sf0-ok-iB1"/>
                                                     <outlet property="name" destination="Tii-bQ-EPV" id="9ub-e7-fE3"/>
                                                     <outlet property="value" destination="rKr-xy-Mwr" id="mrA-7J-YCA"/>
