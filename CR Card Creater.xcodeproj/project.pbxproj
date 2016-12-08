@@ -19,6 +19,11 @@
 		F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */; };
 		F7ADDCC71DF59CCF00C106FA /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADDCC61DF59CCF00C106FA /* Attributes.swift */; };
 		F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */; };
+		F7E7CFA21DF92E5900A0C047 /* CardLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */; };
+		F7E7CFA61DF92F6E00A0C047 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */; };
+		F7E7CFA81DF9302700A0C047 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA71DF9302700A0C047 /* Helper.swift */; };
+		F7E7CFAC1DF932B400A0C047 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFAB1DF932B400A0C047 /* MenuTableViewController.swift */; };
+		F7E7CFAE1DF9335E00A0C047 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFAD1DF9335E00A0C047 /* Strings.swift */; };
 		F7FAA42D1DF40457004316BE /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA4291DF40457004316BE /* Card+CoreDataProperties.swift */; };
 		F7FAA42E1DF40457004316BE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA42A1DF40457004316BE /* Card.swift */; };
 		F7FAA42F1DF40457004316BE /* Attribute+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAA42B1DF40457004316BE /* Attribute+CoreDataProperties.swift */; };
@@ -40,6 +45,13 @@
 		F7ADDCC61DF59CCF00C106FA /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
+		F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLibraryViewController.swift; sourceTree = "<group>"; };
+		F7E7CFA31DF92F6D00A0C047 /* CR Card Creater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CR Card Creater-Bridging-Header.h"; sourceTree = "<group>"; };
+		F7E7CFA41DF92F6E00A0C047 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		F7E7CFA71DF9302700A0C047 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F7E7CFAB1DF932B400A0C047 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		F7E7CFAD1DF9335E00A0C047 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F7FAA4291DF40457004316BE /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F7FAA42A1DF40457004316BE /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F7FAA42B1DF40457004316BE /* Attribute+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attribute+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -87,12 +99,19 @@
 				F72269831DE838B4005DC76B /* Assets.xcassets */,
 				F72269851DE838B4005DC76B /* LaunchScreen.storyboard */,
 				F7730B751DE84DA30082EFC8 /* CustomCollectionViewCell.swift */,
+				F7E7CFA41DF92F6E00A0C047 /* SWRevealViewController.h */,
+				F7E7CFAB1DF932B400A0C047 /* MenuTableViewController.swift */,
+				F7E7CFA31DF92F6D00A0C047 /* CR Card Creater-Bridging-Header.h */,
+				F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */,
 				F72269881DE838B4005DC76B /* Info.plist */,
 				F72269801DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld */,
 				F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */,
 				F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */,
 				F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */,
 				F7ADDCC61DF59CCF00C106FA /* Attributes.swift */,
+				F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */,
+				F7E7CFA71DF9302700A0C047 /* Helper.swift */,
+				F7E7CFAD1DF9335E00A0C047 /* Strings.swift */,
 			);
 			path = "CR Card Creater";
 			sourceTree = "<group>";
@@ -170,14 +189,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E7CFA21DF92E5900A0C047 /* CardLibraryViewController.swift in Sources */,
 				F7FAA4301DF40457004316BE /* Attribute.swift in Sources */,
+				F7E7CFA81DF9302700A0C047 /* Helper.swift in Sources */,
 				F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */,
+				F7E7CFAC1DF932B400A0C047 /* MenuTableViewController.swift in Sources */,
 				F7FAA42D1DF40457004316BE /* Card+CoreDataProperties.swift in Sources */,
 				F7FAA42F1DF40457004316BE /* Attribute+CoreDataProperties.swift in Sources */,
 				F722697C1DE838B4005DC76B /* ViewController.swift in Sources */,
 				F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */,
+				F7E7CFA61DF92F6E00A0C047 /* SWRevealViewController.m in Sources */,
 				F72269821DE838B4005DC76B /* CR_Card_Creater.xcdatamodeld in Sources */,
 				F722697A1DE838B4005DC76B /* AppDelegate.swift in Sources */,
+				F7E7CFAE1DF9335E00A0C047 /* Strings.swift in Sources */,
 				F777E7881DF57C9D003F4960 /* AttributesTableViewController.swift in Sources */,
 				F7730B761DE84DA30082EFC8 /* CustomCollectionViewCell.swift in Sources */,
 				F7ADDCC71DF59CCF00C106FA /* Attributes.swift in Sources */,
@@ -296,11 +320,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CR Card Creater/CR Card Creater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -308,11 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CR Card Creater/CR Card Creater-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -42,6 +42,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        Helper.addMenuButton(self)
         
         if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
         {
@@ -77,6 +78,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         reloadTable()
     }
     override func viewWillAppear(animated: Bool) {
+     
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         reloadTable()
     }
     @IBAction func editRarity(sender: UIButton) {

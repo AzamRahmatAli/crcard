@@ -27,6 +27,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
      name1.text = card.name
         name2.text = card.name
         discription.text = card.detail
@@ -104,6 +106,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return cell
     }
-    
+   
 }
 

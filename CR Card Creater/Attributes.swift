@@ -23,13 +23,8 @@ class Attributes {
     
     func getValueType(name : String , controller : UIViewController)
     {
-        print(String(controller))
-       /* var atrName = nameAll[index]
-        if String(controller).containsString("CreateCardViewController")
-        {
-            atrName = names[index]
-
-        }*/
+       
+       
         switch name
         {
             
