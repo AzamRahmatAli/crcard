@@ -33,7 +33,6 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
-            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -205,7 +204,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-A1-Pwd">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-A1-Pwd">
                                 <rect key="frame" x="20" y="20" width="280" height="548"/>
                                 <color key="backgroundColor" red="0.383539672" green="0.42226688769999998" blue="0.51135345970000001" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="n1D-OX-Miv">
@@ -264,7 +263,7 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="OIy-Ya-MSr" firstAttribute="centerX" secondItem="vUX-IL-tso" secondAttribute="centerX" id="Npm-BT-f2i"/>
                                                                 <constraint firstAttribute="bottom" secondItem="OIy-Ya-MSr" secondAttribute="bottom" constant="9" id="n4M-wj-V1X"/>
@@ -274,41 +273,44 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktw-pY-eci">
                                                             <rect key="frame" x="1" y="0.0" width="162" height="24"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdn-Qd-J9R">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="gdn-Qd-J9R">
                                                                     <rect key="frame" x="0.0" y="0.0" width="162" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="shadowOffset" width="1" height="1"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jo-zX-Q6L">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="shadowOffset" width="-1" height="-1"/>
+                                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="1" green="0.50395868288590606" blue="1" alpha="0.24951508620689655" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="3Jo-zX-Q6L" firstAttribute="top" secondItem="Ktw-pY-eci" secondAttribute="top" id="57e-gJ-kK0"/>
-                                                                <constraint firstItem="3Jo-zX-Q6L" firstAttribute="leading" secondItem="Ktw-pY-eci" secondAttribute="leading" id="HAL-Nw-yiz"/>
                                                                 <constraint firstItem="gdn-Qd-J9R" firstAttribute="leading" secondItem="Ktw-pY-eci" secondAttribute="leading" id="HEV-7Y-esR"/>
-                                                                <constraint firstAttribute="trailing" secondItem="3Jo-zX-Q6L" secondAttribute="trailing" id="Mak-rs-tsr"/>
                                                                 <constraint firstAttribute="width" secondItem="Ktw-pY-eci" secondAttribute="height" multiplier="27:4" id="PZ3-NY-aQy"/>
                                                                 <constraint firstItem="gdn-Qd-J9R" firstAttribute="top" secondItem="Ktw-pY-eci" secondAttribute="top" id="TzR-ZJ-dzN"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gdn-Qd-J9R" secondAttribute="bottom" id="hN7-3G-GnI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gdn-Qd-J9R" secondAttribute="trailing" id="qMB-Y9-awb"/>
-                                                                <constraint firstAttribute="bottom" secondItem="3Jo-zX-Q6L" secondAttribute="bottom" id="vpF-7h-LoT"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOU-eL-TPp">
                                                             <rect key="frame" x="0.0" y="224" width="162" height="33"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_library_item_delete_button" translatesAutoresizingMaskIntoConstraints="NO" id="b0p-LU-sfa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="33"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-Gd-nLL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="33"/>
+                                                                </button>
+                                                            </subviews>
                                                             <color key="backgroundColor" red="1" green="0.50395868290000001" blue="1" alpha="0.24951508620000001" colorSpace="calibratedRGB"/>
                                                             <constraints>
+                                                                <constraint firstItem="Yuw-Gd-nLL" firstAttribute="top" secondItem="b0p-LU-sfa" secondAttribute="top" id="0I9-px-OmC"/>
+                                                                <constraint firstItem="b0p-LU-sfa" firstAttribute="top" secondItem="bOU-eL-TPp" secondAttribute="top" id="7Ed-Td-Dxa"/>
+                                                                <constraint firstItem="Yuw-Gd-nLL" firstAttribute="trailing" secondItem="b0p-LU-sfa" secondAttribute="trailing" id="9nO-IR-vI2"/>
                                                                 <constraint firstAttribute="width" secondItem="bOU-eL-TPp" secondAttribute="height" multiplier="54:11" id="QQo-mg-Edb"/>
+                                                                <constraint firstAttribute="bottom" secondItem="b0p-LU-sfa" secondAttribute="bottom" id="XJM-nw-QQU"/>
+                                                                <constraint firstItem="Yuw-Gd-nLL" firstAttribute="bottom" secondItem="b0p-LU-sfa" secondAttribute="bottom" id="ab7-oa-xS2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="b0p-LU-sfa" secondAttribute="trailing" id="cuz-9n-ln7"/>
+                                                                <constraint firstItem="Yuw-Gd-nLL" firstAttribute="leading" secondItem="b0p-LU-sfa" secondAttribute="leading" id="gNR-Fa-Yyh"/>
+                                                                <constraint firstItem="b0p-LU-sfa" firstAttribute="leading" secondItem="bOU-eL-TPp" secondAttribute="leading" id="kDi-2L-p9p"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Di9-bO-1nR">
@@ -316,7 +318,7 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68S-sS-CaC">
                                                                     <rect key="frame" x="0.0" y="0.0" width="162" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="6"/>
+                                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="7"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -358,15 +360,16 @@
                                         </view>
                                         <color key="backgroundColor" red="0.82786543219999997" green="0.8811756302" blue="0.88953148569999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="PmP-8n-Fff" secondAttribute="bottom" constant="-8" id="B8o-PN-ZgW"/>
-                                            <constraint firstItem="PmP-8n-Fff" firstAttribute="centerX" secondItem="qBU-EJ-NbB" secondAttribute="centerX" id="N64-pW-uSc"/>
-                                            <constraint firstItem="PmP-8n-Fff" firstAttribute="top" secondItem="qBU-EJ-NbB" secondAttribute="topMargin" constant="-8" id="j1f-Mx-VNe"/>
+                                            <constraint firstItem="PmP-8n-Fff" firstAttribute="leading" secondItem="qBU-EJ-NbB" secondAttribute="leadingMargin" constant="-8" id="12f-ua-ahm"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="PmP-8n-Fff" secondAttribute="trailing" constant="-8" id="8yh-b4-R50"/>
+                                            <constraint firstItem="PmP-8n-Fff" firstAttribute="centerY" secondItem="qBU-EJ-NbB" secondAttribute="centerY" id="Grv-sR-wFq"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="imageView" destination="o2o-nv-lAy" id="4WG-fb-Bzn"/>
+                                            <outlet property="costImage" destination="exZ-CL-cec" id="wcf-Aa-N7c"/>
+                                            <outlet property="deleteButton" destination="Yuw-Gd-nLL" id="EhS-Si-Wgx"/>
+                                            <outlet property="imageView" destination="wDO-he-Dg4" id="d1P-mv-oiI"/>
                                             <outlet property="name" destination="68S-sS-CaC" id="RxI-Tf-hRO"/>
                                             <outlet property="points" destination="gdn-Qd-J9R" id="Fry-IQ-Wv4"/>
-                                            <outlet property="pointsd" destination="3Jo-zX-Q6L" id="thL-Yu-r0p"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1305,7 +1308,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_logo" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dele" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
                                                     <rect key="frame" x="49" y="22" width="196" height="121"/>
                                                 </imageView>
                                             </subviews>
@@ -1521,9 +1524,11 @@
         <image name="card_creator_icon_overlay_legendary" width="350" height="422"/>
         <image name="card_creator_icon_overlay_normal" width="350" height="422"/>
         <image name="card_library_item_background" width="575" height="914"/>
+        <image name="card_library_item_delete_button" width="330" height="131"/>
         <image name="card_template" width="1080" height="1340"/>
         <image name="close_button" width="84" height="84"/>
         <image name="dark_blue_background" width="702" height="1248"/>
+        <image name="dele" width="144" height="144"/>
         <image name="edit_button" width="84" height="84"/>
         <image name="edit_card_icon_background" width="300" height="362"/>
         <image name="edit_card_icon_overlay_normal" width="320" height="386"/>
@@ -1535,7 +1540,6 @@
         <image name="edit_rarity_rare" width="507" height="121"/>
         <image name="edit_type_troop" width="507" height="121"/>
         <image name="elixir_5_icon" width="85" height="100"/>
-        <image name="home_logo" width="144" height="144"/>
         <image name="ic_functions" width="96" height="96"/>
         <image name="ic_info" width="96" height="96"/>
         <image name="ic_settings" width="96" height="96"/>

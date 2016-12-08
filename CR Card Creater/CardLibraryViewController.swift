@@ -25,7 +25,7 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
         var collectionViewSize = collectionView.frame.size
-        collectionViewSize.width = collectionViewSize.width/2.5 //Display Three elements in a row.
+        collectionViewSize.width = collectionViewSize.width/2.2 //Display Three elements in a row.
         collectionViewSize.height = collectionViewSize.height/2.5
         return collectionViewSize
     }
@@ -42,7 +42,7 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         return 0
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 20
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
