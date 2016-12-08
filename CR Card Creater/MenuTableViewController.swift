@@ -68,11 +68,12 @@ class MenuTableViewController: UITableViewController {
         }
         if(indexPath.row == 1)
         {
-            self.performSegueWithIdentifier("newcad", sender: nil)
+            self.performSegueWithIdentifier("newcard", sender: nil)
             switchColor(indexPath.row)
         }
         else if(indexPath.row == 2)
         {
+            self.performSegueWithIdentifier("cardlibrary", sender: nil)
             switchColor(indexPath.row)
             
         }
