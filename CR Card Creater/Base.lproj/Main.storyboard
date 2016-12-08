@@ -46,7 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWn-5J-2sr" id="Ndn-sK-Ug4">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -106,7 +106,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="169" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="105" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfq-G5-mUt" id="YY5-i8-M2R">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -688,6 +688,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Y1-vn-Vdz" secondAttribute="bottom" id="qDZ-AP-jqW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6ca-PG-aWd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="0vh-WQ-5Cz">
+                            <connections>
+                                <action selector="editCard:" destination="BYZ-38-t0r" id="LN1-AR-Rpc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="border" destination="Ah6-NS-Mpp" id="Az8-HE-xDO"/>
@@ -697,11 +704,12 @@
                         <outlet property="name2" destination="Inu-OE-IL7" id="0lf-3v-Hcs"/>
                         <outlet property="number" destination="ql2-1h-jLB" id="6PI-aW-Wap"/>
                         <outlet property="rarity" destination="1cv-Mj-O1Z" id="o96-6A-yK9"/>
+                        <segue destination="AHk-Fg-PTx" kind="show" identifier="editcard" id="Z0w-00-txi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="363"/>
+            <point key="canvasLocation" x="1171" y="382"/>
         </scene>
         <!--Create Card View Controller-->
         <scene sceneID="aPu-Hc-b2J">
@@ -715,7 +723,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="999"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
                                 <rect key="frame" x="0.0" y="8" width="320" height="991"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc3-gG-sPW">
@@ -1550,5 +1558,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sev-eT-XbJ"/>
+        <segue reference="Z0w-00-txi"/>
     </inferredMetricsTieBreakers>
 </document>

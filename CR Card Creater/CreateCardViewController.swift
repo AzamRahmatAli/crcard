@@ -32,7 +32,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var index = 0
     var newCard : Card!
-    let attributes = Attributes()
+    var attributes = Attributes()
    // var atrName : [String] = []
     //var atrImage: [String] = []
     //var value : [String] = ["500", "150", "1.5sec", "Ground", "5"]

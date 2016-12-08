@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Helper.addMenuButton(self)
         
      name1.text = card.name
         name2.text = card.name
@@ -41,30 +41,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             border.image = UIImage(named: "card_creator_icon_overlay_normal")
         }
         number.image = UIImage(named: "elixir_" + String(card.cost!) + "_icon")
-        /*
-        if card.rarity == "common"
-        {
-            
-        }
-        else if card.rarity == "rare"
-        {
-            
-        }
-        else if card.rarity == "epic"
-        {
-            
-        }
-        else if card.rarity == "legendary"
-        {
-            
-        }*/
-        
-        
-        
+         
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    @IBAction func editCard(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("editcard", sender: nil)
+    }
   
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editcard"
+        {
+            let dvc = segue.destinationViewController as! CreateCardViewController
+            dvc.attributes = attributes
+            dvc.newCard = card
+ 
+        }
+    }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
         var collectionViewSize = collectionView.frame.size
