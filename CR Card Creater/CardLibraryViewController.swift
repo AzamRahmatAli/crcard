@@ -7,14 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class CardLibraryViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    var card : Card!
+    var attributes : Attributes = Attributes()
+    var cards : [Card]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Helper.addMenuButton(self)
         // Do any additional setup after loading the view.
+      
+        do{
+            let request = NSFetchRequest(entityName: "Card")
+            
+            
+            let queryResult = try managedObjectContext?.executeFetchRequest(request) as! [Card]
+            cards = queryResult
+                        
+        }
+        catch let error {
+            print("error : ", error)
+        }
+
     }
     override func viewWillAppear(animated: Bool) {
         
@@ -22,6 +40,17 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         
     }
     
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "displaycard"
+    {
+        let dvc = segue.destinationViewController as! ViewController
+        dvc.attributes = attributes
+        dvc.card = card
+        
+    }
+}
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
         var collectionViewSize = collectionView.frame.size
@@ -29,9 +58,20 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         collectionViewSize.height = collectionViewSize.height/2.5
         return collectionViewSize
     }
-    
-    
-    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        attributes.names = []
+        attributes.images = []
+        attributes.values = []
+        card = cards[indexPath.row]
+        for attribute in card.attributes?.allObjects as! [Attribute]
+        {
+            attributes.names.append(attribute.name!)
+            attributes.images.append(attribute.image!)
+            attributes.values.append(attribute.value!)
+        }
+        performSegueWithIdentifier("displaycard", sender: nil)
+    }
+   
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 15
@@ -42,13 +82,17 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         return 0
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return cards?.count ?? 0
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
+         cell.dp.image = UIImage(data: cards[indexPath.row].dp!)
+            cell.costImage.image = UIImage(named: cards![indexPath.row].cost!)
+            
+            cell.name.text = cards[indexPath.row].name
         
         
         return cell

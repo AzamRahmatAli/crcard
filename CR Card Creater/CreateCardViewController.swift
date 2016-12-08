@@ -43,14 +43,28 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         imagePicker.delegate = self
         Helper.addMenuButton(self)
-        
+        if newCard == nil
+        {
         if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
         {
             
-        entity.rarity = "common"
+        entity.rarity = "rare"
         entity.type = "troop"
         entity.cost = "5"
         newCard = entity
+            
+            }
+            
+        }
+        else
+        {
+            cardName.text = newCard.name
+            discription.text = newCard.detail
+            userImage.image = UIImage(data:  newCard.dp!)
+            rarity.image = UIImage(named: newCard.rarity!)
+            type.image = UIImage(named: newCard.type!)
+            elixirCost.image = UIImage(named: newCard.cost!)
+            changeRarity(newCard.rarity!)
             
         }
         
@@ -238,6 +252,28 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     @IBAction func CreateUpdate(sender: UIButton) {
         newCard.name = cardName.text
         newCard.detail = discription.text
+        
+        for  (index, name) in attributes.names.enumerate()
+        {
+            if let entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
+            {
+                
+                entity.name = name
+                entity.value = attributes.values[index]
+                entity.image = attributes.images[index]
+                entity.card = newCard
+               
+            }
+        }
+        
+        do
+        {
+            try  managedObjectContext?.save()
+        }
+        catch let error
+        {
+            print(error)
+        }
         performSegueWithIdentifier("createCard", sender: nil)
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -269,6 +305,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
      }
+    
     func deleteRow(sender : UIButton)
     {
         attributes.names.removeAtIndex(sender.tag)

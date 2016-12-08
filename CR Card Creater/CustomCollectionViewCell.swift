@@ -16,6 +16,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pointsd: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
+    @IBOutlet weak var dp: UIImageView!
     @IBOutlet weak var costImage: UIImageView!
     /*override func awakeFromNib() {
         imageView.layer.shadowColor = UIColor.blackColor().CGColor

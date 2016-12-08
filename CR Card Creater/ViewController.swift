@@ -24,6 +24,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var card : Card!
     var attributes : Attributes!
+    var nevigationFromNewCard = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         name2.text = card.name
         discription.text = card.detail
         dp.image = UIImage(data: card.dp!)
-        
-        
         rarity.image = UIImage(named: "label_" + card.rarity! + "_" + card.type!)
         if card.rarity != "legendary"
         {
@@ -46,13 +46,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewWillAppear(animated: Bool) {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+    
     @IBAction func editCard(sender: UIBarButtonItem) {
+        if nevigationFromNewCard
+        {
+            navigationController?.popViewControllerAnimated(true)
+        }
+        else
+        {
+            
         performSegueWithIdentifier("editcard", sender: nil)
+        }
     }
   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "editcard"
         {
+          
+
             let dvc = segue.destinationViewController as! CreateCardViewController
             dvc.attributes = attributes
             dvc.newCard = card
