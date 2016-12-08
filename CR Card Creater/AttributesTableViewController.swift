@@ -47,8 +47,8 @@ class AttributesTableViewController: UITableViewController {
         
         
         
-        if indexPath.row != 0
-        {
+        /*if indexPath.row != 0
+        {*/
             let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! CustomTableViewCell
             cell.imgView.image = UIImage(named: attributes.imageAll[indexPath.row])
             
@@ -65,13 +65,13 @@ class AttributesTableViewController: UITableViewController {
             cell.addBtn.addTarget(self, action: #selector(AttributesTableViewController.buttonHandler(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             cell.addBtn.tag = indexPath.row
              return cell
-        }
+        /*}
         else{
             
             let cell = tableView.dequeueReusableCellWithIdentifier("customCell", forIndexPath: indexPath) as! CustomTableViewCell
             cell.addBtn.addTarget(self, action: #selector(AttributesTableViewController.buttonHandler(_:)), forControlEvents: UIControlEvents.TouchUpInside)
              return cell
-        }
+        }*/
         
         
         
@@ -89,13 +89,11 @@ class AttributesTableViewController: UITableViewController {
         {
            print(sender.tag) 
         }
-        else if sender.tag != 0
+        else //if sender.tag != 0
         {
             attributes.getValueType(attributes.nameAll[ sender.tag], controller : self)
         }
-        else{
-            print(sender.tag)
-        }
+        
     }
     
     

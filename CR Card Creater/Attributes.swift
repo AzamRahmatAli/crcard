@@ -15,9 +15,9 @@ class Attributes {
      
     var names : [String] = ["Hitpoints", "Damage", "Hit Speed", "Targets", "Range"]
     var images : [String] = ["icons_stats_hitpoints", "icons_stats_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_range"]
-    var values : [String] = ["500", "150", "1.5sec", "Ground", "5"]
-     let nameAll : [String] = ["custom","Hitpoints","Shield Hitpoints", "Damage Per Second", "Damage", "Area Damage", "Death Damage", "Crown Tower Damage", "Hit Speed", "Targets", "Deploy Time", "Speed", "Range", "Duration", "Radius", "Lifetime" , "Stun Duration", "Spawn Speed", "Count", "Boost", "Rage Effect", "Freeze Duration"]
-     let imageAll : [String] = ["custom","icons_stats_hitpoints","icons_stats_shield_hitpoints", "icons_stats_damage_per_second", "icons_stats_damage", "icons_stats_area_damage", "icons_stats_death_damage", "icons_stats_crown_tower_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_deploy_time", "icons_stats_speed", "icons_stats_range", "icons_stats_spawn_speed", "icons_stats_radius", "icons_stats_spawn_speed" , "icons_stats_freeze_duration", "icons_stats_spawn_speed", "icons_stats_count", "icons_stats_boost", "icons_stats_rage_effect", "icons_stats_freeze_duration"]
+    var values : [String] = ["500", "150", "1.5", "Ground", "5"]
+     let nameAll : [String] = ["Hitpoints","Shield Hitpoints", "Damage Per Second", "Damage", "Area Damage", "Death Damage", "Crown Tower Damage", "Hit Speed", "Targets", "Deploy Time", "Speed", "Range", "Duration", "Radius", "Lifetime" , "Stun Duration", "Spawn Speed", "Count", "Boost", "Rage Effect", "Freeze Duration"]
+     let imageAll : [String] = ["icons_stats_hitpoints","icons_stats_shield_hitpoints", "icons_stats_damage_per_second", "icons_stats_damage", "icons_stats_area_damage", "icons_stats_death_damage", "icons_stats_crown_tower_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_deploy_time", "icons_stats_speed", "icons_stats_range", "icons_stats_spawn_speed", "icons_stats_radius", "icons_stats_spawn_speed" , "icons_stats_freeze_duration", "icons_stats_spawn_speed", "icons_stats_count", "icons_stats_boost", "icons_stats_rage_effect", "icons_stats_freeze_duration"]
     
     
     
@@ -33,11 +33,11 @@ class Attributes {
         switch name
         {
             
-        case nameAll[1],nameAll[2], nameAll[3], nameAll[4], nameAll[5], nameAll[6], nameAll[7], nameAll[8], nameAll[10], nameAll[13],  nameAll[14], nameAll[15], nameAll[16], nameAll[17], nameAll[18], nameAll[19], nameAll[20], nameAll[21]  :
+        case nameAll[1],nameAll[2], nameAll[3], nameAll[4], nameAll[5], nameAll[6], nameAll[7], nameAll[9], nameAll[12], nameAll[13],  nameAll[14], nameAll[15], nameAll[16], nameAll[17], nameAll[18], nameAll[19], nameAll[20], nameAll[0]  :
             
             getValue(name,  controller: controller)
             
-        case nameAll[9], nameAll[11], nameAll[12] :
+        case nameAll[8], nameAll[10], nameAll[11] :
             
             getOtherValue(name, controller: controller)
             
@@ -54,15 +54,15 @@ class Attributes {
         var values : [String] = []
         
         let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "", message: name, preferredStyle: .ActionSheet)
-        if name == nameAll[9]
+        if name == nameAll[8]
         {
             values = ["Air", "Ground", "Air + Ground", "Buildings"]
         }
-        else if name == nameAll[11]
+        else if name == nameAll[10]
         {
             values = ["Very Slow", "Slow", "Medium", "Fast", "Very Fast"]
         }
-        else if name == nameAll[12]
+        else if name == nameAll[11]
         {
             values = ["Melee", "Range"]
         }
