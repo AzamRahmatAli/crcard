@@ -16,8 +16,33 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     var attributes : Attributes = Attributes()
     var cards : [Card]!
     
+    @IBAction func deleteCard(sender: UIButton) {
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let fetchRequest = NSFetchRequest(entityName: "Card")
+        do {
+        let cards = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [Card]
+        
+        // Then you can use your properties.
+        
+        for card in cards {
+            
+            if card.objectID.temporaryID
+            {
+                print(card.objectID.temporaryID)
+                self.managedObjectContext!.deleteObject(card)
+            }
+   
+            
+        }
+        } catch let error as NSError {
+            print("Could not fetch \(error)")
+        }
         Helper.addMenuButton(self)
         // Do any additional setup after loading the view.
       

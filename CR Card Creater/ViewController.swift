@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         Helper.addMenuButton(self)
         
-     name1.text = card.name
+        name1.text = card.name
         name2.text = card.name
         discription.text = card.detail
         dp.image = UIImage(data: card.dp!)

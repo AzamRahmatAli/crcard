@@ -46,7 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWn-5J-2sr" id="Ndn-sK-Ug4">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -106,7 +106,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="169" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="105" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfq-G5-mUt" id="YY5-i8-M2R">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -281,7 +281,7 @@
                                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="1" green="0.50395868288590606" blue="1" alpha="0.24951508620689655" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="gdn-Qd-J9R" firstAttribute="leading" secondItem="Ktw-pY-eci" secondAttribute="leading" id="HEV-7Y-esR"/>
                                                                 <constraint firstAttribute="width" secondItem="Ktw-pY-eci" secondAttribute="height" multiplier="27:4" id="PZ3-NY-aQy"/>
@@ -299,11 +299,21 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-Gd-nLL">
                                                                     <rect key="frame" x="0.0" y="0.0" width="162" height="33"/>
                                                                 </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEH-1K-7KC">
+                                                                    <rect key="frame" x="8" y="8" width="146" height="17"/>
+                                                                    <connections>
+                                                                        <action selector="deleteCard:" destination="vM8-Cl-Kn6" eventType="touchUpInside" id="iTz-Cg-2lm"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="1" green="0.50395868290000001" blue="1" alpha="0.24951508620000001" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="Yuw-Gd-nLL" firstAttribute="top" secondItem="b0p-LU-sfa" secondAttribute="top" id="0I9-px-OmC"/>
+                                                                <constraint firstItem="OEH-1K-7KC" firstAttribute="top" secondItem="bOU-eL-TPp" secondAttribute="topMargin" id="1ok-ic-zEw"/>
+                                                                <constraint firstItem="OEH-1K-7KC" firstAttribute="centerX" secondItem="Yuw-Gd-nLL" secondAttribute="centerX" id="52I-Iv-Wod"/>
                                                                 <constraint firstItem="b0p-LU-sfa" firstAttribute="top" secondItem="bOU-eL-TPp" secondAttribute="top" id="7Ed-Td-Dxa"/>
+                                                                <constraint firstItem="OEH-1K-7KC" firstAttribute="centerY" secondItem="b0p-LU-sfa" secondAttribute="centerY" id="7SR-W6-hQK"/>
+                                                                <constraint firstItem="OEH-1K-7KC" firstAttribute="leading" secondItem="bOU-eL-TPp" secondAttribute="leadingMargin" id="879-c5-hsX"/>
                                                                 <constraint firstItem="Yuw-Gd-nLL" firstAttribute="trailing" secondItem="b0p-LU-sfa" secondAttribute="trailing" id="9nO-IR-vI2"/>
                                                                 <constraint firstAttribute="width" secondItem="bOU-eL-TPp" secondAttribute="height" multiplier="54:11" id="QQo-mg-Edb"/>
                                                                 <constraint firstAttribute="bottom" secondItem="b0p-LU-sfa" secondAttribute="bottom" id="XJM-nw-QQU"/>
@@ -323,7 +333,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.8872534983" green="0.89731570510000003" blue="0.0" alpha="0.36150323280000002" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="68S-sS-CaC" firstAttribute="top" secondItem="Di9-bO-1nR" secondAttribute="top" id="7SL-ln-6Wu"/>
                                                                 <constraint firstItem="68S-sS-CaC" firstAttribute="leading" secondItem="Di9-bO-1nR" secondAttribute="leading" id="RDv-xo-0ko"/>
@@ -358,7 +368,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.82786543219999997" green="0.8811756302" blue="0.88953148569999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="PmP-8n-Fff" firstAttribute="leading" secondItem="qBU-EJ-NbB" secondAttribute="leadingMargin" constant="-8" id="12f-ua-ahm"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="PmP-8n-Fff" secondAttribute="trailing" constant="-8" id="8yh-b4-R50"/>
@@ -723,7 +733,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="999"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
                                 <rect key="frame" x="0.0" y="8" width="320" height="991"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc3-gG-sPW">
@@ -992,7 +1002,6 @@
                                         <rect key="frame" x="8" y="640" width="304" height="50"/>
                                         <connections>
                                             <action selector="addAttribute:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="R9h-aj-FJK"/>
-                                            <segue destination="bFc-7u-jde" kind="show" identifier="addAttribute" id="QRn-cy-QgA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNo-w4-he4">
@@ -1240,6 +1249,7 @@
                     <size key="freeformSize" width="320" height="999"/>
                     <connections>
                         <outlet property="addAttribute" destination="Yf7-8F-dzV" id="RYX-ew-rC8"/>
+                        <outlet property="addAttributeImg" destination="lDn-9q-CLH" id="lvt-Er-toD"/>
                         <outlet property="border" destination="Ty0-19-GLd" id="0wU-Ew-0bM"/>
                         <outlet property="cardName" destination="Lmc-3J-hjx" id="8v3-kz-XSI"/>
                         <outlet property="createUpdate" destination="nvF-66-Okg" id="V9g-jB-dKP"/>
@@ -1253,11 +1263,12 @@
                         <outlet property="typeBackground" destination="MbR-bQ-g61" id="eXZ-gY-4E0"/>
                         <outlet property="userImage" destination="5Bm-UQ-ehE" id="tcs-rM-MBt"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="createCard" id="DmO-SD-q7C"/>
+                        <segue destination="bFc-7u-jde" kind="show" identifier="addAttribute" id="7bA-Lh-2Pi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCA-GZ-h9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="219.5"/>
+            <point key="canvasLocation" x="1726" y="219.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KuT-mt-ec4">
@@ -1558,7 +1569,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sev-eT-XbJ"/>
-        <segue reference="weF-ch-ngS"/>
+        <segue reference="DmO-SD-q7C"/>
         <segue reference="Z0w-00-txi"/>
     </inferredMetricsTieBreakers>
 </document>

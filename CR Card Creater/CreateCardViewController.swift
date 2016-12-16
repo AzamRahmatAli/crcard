@@ -28,11 +28,13 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var type: UIImageView!
     @IBOutlet weak var typeBackground: UIImageView!
     @IBOutlet weak var elixirCost: UIImageView!
+    @IBOutlet weak var addAttributeImg: UIImageView!
     
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var index = 0
     var newCard : Card!
     var attributes = Attributes()
+
    // var atrName : [String] = []
     //var atrImage: [String] = []
     //var value : [String] = ["500", "150", "1.5sec", "Ground", "5"]
@@ -47,7 +49,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
         if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
         {
-            
+           
         entity.rarity = "rare"
         entity.type = "troop"
         entity.cost = "5"
@@ -58,13 +60,15 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
         else
         {
+            createUpdate.image = UIImage(named: "edit_layout_update_button")
             cardName.text = newCard.name
             discription.text = newCard.detail
             userImage.image = UIImage(data:  newCard.dp!)
-            rarity.image = UIImage(named: newCard.rarity!)
-            type.image = UIImage(named: newCard.type!)
-            elixirCost.image = UIImage(named: newCard.cost!)
+            //rarity.image = UIImage(named: newCard.rarity!)
+            //type.image = UIImage(named: newCard.type!)
+            elixirCost.image = UIImage(named: "elixir_" + String(newCard.cost!) + "_icon")
             changeRarity(newCard.rarity!)
+            changeType(newCard.type!)
             
         }
         
@@ -82,6 +86,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         //print(atrImage)
               // Do any additional setup after loading the view.
     }
+
     func receivedDataNotification(object: AnyObject) {
         let name = attributes.names.removeLast()
         let image = attributes.images.removeLast()
@@ -94,6 +99,10 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(animated: Bool) {
      
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        if attributes.names.count >= 12
+        {
+            addAttributeImg.image = UIImage(named: "edit_layout_add_attribute_button_inactive")
+        }
         reloadTable()
     }
     @IBAction func editRarity(sender: UIButton) {
@@ -170,23 +179,21 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         let Troop: UIAlertAction = UIAlertAction(title: "Troop", style: .Default)
         { action -> Void in
-            self.newCard.type = "troop"
-            self.type.image = UIImage(named: "edit_type_troop")
-           
+            
+            self.changeType("troop")
         }
         actionSheetControllerIOS8.addAction(Troop)
         
         let Building: UIAlertAction = UIAlertAction(title: "Building", style: .Default)
         { action -> Void in
-            self.newCard.type = "building"
-            self.type.image = UIImage(named: "edit_type_building")
+            
+            self.changeType("building")
         }
         actionSheetControllerIOS8.addAction(Building)
         let Spell: UIAlertAction = UIAlertAction(title: "Spell", style: .Default)
         { action -> Void in
             
-            self.newCard.type = "spell"
-            self.type.image = UIImage(named: "edit_type_spell")
+           self.changeType("spell")
         }
         actionSheetControllerIOS8.addAction(Spell)
         
@@ -197,6 +204,11 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
             
         }
         actionSheetControllerIOS8.addAction(cancelActionButton)
+    }
+    func changeType(type : String)
+    {
+        self.newCard.type = type
+        self.type.image = UIImage(named: "edit_type_" + type )
     }
 
     @IBAction func costEdit(sender: UIButton) {
@@ -247,6 +259,11 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func addAttribute(sender: UIButton) {
+        if attributes.names.count < 12
+        {
+            performSegueWithIdentifier("addAttribute", sender: self)
+        }
+       
     }
     
     @IBAction func CreateUpdate(sender: UIButton) {
@@ -255,7 +272,13 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
         for  (index, name) in attributes.names.enumerate()
         {
-            if let entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
+            
+            
+            if let _ = Attribute.attribute(name, inManagedObjectContext: managedObjectContext!)
+            {
+                
+            }
+            else if let entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
             {
                 
                 entity.name = name
@@ -326,6 +349,10 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func reloadTable() {
         print(attributes.names)
         tableHeight.constant = CGFloat(attributes.names.count * 70 )
+        if attributes.names.count < 12
+        {
+        addAttributeImg.image = UIImage(named: "edit_layout_add_attribute_button")
+        }
         tableView.reloadData()
         //plus anything else you want to accomplish
     }
@@ -361,4 +388,5 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         newCard.dp = UIImageJPEGRepresentation(self.userImage.image!, 1.0)//back by UIImage(data: imageData)
         //}
     }
+    
 }
