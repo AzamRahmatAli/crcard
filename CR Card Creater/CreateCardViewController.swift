@@ -49,7 +49,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
         if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
         {
-           
+        entity.date = NSDate()
         entity.rarity = "rare"
         entity.type = "troop"
         entity.cost = "5"
@@ -304,7 +304,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         {
             
             
-            if let _ = Attribute.attribute(name, inManagedObjectContext: managedObjectContext!)
+            if let _ = Attribute.attribute(name,objectID : newCard.objectID, inManagedObjectContext: managedObjectContext!)
             {
                 
             }

@@ -16,9 +16,7 @@ class MenuTableViewController: UITableViewController {
    // @IBOutlet weak var cellAsButton: UIButton!
     
     @IBOutlet weak var appName: UILabel!
-    @IBOutlet weak var help: UIImageView!
-    
-    @IBOutlet weak var setting: UIImageView!
+
   
     @IBOutlet weak var dashBoard: UIImageView!
     @IBOutlet weak var quickSummary: UIImageView!
@@ -40,8 +38,8 @@ class MenuTableViewController: UITableViewController {
     {
         dashBoard.tintColor = UIColor.lightGrayColor()
         quickSummary.tintColor = UIColor.lightGrayColor()
-        setting.tintColor = UIColor.lightGrayColor()
-        help.tintColor = UIColor.lightGrayColor()
+        //setting.tintColor = UIColor.lightGrayColor()
+        //help.tintColor = UIColor.lightGrayColor()
         if index == 1
         {
             dashBoard.tintColor = Helper.colors[0]//UIColor(red: 0, green : 0.478431, blue: 1 , alpha: 1)
@@ -51,11 +49,11 @@ class MenuTableViewController: UITableViewController {
         }
         else if index == 3
         {
-           setting.tintColor = Helper.colors[0]
+           //setting.tintColor = Helper.colors[0]
         }
         else if index == 4
         {
-          help.tintColor = Helper.colors[0]
+          //help.tintColor = Helper.colors[0]
         }
     }
    

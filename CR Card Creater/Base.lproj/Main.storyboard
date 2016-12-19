@@ -33,6 +33,9 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -373,6 +376,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="costImage" destination="exZ-CL-cec" id="wcf-Aa-N7c"/>
+                                            <outlet property="dateCreated" destination="68S-sS-CaC" id="Hbr-bM-MGk"/>
                                             <outlet property="deleteButton" destination="OEH-1K-7KC" id="D5A-wG-4gD"/>
                                             <outlet property="dp" destination="wDO-he-Dg4" id="zt8-sk-hxf"/>
                                             <outlet property="name" destination="gdn-Qd-J9R" id="v2g-GZ-lgT"/>
@@ -1301,7 +1305,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="OkV-6E-YMe">
-                            <rect key="frame" x="0.0" y="406" width="320" height="0.0"/>
+                            <rect key="frame" x="0.0" y="300" width="320" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -1315,18 +1319,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyBudget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-YR-f8G">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dele" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
+                                                    <rect key="frame" x="49" y="22" width="196" height="121"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRCard Creater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-YR-f8G">
                                                     <rect key="frame" x="49" y="151" width="196" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="fCV-He-kxf"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dele" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
-                                                    <rect key="frame" x="49" y="22" width="196" height="121"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TDR-bv-m08" firstAttribute="trailing" secondItem="OBB-YR-f8G" secondAttribute="trailing" id="6aK-GF-Zl6"/>
@@ -1352,9 +1356,9 @@
                                                         <constraint firstAttribute="width" constant="30" id="CSc-Ys-FyY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-4G-SFh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-4G-SFh">
                                                     <rect key="frame" x="46" y="8" width="266" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1377,18 +1381,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-c4-dEX">
-                                                    <rect key="frame" x="46" y="8" width="266" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_functions" translatesAutoresizingMaskIntoConstraints="NO" id="MFG-9E-kdE">
                                                     <rect key="frame" x="8" y="8" width="30" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="J3P-oJ-GFn"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-c4-dEX">
+                                                    <rect key="frame" x="46" y="8" width="266" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MFG-9E-kdE" firstAttribute="bottom" secondItem="HZj-Tw-fUy" secondAttribute="bottomMargin" id="0Bs-3p-ck5"/>
@@ -1398,68 +1402,6 @@
                                                 <constraint firstItem="MFG-9E-kdE" firstAttribute="top" secondItem="ag7-c4-dEX" secondAttribute="top" id="WKU-S5-0zu"/>
                                                 <constraint firstItem="ag7-c4-dEX" firstAttribute="leading" secondItem="MFG-9E-kdE" secondAttribute="trailing" constant="8" symbolic="YES" id="e45-bO-9d4"/>
                                                 <constraint firstItem="MFG-9E-kdE" firstAttribute="top" secondItem="HZj-Tw-fUy" secondAttribute="topMargin" id="uAA-fA-Exo"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="53" id="gJF-Yf-jgH">
-                                        <rect key="frame" x="0.0" y="300" width="320" height="53"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gJF-Yf-jgH" id="xX9-ib-yJO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_settings" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-9B-UEF">
-                                                    <rect key="frame" x="8" y="8" width="30" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="ulG-um-ftp"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVh-WQ-d39">
-                                                    <rect key="frame" x="46" y="8" width="266" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NuK-9B-UEF" firstAttribute="top" secondItem="xX9-ib-yJO" secondAttribute="topMargin" id="8Rw-C6-jkQ"/>
-                                                <constraint firstItem="NuK-9B-UEF" firstAttribute="top" secondItem="oVh-WQ-d39" secondAttribute="top" id="JaE-9Q-Qbm"/>
-                                                <constraint firstItem="oVh-WQ-d39" firstAttribute="trailing" secondItem="xX9-ib-yJO" secondAttribute="trailingMargin" id="Uw0-7R-uhv"/>
-                                                <constraint firstItem="NuK-9B-UEF" firstAttribute="bottom" secondItem="xX9-ib-yJO" secondAttribute="bottomMargin" id="ZZY-4h-jAE"/>
-                                                <constraint firstItem="oVh-WQ-d39" firstAttribute="leading" secondItem="NuK-9B-UEF" secondAttribute="trailing" constant="8" symbolic="YES" id="bf9-JA-BMY"/>
-                                                <constraint firstItem="NuK-9B-UEF" firstAttribute="leading" secondItem="xX9-ib-yJO" secondAttribute="leadingMargin" id="f6f-aT-y6E"/>
-                                                <constraint firstItem="NuK-9B-UEF" firstAttribute="bottom" secondItem="oVh-WQ-d39" secondAttribute="bottom" id="hzt-3B-Fsf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="53" id="Drd-45-9a1">
-                                        <rect key="frame" x="0.0" y="353" width="320" height="53"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Drd-45-9a1" id="5h7-sV-il1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_info" translatesAutoresizingMaskIntoConstraints="NO" id="OPc-KJ-nE4">
-                                                    <rect key="frame" x="8" y="8" width="30" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="rU4-FX-Ek0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-Zj-pHu">
-                                                    <rect key="frame" x="46" y="8" width="266" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="OPc-KJ-nE4" firstAttribute="top" secondItem="5h7-sV-il1" secondAttribute="topMargin" id="8pR-Ru-Cci"/>
-                                                <constraint firstItem="9wR-Zj-pHu" firstAttribute="trailing" secondItem="5h7-sV-il1" secondAttribute="trailingMargin" id="DXz-eY-S72"/>
-                                                <constraint firstItem="OPc-KJ-nE4" firstAttribute="bottom" secondItem="9wR-Zj-pHu" secondAttribute="bottom" id="IWJ-sX-MZP"/>
-                                                <constraint firstItem="OPc-KJ-nE4" firstAttribute="bottom" secondItem="5h7-sV-il1" secondAttribute="bottomMargin" id="OiQ-fU-8ai"/>
-                                                <constraint firstItem="OPc-KJ-nE4" firstAttribute="leading" secondItem="5h7-sV-il1" secondAttribute="leadingMargin" id="PBG-to-Ou4"/>
-                                                <constraint firstItem="OPc-KJ-nE4" firstAttribute="top" secondItem="9wR-Zj-pHu" secondAttribute="top" id="RrJ-1p-Fny"/>
-                                                <constraint firstItem="9wR-Zj-pHu" firstAttribute="leading" secondItem="OPc-KJ-nE4" secondAttribute="trailing" constant="8" symbolic="YES" id="k3k-SP-8Z3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1475,9 +1417,7 @@
                     <connections>
                         <outlet property="appName" destination="OBB-YR-f8G" id="KvN-BW-Gfq"/>
                         <outlet property="dashBoard" destination="SZl-oq-do2" id="nnb-xY-S1l"/>
-                        <outlet property="help" destination="OPc-KJ-nE4" id="tMp-PY-C4Q"/>
                         <outlet property="quickSummary" destination="MFG-9E-kdE" id="zXD-BJ-wxl"/>
-                        <outlet property="setting" destination="NuK-9B-UEF" id="ILW-3q-6iR"/>
                         <segue destination="Iv7-ss-8cl" kind="custom" identifier="newcard" customClass="SWRevealViewControllerSeguePushController" id="sev-eT-XbJ"/>
                         <segue destination="jlW-sr-Ioc" kind="custom" identifier="cardlibrary" customClass="SWRevealViewControllerSeguePushController" id="KhM-5D-ocH"/>
                     </connections>
@@ -1561,8 +1501,6 @@
         <image name="edit_type_troop" width="507" height="121"/>
         <image name="elixir_5_icon" width="85" height="100"/>
         <image name="ic_functions" width="96" height="96"/>
-        <image name="ic_info" width="96" height="96"/>
-        <image name="ic_settings" width="96" height="96"/>
         <image name="ic_view_list" width="96" height="96"/>
         <image name="icons_stats_battle" width="88" height="88"/>
         <image name="icons_stats_hit_speed" width="88" height="88"/>

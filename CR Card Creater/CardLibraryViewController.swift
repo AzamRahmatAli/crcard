@@ -112,6 +112,8 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         
@@ -120,6 +122,13 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         
         cell.deleteButton.tag = indexPath.row
         
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyy-mm-dd h:mma"//"h:mm a 'on' MMMM dd, yyyy"
+        //formatter.AMSymbol = "AM"
+        //formatter.PMSymbol = "PM"
+        let dateString = formatter.stringFromDate(cards[indexPath.row].date!)
+        
+        cell.dateCreated.text = dateString
         cell.deleteButton.addTarget(self, action: #selector(CardLibraryViewController.deleteCell(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         cell.dp.image = UIImage(data: cards[indexPath.row].dp!)

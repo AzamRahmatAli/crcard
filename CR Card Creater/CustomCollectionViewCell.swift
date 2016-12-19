@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var dateCreated: UILabel!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var imageView: UIImageView!
