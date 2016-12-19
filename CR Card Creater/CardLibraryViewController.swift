@@ -26,38 +26,38 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         
         let fetchRequest = NSFetchRequest(entityName: "Card")
         do {
-        let cards = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [Card]
-        
-        // Then you can use your properties.
-        
-        for card in cards {
+            let cards = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [Card]
             
-            if card.objectID.temporaryID
-            {
-                print(card.objectID.temporaryID)
-                self.managedObjectContext!.deleteObject(card)
+            // Then you can use your properties.
+            
+            for card in cards {
+                
+                if card.objectID.temporaryID
+                {
+                    print(card.objectID.temporaryID)
+                    self.managedObjectContext!.deleteObject(card)
+                }
+                
+                
             }
-   
-            
-        }
         } catch let error as NSError {
             print("Could not fetch \(error)")
         }
         Helper.addMenuButton(self)
         // Do any additional setup after loading the view.
-      
+        
         do{
             let request = NSFetchRequest(entityName: "Card")
             
             
             let queryResult = try managedObjectContext?.executeFetchRequest(request) as! [Card]
             cards = queryResult
-                        
+            
         }
         catch let error {
             print("error : ", error)
         }
-
+        
     }
     override func viewWillAppear(animated: Bool) {
         
@@ -65,17 +65,17 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         
     }
     
-
-
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "displaycard"
-    {
-        let dvc = segue.destinationViewController as! ViewController
-        dvc.attributes = attributes
-        dvc.card = card
-        
+        if segue.identifier == "displaycard"
+        {
+            let dvc = segue.destinationViewController as! ViewController
+            dvc.attributes = attributes
+            dvc.card = card
+            
+        }
     }
-}
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
         var collectionViewSize = collectionView.frame.size
@@ -96,7 +96,7 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         }
         performSegueWithIdentifier("displaycard", sender: nil)
     }
-   
+    
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 15
@@ -113,15 +113,47 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
-         cell.dp.image = UIImage(data: cards[indexPath.row].dp!)
-            cell.costImage.image = UIImage(named: "elixir_\(cards![indexPath.row].cost!)_icon")
-            
-            cell.name.text = "  " + cards[indexPath.row].name!
+        
+        cell.deleteButton.tag = indexPath.row
+        
+        cell.deleteButton.addTarget(self, action: #selector(CardLibraryViewController.deleteCell(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        cell.dp.image = UIImage(data: cards[indexPath.row].dp!)
+        cell.costImage.image = UIImage(named: "elixir_\(cards![indexPath.row].cost!)_icon")
+        
+        cell.name.text = "  " + cards[indexPath.row].name!
         
         
         return cell
     }
     
-
+    func deleteCell(sender : UIButton)
+    {
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "Delete", message: "Delete \(cards[sender.tag].name!) card?", preferredStyle: .ActionSheet)
+        
+        
+        
+        let saveActionButton: UIAlertAction = UIAlertAction(title: "Delete", style: .Destructive)
+        { action -> Void in
+            
+            self.managedObjectContext!.deleteObject(self.cards[sender.tag] )
+            self.cards.removeAtIndex(sender.tag)
+            do {
+                try self.managedObjectContext!.save()
+            } catch _ {
+            }
+            
+            self.collectionView.reloadData()
+        }
+        actionSheetControllerIOS8.addAction(saveActionButton)
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        self.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)       
+    }
 }

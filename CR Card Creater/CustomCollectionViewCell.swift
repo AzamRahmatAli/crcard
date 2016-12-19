@@ -18,6 +18,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dp: UIImageView!
     @IBOutlet weak var costImage: UIImageView!
+   
     /*override func awakeFromNib() {
         imageView.layer.shadowColor = UIColor.blackColor().CGColor
         imageView.layer.shadowOffset = CGSizeMake(-1, -1)

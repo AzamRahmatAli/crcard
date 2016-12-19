@@ -46,7 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWn-5J-2sr" id="Ndn-sK-Ug4">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -106,7 +106,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="105" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfq-G5-mUt" id="YY5-i8-M2R">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -301,9 +301,6 @@
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEH-1K-7KC">
                                                                     <rect key="frame" x="8" y="8" width="146" height="17"/>
-                                                                    <connections>
-                                                                        <action selector="deleteCard:" destination="vM8-Cl-Kn6" eventType="touchUpInside" id="iTz-Cg-2lm"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -376,7 +373,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="costImage" destination="exZ-CL-cec" id="wcf-Aa-N7c"/>
-                                            <outlet property="deleteButton" destination="Yuw-Gd-nLL" id="EhS-Si-Wgx"/>
+                                            <outlet property="deleteButton" destination="OEH-1K-7KC" id="D5A-wG-4gD"/>
                                             <outlet property="dp" destination="wDO-he-Dg4" id="zt8-sk-hxf"/>
                                             <outlet property="name" destination="gdn-Qd-J9R" id="v2g-GZ-lgT"/>
                                         </connections>
@@ -454,8 +451,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
-                                <rect key="frame" x="-4" y="44" width="328" height="524"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-fu-G3l">
                                 <rect key="frame" x="-4" y="81" width="328" height="405"/>
@@ -734,7 +731,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
-                                <rect key="frame" x="0.0" y="8" width="320" height="991"/>
+                                <rect key="frame" x="0.0" y="-36" width="320" height="1035"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc3-gG-sPW">
                                         <rect key="frame" x="8" y="359" width="304" height="21"/>
@@ -1521,7 +1518,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f5E-A3-C0J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1569,7 +1570,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sev-eT-XbJ"/>
-        <segue reference="DmO-SD-q7C"/>
-        <segue reference="Z0w-00-txi"/>
+        <segue reference="HUk-LL-xlH"/>
+        <segue reference="weF-ch-ngS"/>
     </inferredMetricsTieBreakers>
 </document>
