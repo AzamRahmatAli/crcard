@@ -106,8 +106,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         cell.imageView.image = UIImage(named: attributes.images[indexPath.row])
         cell.name.text = attributes.names[indexPath.row]
-        cell.points.text = attributes.values[indexPath.row]
-        cell.pointsd.text = attributes.values[indexPath.row]
+        let value = attributes.attributeValue(cell.name.text! , value : attributes.values[indexPath.row])
+        cell.points.text = value
+        cell.pointsd.text = value
         
         return cell
     }

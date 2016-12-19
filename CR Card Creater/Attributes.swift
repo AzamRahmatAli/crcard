@@ -150,4 +150,19 @@ class Attributes {
     func receivedMessageFromServer() {
         NSNotificationCenter.defaultCenter().postNotificationName("ReceivedData", object: nil)
     }
+    func attributeValue(text : String , value : String) -> String
+    {
+        print(text)
+        
+        if text == "Hit Speed" || text == "Freeze Duration" || text == "Spawn Speed" || text == "Stun Duration" || text == "Lifetime"
+        {
+            return value + "sec"
+        }
+        if text == "Rage Effect" || text == "Boost"
+        {
+            return value + "%"
+        }
+        
+        return text
+    }
 }

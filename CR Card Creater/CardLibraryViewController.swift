@@ -115,9 +115,9 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
          cell.dp.image = UIImage(data: cards[indexPath.row].dp!)
-            cell.costImage.image = UIImage(named: cards![indexPath.row].cost!)
+            cell.costImage.image = UIImage(named: "elixir_\(cards![indexPath.row].cost!)_icon")
             
-            cell.name.text = cards[indexPath.row].name
+            cell.name.text = "  " + cards[indexPath.row].name!
         
         
         return cell

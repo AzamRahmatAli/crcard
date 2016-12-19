@@ -265,11 +265,41 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
        
     }
+    func alert(title : String, message : String)
+    {
+    let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    
+    
+    
+    let saveActionButton: UIAlertAction = UIAlertAction(title: "OK", style: .Default)
+    { action -> Void in
+       
+    }
+    alertController.addAction(saveActionButton)
+     self.presentViewController(alertController, animated: true, completion: nil)
+
+    }
     
     @IBAction func CreateUpdate(sender: UIButton) {
         newCard.name = cardName.text
         newCard.detail = discription.text
+        guard newCard.name != ""
+        else{
+            alert("Card Name", message: "Card name cannnot be empty")
+            return
+        }
+        guard newCard.dp != nil
+            else{
+               alert("Card Icon", message: "Card icon cannnot be empty")
+                return
+        }
+        guard attributes.names.count > 0
+            else{
+                alert("Attribute", message: "A card must have at least one attribute")
+                return
+        }
         
+          
         for  (index, name) in attributes.names.enumerate()
         {
             
@@ -324,7 +354,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
             cell.imgView.image = UIImage(named: attributes.images[indexPath.row])
             cell.name.text = attributes.names[indexPath.row]
-            cell.value.text = attributes.values[indexPath.row]
+       
+            cell.value.text = attributes.attributeValue(cell.name.text! , value :attributes.values[indexPath.row])
         
         return cell
      }
