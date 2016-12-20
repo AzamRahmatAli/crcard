@@ -12,19 +12,19 @@ import UIKit
 
 class Attributes {
     
-     
+    
     var names : [String] = ["Hitpoints", "Damage", "Hit Speed", "Targets", "Range"]
     var images : [String] = ["icons_stats_hitpoints", "icons_stats_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_range"]
     var values : [String] = ["500", "150", "1.5", "Ground", "5"]
-     let nameAll : [String] = ["Hitpoints","Shield Hitpoints", "Damage Per Second", "Damage", "Area Damage", "Death Damage", "Crown Tower Damage", "Hit Speed", "Targets", "Deploy Time", "Speed", "Range", "Duration", "Radius", "Lifetime" , "Stun Duration", "Spawn Speed", "Count", "Boost", "Rage Effect", "Freeze Duration"]
-     let imageAll : [String] = ["icons_stats_hitpoints","icons_stats_shield_hitpoints", "icons_stats_damage_per_second", "icons_stats_damage", "icons_stats_area_damage", "icons_stats_death_damage", "icons_stats_crown_tower_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_deploy_time", "icons_stats_speed", "icons_stats_range", "icons_stats_spawn_speed", "icons_stats_radius", "icons_stats_spawn_speed" , "icons_stats_freeze_duration", "icons_stats_spawn_speed", "icons_stats_count", "icons_stats_boost", "icons_stats_rage_effect", "icons_stats_freeze_duration"]
+    let nameAll : [String] = ["Hitpoints","Shield Hitpoints", "Damage Per Second", "Damage", "Area Damage", "Death Damage", "Crown Tower Damage", "Hit Speed", "Targets", "Deploy Time", "Speed", "Range", "Duration", "Radius", "Lifetime" , "Stun Duration", "Spawn Speed", "Count", "Boost", "Rage Effect", "Freeze Duration"]
+    let imageAll : [String] = ["icons_stats_hitpoints","icons_stats_shield_hitpoints", "icons_stats_damage_per_second", "icons_stats_damage", "icons_stats_area_damage", "icons_stats_death_damage", "icons_stats_crown_tower_damage", "icons_stats_hit_speed", "icons_stats_targets", "icons_stats_deploy_time", "icons_stats_speed", "icons_stats_range", "icons_stats_spawn_speed", "icons_stats_radius", "icons_stats_spawn_speed" , "icons_stats_freeze_duration", "icons_stats_spawn_speed", "icons_stats_count", "icons_stats_boost", "icons_stats_rage_effect", "icons_stats_freeze_duration"]
     
     
     
     func getValueType(name : String , controller : UIViewController)
     {
-       
-       
+        
+        
         switch name
         {
             
@@ -36,7 +36,7 @@ class Attributes {
             
             getOtherValue(name, controller: controller)
             
-       
+            
             
             
         default :
@@ -92,7 +92,7 @@ class Attributes {
         actionSheetControllerIOS8.addAction(cancelActionButton)
         controller.presentViewController(actionSheetControllerIOS8, animated: true, completion: nil)
     }
-
+    
     func getValue(name : String,  controller : UIViewController)
     {
         print(index)
@@ -104,39 +104,36 @@ class Attributes {
             textField.placeholder = "Value"
             textField.keyboardType = UIKeyboardType.NumberPad
         })
-        let saveAction = UIAlertAction(title: "Save",
-                                       style: .Default) { (action: UIAlertAction!) -> Void in
-                                        
-                                        let textField = alert.textFields![0] as UITextField
-                                        
-                                        if textField.text != ""
-                                        {
-                                            self.names.append(name)
-                                    
-                                            self.images.append(self.imageAll[self.nameAll.indexOf(name)!])
-                                            self.values.append(textField.text!)
-                                            
-                                            if String(controller).containsString("CreateCardViewController")
-                                            {
-                                               self.receivedMessageFromServer()
-                                            }
-                                            
-                                            controller.navigationController?.popViewControllerAnimated(true)
-                                        }
-                                        else
-                                        {
-                                            
-                                        }
+        let saveAction = UIAlertAction(title: "Save",style: .Default) { (action: UIAlertAction!) -> Void in
+            
+            let textField = alert.textFields![0] as UITextField
+            
+            if textField.text != ""
+            {
+                self.names.append(name)
+                
+                self.images.append(self.imageAll[self.nameAll.indexOf(name)!])
+                self.values.append(textField.text!)
+                
+                if String(controller).containsString("CreateCardViewController")
+                {
+                    self.receivedMessageFromServer()
+                }
+                
+                controller.navigationController?.popViewControllerAnimated(true)
+            }
+            else
+            {
+                
+            }
         }
         
         saveAction.enabled = false
-        NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object:alert.textFields?[0],
-                                                                queue: NSOperationQueue.mainQueue()) {
-                                                                    (notification) -> Void in
-                                                                    
-                                                                    let textFieldValue = alert.textFields?[0]
-                                                                    
-                                                                    saveAction.enabled = !textFieldValue!.text!.isEmpty
+        NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object:alert.textFields?[0],queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            let textFieldValue = alert.textFields?[0]
+            
+            saveAction.enabled = !textFieldValue!.text!.isEmpty
         }
         
         //3. Grab the value from the text field, and print it when the user clicks OK.
@@ -163,6 +160,6 @@ class Attributes {
             return value + "%"
         }
         
-        return text
+        return value
     }
 }

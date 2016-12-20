@@ -9,10 +9,10 @@
 import UIKit
 
 
-import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var shareAndSaveButtonView: UIView!
     @IBOutlet weak var number: UIImageView!
     @IBOutlet weak var name2: UILabel!
     @IBOutlet weak var name1: UILabel!
@@ -26,7 +26,49 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var attributes : Attributes!
     var nevigationFromNewCard = false
     
-    
+    @IBAction func shareButton(sender: UIButton) {
+        //Helper.performUIUpdatesOnMain {
+            self.shareAndSaveButtonView.hidden = true
+            self.navigationController?.navigationBarHidden = true
+       // }
+        
+      /*  let bounds = UIScreen.mainScreen().bounds
+        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+        self.view.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+        */
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 50))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            let screen = UIScreen.mainScreen()
+            
+            if let window = UIApplication.sharedApplication().keyWindow {
+                UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
+                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+                let image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                
+                self.presentViewController(activityViewController, animated: true, completion: nil)
+                
+            }
+            Helper.performUIUpdatesOnMain {
+                self.shareAndSaveButtonView.hidden = false
+                
+                self.navigationController?.navigationBarHidden = false
+            }
+        }
+        
+       
+        
+    }
+    @IBAction func saveButton(sender: UIButton) {
+        dp.hidden = !dp.hidden
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         Helper.addMenuButton(self)
