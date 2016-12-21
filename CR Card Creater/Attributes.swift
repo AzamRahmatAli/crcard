@@ -75,7 +75,10 @@ class Attributes {
                     {
                         self.receivedMessageFromServer()
                     }
+                    else
+                    {
                     controller.navigationController?.popViewControllerAnimated(true)
+                    }
                 }
                 else{
                     self.getValue(name, controller: controller)
@@ -119,8 +122,10 @@ class Attributes {
                 {
                     self.receivedMessageFromServer()
                 }
-                
+                else
+                {
                 controller.navigationController?.popViewControllerAnimated(true)
+                }
             }
             else
             {

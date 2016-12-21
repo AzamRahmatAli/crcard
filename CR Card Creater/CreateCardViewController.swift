@@ -33,7 +33,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
     var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var index = 0
-    var newCard : Card!
+    var newCard : TempraryCard!
+    var updateCard : Card!
     var attributes = Attributes()
     var bannerView = GADBannerView()
 
@@ -50,15 +51,15 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         Helper.addMenuButton(self)
         if newCard == nil
         {
-        if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
-        {
+        let entity = TempraryCard()
+        
         entity.date = NSDate()
         entity.rarity = "rare"
         entity.type = "troop"
         entity.cost = "5"
         newCard = entity
             
-            }
+            
             
         }
         else
@@ -165,8 +166,10 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "createCard"
         {
             let dvc = segue.destinationViewController as! ViewController
-            dvc.card = newCard
+            print(newCard.type)
+            dvc.tempCard = newCard
             dvc.attributes = attributes
+            dvc.updateCard = updateCard
         }
         else if segue.identifier == "addAttribute"
         {
@@ -303,33 +306,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         }
         
           
-        for  (index, name) in attributes.names.enumerate()
-        {
-            
-            
-            if let _ = Attribute.attribute(name,objectID : newCard.objectID, inManagedObjectContext: managedObjectContext!)
-            {
-                
-            }
-            else if let entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
-            {
-                
-                entity.name = name
-                entity.value = attributes.values[index]
-                entity.image = attributes.images[index]
-                entity.card = newCard
-               
-            }
-        }
-        
-        do
-        {
-            try  managedObjectContext?.save()
-        }
-        catch let error
-        {
-            print(error)
-        }
+       
         performSegueWithIdentifier("createCard", sender: nil)
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -381,7 +358,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     func reloadTable() {
-        print(attributes.names)
+        //print(attributes.names)
         tableHeight.constant = CGFloat(attributes.names.count * 70 )
         if attributes.names.count < 12
         {

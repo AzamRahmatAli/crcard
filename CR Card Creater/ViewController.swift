@@ -8,41 +8,47 @@
 
 import UIKit
 import GoogleMobileAds
+import CoreData
 
 
 
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     @IBOutlet weak var shareAndSaveButtonView: UIView!
     @IBOutlet weak var number: UIImageView!
     @IBOutlet weak var name2: UILabel!
     @IBOutlet weak var name1: UILabel!
     @IBOutlet weak var discription: UILabel!
-   
+    
     @IBOutlet weak var dp: UIImageView!
     @IBOutlet weak var border: UIImageView!
     @IBOutlet weak var rarity: UIImageView!
     
-    var card : Card!
+    var updateCard : Card!
+    var tempCard : TempraryCard!
     var attributes : Attributes!
     var nevigationFromNewCard = false
     var bannerView = GADBannerView()
+    let imageView = UIImageView(image: UIImage(named: "saving_background"))
+    
+    
     @IBAction func shareButton(sender: UIButton) {
         //Helper.performUIUpdatesOnMain {
-            self.shareAndSaveButtonView.hidden = true
-            self.navigationController?.navigationBarHidden = true
-            bannerView.hidden = true
-       // }
+        self.shareAndSaveButtonView.hidden = true
+        self.navigationController?.navigationBarHidden = true
+        bannerView.hidden = true
+        // }
         
-      /*  let bounds = UIScreen.mainScreen().bounds
-        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-        self.view.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-        self.presentViewController(activityViewController, animated: true, completion: nil)
-        */
+        /*  let bounds = UIScreen.mainScreen().bounds
+         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+         self.view.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
+         let img = UIGraphicsGetImageFromCurrentImageContext()
+         UIGraphicsEndImageContext()
+         let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
+         self.presentViewController(activityViewController, animated: true, completion: nil)
+         */
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 50))
         dispatch_after(time, dispatch_get_main_queue()) {
             let screen = UIScreen.mainScreen()
@@ -65,43 +71,122 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         }
         
-       
+        
         
     }
-    @IBAction func saveButton(sender: UIButton) {
-        dp.hidden = !dp.hidden
+    
+    func assignValues(entity : Card)
+    {
+        entity.date = tempCard.date
+        entity.rarity = tempCard.rarity
+        entity.type = tempCard.type
+        entity.cost = tempCard.cost
+        entity.dp = tempCard.dp
+        entity.name = tempCard.name
+        entity.detail = tempCard.detail
+        for  (index, name) in attributes.names.enumerate()
+        {
+            
+            
+            if  let _ = Attribute.attribute(name,objectID : entity.objectID, inManagedObjectContext: managedObjectContext!) where updateCard != nil
+            {
+                
+            }
+            else if let sub_entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
+            {
+                
+                sub_entity.name = name
+                sub_entity.value = attributes.values[index]
+                
+                sub_entity.image = attributes.images[index]
+                sub_entity.card = entity
+                
+            }
+        }
     }
-  
+    @IBAction func saveButton(sender: UIButton) {
+        if updateCard != nil
+        {
+            assignValues(updateCard)
+        }
+        else if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
+        {
+            
+            assignValues(entity)
+            updateCard = entity
+        }
+        
+        do
+        {
+            try  managedObjectContext?.save()
+            Helper.performUIUpdatesOnMain{
+                 self.imageView.hidden = false
+            }
+            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 2))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                
+                
+                    self.imageView.hidden = true
+                
+            }
+            
+        }
+        catch let error
+        {
+            print(error)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       /* self.bannerView.frame = CGRectMake(0, self.view.frame.size.height - 50, 360, 50)
-        self.view.addSubview(self.bannerView)
-        bannerView.hidden = false
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.loadRequest(GADRequest())
-        
-        */
+        /* self.bannerView.frame = CGRectMake(0, self.view.frame.size.height - 50, 360, 50)
+         self.view.addSubview(self.bannerView)
+         bannerView.hidden = false
+         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+         bannerView.rootViewController = self
+         bannerView.loadRequest(GADRequest())
+         
+         */
         Helper.loadAd(self, adView: bannerView)
-       
         
-       
+     
+        
+        
+        imageView.frame = CGRect(x: 0, y: 0, width: 167, height: 50)
+        imageView.center = view.center
+        imageView.hidden = true
+        view.addSubview(imageView)
+        
         
         
         Helper.addMenuButton(self)
-        
-        name1.text = card.name
-        name2.text = card.name
-        discription.text = card.detail
-        dp.image = UIImage(data: card.dp!)
-        rarity.image = UIImage(named: "label_" + card.rarity! + "_" + card.type!)
-        if card.rarity != "legendary"
+        if(tempCard == nil)
+        {
+            tempCard = TempraryCard()
+            
+            tempCard.name = updateCard.name
+            
+            tempCard.detail = updateCard.detail
+            tempCard.dp = updateCard.dp
+            tempCard.rarity = updateCard.rarity
+            tempCard.type  = updateCard.type
+            tempCard.cost = updateCard.cost
+            tempCard.date = updateCard.date
+        }
+        print(tempCard.name ,tempCard.detail,tempCard.rarity,tempCard.type,tempCard.cost)
+        name1.text = tempCard.name
+        name2.text = tempCard.name
+        discription.text = tempCard.detail
+        dp.image = UIImage(data: tempCard.dp!)
+        rarity.image = UIImage(named: "label_" + tempCard.rarity! + "_" + tempCard.type!)
+        if tempCard.rarity != "legendary"
         {
             border.image = UIImage(named: "card_creator_icon_overlay_normal")
         }
-        number.image = UIImage(named: "elixir_" + String(card.cost!) + "_icon")
-         
+        number.image = UIImage(named: "elixir_" + String(tempCard.cost!) + "_icon")
+        
+        print(tempCard)
     }
     override func viewWillAppear(animated: Bool) {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -115,19 +200,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else
         {
             
-        performSegueWithIdentifier("editcard", sender: nil)
+            performSegueWithIdentifier("editcard", sender: nil)
         }
     }
-  
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "editcard"
         {
-          
-
             let dvc = segue.destinationViewController as! CreateCardViewController
             dvc.attributes = attributes
-            dvc.newCard = card
- 
+            dvc.newCard = tempCard
+            dvc.updateCard = updateCard
+            
         }
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
@@ -172,6 +256,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return cell
     }
-   
+    
 }
 

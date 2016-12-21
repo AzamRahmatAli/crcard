@@ -73,7 +73,7 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
         {
             let dvc = segue.destinationViewController as! ViewController
             dvc.attributes = attributes
-            dvc.card = card
+            dvc.updateCard = card
             
         }
     }
