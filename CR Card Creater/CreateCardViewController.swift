@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -34,6 +35,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     var index = 0
     var newCard : Card!
     var attributes = Attributes()
+    var bannerView = GADBannerView()
 
    // var atrName : [String] = []
     //var atrImage: [String] = []
@@ -43,6 +45,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Helper.loadAd(self, adView: bannerView)
         imagePicker.delegate = self
         Helper.addMenuButton(self)
         if newCard == nil

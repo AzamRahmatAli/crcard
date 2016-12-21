@@ -18,6 +18,7 @@
 		F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */; };
 		F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */; };
 		F7ADDCC71DF59CCF00C106FA /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADDCC61DF59CCF00C106FA /* Attributes.swift */; };
+		F7BA39A41E0A3BF500C9B262 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */; };
 		F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */; };
 		F7E7CFA21DF92E5900A0C047 /* CardLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */; };
 		F7E7CFA61DF92F6E00A0C047 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */; };
@@ -43,6 +44,7 @@
 		F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesTableViewController.swift; sourceTree = "<group>"; };
 		F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardViewController.swift; sourceTree = "<group>"; };
 		F7ADDCC61DF59CCF00C106FA /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
 		F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLibraryViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BA39A41E0A3BF500C9B262 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 		F722696D1DE838B3005DC76B = {
 			isa = PBXGroup;
 			children = (
+				F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */,
 				F72269781DE838B4005DC76B /* CR Card Creater */,
 				F72269771DE838B3005DC76B /* Products */,
 			);
@@ -322,6 +326,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";
@@ -337,6 +345,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brainload.CR-Card-Creater";

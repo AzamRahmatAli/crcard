@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 class CardLibraryViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -15,14 +16,14 @@ class CardLibraryViewController: UIViewController , UICollectionViewDataSource, 
     var card : Card!
     var attributes : Attributes = Attributes()
     var cards : [Card]!
-    
+    var bannerView = GADBannerView()
     @IBAction func deleteCard(sender: UIButton) {
         
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Helper.loadAd(self, adView: bannerView)
         
         let fetchRequest = NSFetchRequest(entityName: "Card")
         do {

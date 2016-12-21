@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
 
 
 
@@ -25,11 +27,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var card : Card!
     var attributes : Attributes!
     var nevigationFromNewCard = false
-    
+    var bannerView = GADBannerView()
     @IBAction func shareButton(sender: UIButton) {
         //Helper.performUIUpdatesOnMain {
             self.shareAndSaveButtonView.hidden = true
             self.navigationController?.navigationBarHidden = true
+            bannerView.hidden = true
        // }
         
       /*  let bounds = UIScreen.mainScreen().bounds
@@ -57,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
             Helper.performUIUpdatesOnMain {
                 self.shareAndSaveButtonView.hidden = false
-                
+                self.bannerView.hidden = false
                 self.navigationController?.navigationBarHidden = false
             }
         }
@@ -71,6 +74,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       /* self.bannerView.frame = CGRectMake(0, self.view.frame.size.height - 50, 360, 50)
+        self.view.addSubview(self.bannerView)
+        bannerView.hidden = false
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
+        
+        */
+        Helper.loadAd(self, adView: bannerView)
+       
+        
+       
+        
+        
         Helper.addMenuButton(self)
         
         name1.text = card.name

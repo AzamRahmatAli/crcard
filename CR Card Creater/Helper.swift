@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleMobileAds
 import UIKit
 
 struct Helper
@@ -37,6 +38,18 @@ struct Helper
         dispatch_async(dispatch_get_main_queue()) {
             updates()
         }
+    }
+    
+    static func loadAd(viewControlleer : UIViewController, adView : GADBannerView)
+    {
+        
+        adView.frame = CGRectMake(viewControlleer.view.frame.size.width / 2 - 180, viewControlleer.view.frame.size.height - 50, 360, 50)
+        
+        viewControlleer.view.addSubview(adView)
+        adView.hidden = false
+        adView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adView.rootViewController = viewControlleer
+        adView.loadRequest(GADRequest())
     }
     
 }
