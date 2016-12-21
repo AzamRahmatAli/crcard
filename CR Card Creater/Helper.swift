@@ -47,7 +47,7 @@ struct Helper
         
         viewControlleer.view.addSubview(adView)
         adView.hidden = false
-        adView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adView.adUnitID = StringFor.adMobID.rawValue
         adView.rootViewController = viewControlleer
         adView.loadRequest(GADRequest())
     }

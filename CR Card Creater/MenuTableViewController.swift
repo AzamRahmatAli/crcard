@@ -29,7 +29,7 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchColor(1)
-        appName.text = StringFor.name["appName"]!
+        appName.text = StringFor.appName.rawValue
         
        // cellAsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     }

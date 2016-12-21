@@ -49,7 +49,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWn-5J-2sr" id="Ndn-sK-Ug4">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -109,7 +109,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="105" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfq-G5-mUt" id="YY5-i8-M2R">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
@@ -455,10 +455,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dark_blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-vn-Vdz">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-fu-G3l">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-fu-G3l">
                                 <rect key="frame" x="-4" y="28" width="328" height="406"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_template" translatesAutoresizingMaskIntoConstraints="NO" id="mDf-Ge-KNV">
@@ -687,7 +687,7 @@
                                     <constraint firstItem="so0-YC-rOt" firstAttribute="leading" secondItem="AuP-fu-G3l" secondAttribute="leading" constant="8" id="ysH-EF-tIi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-3V-Q8Q">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-3V-Q8Q">
                                 <rect key="frame" x="215" y="442" width="117" height="38"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action_bar_background_right" translatesAutoresizingMaskIntoConstraints="NO" id="Buk-c7-7gJ">
@@ -798,7 +798,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="999"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-C0-JT6">
                                 <rect key="frame" x="0.0" y="-36" width="320" height="1035"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc3-gG-sPW">
@@ -875,9 +875,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="39"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI4-1C-NiL">
-                                                <rect key="frame" x="127" y="2" width="37" height="35"/>
+                                                <rect key="frame" x="0.0" y="2" width="164" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="DI4-1C-NiL" secondAttribute="height" multiplier="30:23" constant="-8.6521739130434767" id="BZF-Uu-eNn"/>
+                                                    <constraint firstAttribute="width" secondItem="DI4-1C-NiL" secondAttribute="height" multiplier="30:23" constant="118.34782608695653" id="BZF-Uu-eNn"/>
                                                 </constraints>
                                                 <connections>
                                                     <action selector="editRarity:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="PKC-tC-mQJ"/>
@@ -916,9 +916,9 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phh-gD-hET">
-                                                <rect key="frame" x="128" y="2" width="37" height="35"/>
+                                                <rect key="frame" x="0.0" y="2" width="165" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="phh-gD-hET" secondAttribute="height" multiplier="37:35" id="KBs-b5-Zec"/>
+                                                    <constraint firstAttribute="width" secondItem="phh-gD-hET" secondAttribute="height" multiplier="37:35" constant="128" id="KBs-b5-Zec"/>
                                                 </constraints>
                                                 <connections>
                                                     <action selector="editType:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="6LP-yO-WzD"/>
@@ -966,9 +966,9 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRy-bx-0fA">
-                                                <rect key="frame" x="128" y="2" width="37" height="35"/>
+                                                <rect key="frame" x="0.0" y="2" width="165" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="bRy-bx-0fA" secondAttribute="height" multiplier="37:35" id="tz4-8I-2Xe"/>
+                                                    <constraint firstAttribute="width" secondItem="bRy-bx-0fA" secondAttribute="height" multiplier="37:35" constant="128" id="tz4-8I-2Xe"/>
                                                 </constraints>
                                                 <connections>
                                                     <action selector="costEdit:" destination="AHk-Fg-PTx" eventType="touchUpInside" id="8ra-rJ-ife"/>
@@ -1347,6 +1347,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -1414,18 +1415,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_view_list" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-oq-do2">
-                                                    <rect key="frame" x="8" y="8" width="30" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="CSc-Ys-FyY"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-4G-SFh">
                                                     <rect key="frame" x="46" y="8" width="266" height="36"/>
                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addd" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-oq-do2">
+                                                    <rect key="frame" x="8" y="8" width="30" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="CSc-Ys-FyY"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="8qN-4G-SFh" firstAttribute="leading" secondItem="SZl-oq-do2" secondAttribute="trailing" constant="8" symbolic="YES" id="10d-wB-6Y4"/>
@@ -1525,6 +1526,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -1541,6 +1543,7 @@
     <resources>
         <image name="Capture" width="241" height="266"/>
         <image name="action_bar_background_right" width="583" height="190"/>
+        <image name="addd" width="128" height="128"/>
         <image name="attribute_pane" width="917" height="165"/>
         <image name="attribute_selection_add_button" width="280" height="180"/>
         <image name="attribute_selection_add_button_inactive" width="280" height="180"/>
@@ -1573,8 +1576,8 @@
         <image name="label_rare_troop" width="579" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HUk-LL-xlH"/>
         <segue reference="sev-eT-XbJ"/>
-        <segue reference="Z0w-00-txi"/>
         <segue reference="DmO-SD-q7C"/>
     </inferredMetricsTieBreakers>
 </document>

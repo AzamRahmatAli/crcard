@@ -8,10 +8,12 @@
 
 import Foundation
 
-struct StringFor
+enum StringFor : String
 {
-    static let name = ["appName" : "MyBudget"]
+    case appName = "CRCard"
+    case adMobID = "ca-app-pub-3940256099942544/2934735716"
 }
+
 /*//
  //  CardsTableViewController.swift
  //  Guide for clash royal
