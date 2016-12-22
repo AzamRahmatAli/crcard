@@ -32,112 +32,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var nevigationFromNewCard = false
     var bannerView = GADBannerView()
     let imageView = UIImageView(image: UIImage(named: "saving_background"))
-    
-    
-    @IBAction func shareButton(sender: UIButton) {
-        //Helper.performUIUpdatesOnMain {
-        self.shareAndSaveButtonView.hidden = true
-        self.navigationController?.navigationBarHidden = true
-        bannerView.hidden = true
-        // }
-        
-        /*  let bounds = UIScreen.mainScreen().bounds
-         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-         self.view.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
-         let img = UIGraphicsGetImageFromCurrentImageContext()
-         UIGraphicsEndImageContext()
-         let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-         self.presentViewController(activityViewController, animated: true, completion: nil)
-         */
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 50))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            let screen = UIScreen.mainScreen()
-            
-            if let window = UIApplication.sharedApplication().keyWindow {
-                UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
-                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
-                let image = UIGraphicsGetImageFromCurrentImageContext();
-                UIGraphicsEndImageContext();
-                
-                let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-                
-                self.presentViewController(activityViewController, animated: true, completion: nil)
-                
-            }
-            Helper.performUIUpdatesOnMain {
-                self.shareAndSaveButtonView.hidden = false
-                self.bannerView.hidden = false
-                self.navigationController?.navigationBarHidden = false
-            }
-        }
-        
-        
-        
-    }
-    
-    func assignValues(entity : Card)
-    {
-        entity.date = tempCard.date
-        entity.rarity = tempCard.rarity
-        entity.type = tempCard.type
-        entity.cost = tempCard.cost
-        entity.dp = tempCard.dp
-        entity.name = tempCard.name
-        entity.detail = tempCard.detail
-        entity.attributes = nil // for updating attributes by providing new attributes
-        for  (index, name) in attributes.names.enumerate()
-        {
-            
-            
-           /* if  let _ = Attribute.attribute(name,objectID : entity.objectID, inManagedObjectContext: managedObjectContext!) where updateCard != nil
-            {
-                
-            }
-            else*/ if let sub_entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
-            {
-                
-                sub_entity.name = name
-                sub_entity.value = attributes.values[index]
-                
-                sub_entity.image = attributes.images[index]
-                sub_entity.card = entity
-                
-            }
-        }
-    }
-    @IBAction func saveButton(sender: UIButton) {
-        if updateCard != nil
-        {
-            assignValues(updateCard)
-        }
-        else if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
-        {
-            
-            assignValues(entity)
-            updateCard = entity
-        }
-        
-        do
-        {
-            try  managedObjectContext?.save()
-            Helper.performUIUpdatesOnMain{
-                 self.imageView.hidden = false
-            }
-            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 2))
-            dispatch_after(time, dispatch_get_main_queue()) {
-                
-                
-                    self.imageView.hidden = true
-                
-            }
-            
-        }
-        catch let error
-        {
-            print(error)
-        }
-    }
-    
+    let appAdForSharingImageView = UIImageView(image: UIImage(named: "edit_layout_add_attribute_button"))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -158,6 +54,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         imageView.center = view.center
         imageView.hidden = true
         view.addSubview(imageView)
+        
+        appAdForSharingImageView.frame = CGRect(x: self.view.frame.size.width / 2 - 180, y: self.view.frame.size.height - 50, width: 360, height: 50)
+        appAdForSharingImageView.hidden = true
+        view.addSubview(appAdForSharingImageView)
         
         
         
@@ -191,6 +91,112 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     override func viewWillAppear(animated: Bool) {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    
+    @IBAction func shareButton(sender: UIButton) {
+        //Helper.performUIUpdatesOnMain {
+        self.shareAndSaveButtonView.hidden = true
+        self.navigationController?.navigationBarHidden = true
+        bannerView.hidden = true
+        self.appAdForSharingImageView.hidden = false
+        // }
+        
+        /*  let bounds = UIScreen.mainScreen().bounds
+         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+         self.view.drawViewHierarchyInRect(bounds, afterScreenUpdates: false)
+         let img = UIGraphicsGetImageFromCurrentImageContext()
+         UIGraphicsEndImageContext()
+         let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
+         self.presentViewController(activityViewController, animated: true, completion: nil)
+         */
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 50))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            let screen = UIScreen.mainScreen()
+            
+            if let window = UIApplication.sharedApplication().keyWindow {
+                UIGraphicsBeginImageContextWithOptions(screen.bounds.size, false, 0);
+                window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: false)
+                let image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                
+                self.presentViewController(activityViewController, animated: true, completion: nil)
+                
+            }
+            
+                self.shareAndSaveButtonView.hidden = false
+                self.bannerView.hidden = false
+                self.navigationController?.navigationBarHidden = false
+                self.appAdForSharingImageView.hidden = true
+            
+        }
+        
+        
+        
+    }
+    
+    func assignValues(entity : Card)
+    {
+        entity.date = tempCard.date
+        entity.rarity = tempCard.rarity
+        entity.type = tempCard.type
+        entity.cost = tempCard.cost
+        entity.dp = tempCard.dp
+        entity.name = tempCard.name
+        entity.detail = tempCard.detail
+        entity.attributes = nil // for updating attributes by providing new attributes
+        for  (index, name) in attributes.names.enumerate()
+        {
+            
+            
+            /* if  let _ = Attribute.attribute(name,objectID : entity.objectID, inManagedObjectContext: managedObjectContext!) where updateCard != nil
+             {
+             
+             }
+             else*/ if let sub_entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
+             {
+                
+                sub_entity.name = name
+                sub_entity.value = attributes.values[index]
+                
+                sub_entity.image = attributes.images[index]
+                sub_entity.card = entity
+                
+            }
+        }
+    }
+    @IBAction func saveButton(sender: UIButton) {
+        if updateCard != nil
+        {
+            assignValues(updateCard)
+        }
+        else if let entity = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: managedObjectContext!) as? Card
+        {
+            
+            assignValues(entity)
+            updateCard = entity
+        }
+        
+        do
+        {
+            try  managedObjectContext?.save()
+            Helper.performUIUpdatesOnMain{
+                self.imageView.hidden = false
+            }
+            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), Int64(NSEC_PER_SEC / 2))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                
+                
+                self.imageView.hidden = true
+                
+            }
+            
+        }
+        catch let error
+        {
+            print(error)
+        }
     }
     
     @IBAction func editCard(sender: UIBarButtonItem) {
