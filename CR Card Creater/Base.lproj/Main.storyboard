@@ -539,24 +539,33 @@
                                                                         <constraint firstAttribute="width" secondItem="zYY-8D-f8U" secondAttribute="height" multiplier="1:1" id="d5I-XZ-PXu"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHY-DB-S8J">
-                                                                    <rect key="frame" x="50" y="33" width="144" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHY-DB-S8J" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="32" width="144" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="BHY-DB-S8J" secondAttribute="height" multiplier="9:1" id="XIj-rp-16m"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-ZP-LMD">
-                                                                    <rect key="frame" x="50" y="33" width="144" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-ZP-LMD" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="32" width="144" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="pO0-ZP-LMD" secondAttribute="height" multiplier="9:1" id="nkh-SM-Rof"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="shadowOffset" width="-1" height="-1"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-KL-WDv">
-                                                                    <rect key="frame" x="50" y="0.0" width="144" height="9"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-KL-WDv" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="1" width="144" height="12"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="VjK-KL-WDv" secondAttribute="height" multiplier="16:1" constant="-48" id="neH-7d-tYO"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="6"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -566,16 +575,16 @@
                                                         </view>
                                                         <color key="backgroundColor" red="0.82786543219999997" green="0.8811756302" blue="0.88953148569999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="VjK-KL-WDv" firstAttribute="top" secondItem="GK5-wJ-KzG" secondAttribute="topMargin" constant="-8" id="0M6-zY-z1Q"/>
+                                                            <constraint firstItem="VjK-KL-WDv" firstAttribute="top" secondItem="GK5-wJ-KzG" secondAttribute="topMargin" constant="-7" id="0M6-zY-z1Q"/>
                                                             <constraint firstItem="VjK-KL-WDv" firstAttribute="leading" secondItem="zYY-8D-f8U" secondAttribute="trailing" constant="2" id="EET-Lk-BF9"/>
                                                             <constraint firstItem="zYY-8D-f8U" firstAttribute="top" secondItem="GK5-wJ-KzG" secondAttribute="topMargin" constant="-7" id="Hl0-VT-zAh"/>
                                                             <constraint firstItem="zYY-8D-f8U" firstAttribute="leading" secondItem="GK5-wJ-KzG" secondAttribute="leadingMargin" constant="-7" id="Hyy-cG-4yt"/>
                                                             <constraint firstItem="BHY-DB-S8J" firstAttribute="leading" secondItem="zYY-8D-f8U" secondAttribute="trailing" constant="2" id="MR5-rg-PUe"/>
-                                                            <constraint firstAttribute="bottomMargin" secondItem="pO0-ZP-LMD" secondAttribute="bottom" constant="-8" id="MfY-Wp-oN2"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="pO0-ZP-LMD" secondAttribute="bottom" constant="-7" id="MfY-Wp-oN2"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="VjK-KL-WDv" secondAttribute="trailing" constant="-8" id="NMJ-yA-1jY"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="pO0-ZP-LMD" secondAttribute="trailing" constant="-8" id="OUk-qq-Vk7"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="zYY-8D-f8U" secondAttribute="bottom" constant="-7" id="Zq7-3L-Mn3"/>
-                                                            <constraint firstAttribute="bottomMargin" secondItem="BHY-DB-S8J" secondAttribute="bottom" constant="-8" id="bZ2-3Y-O1q"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="BHY-DB-S8J" secondAttribute="bottom" constant="-7" id="bZ2-3Y-O1q"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="BHY-DB-S8J" secondAttribute="trailing" constant="-8" id="e8m-XL-z0K"/>
                                                             <constraint firstItem="pO0-ZP-LMD" firstAttribute="leading" secondItem="zYY-8D-f8U" secondAttribute="trailing" constant="2" id="sKD-xk-gul"/>
                                                         </constraints>
