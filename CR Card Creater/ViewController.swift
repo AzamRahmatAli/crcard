@@ -84,15 +84,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         entity.dp = tempCard.dp
         entity.name = tempCard.name
         entity.detail = tempCard.detail
+        entity.attributes = nil // for updating attributes by providing new attributes
         for  (index, name) in attributes.names.enumerate()
         {
             
             
-            if  let _ = Attribute.attribute(name,objectID : entity.objectID, inManagedObjectContext: managedObjectContext!) where updateCard != nil
+           /* if  let _ = Attribute.attribute(name,objectID : entity.objectID, inManagedObjectContext: managedObjectContext!) where updateCard != nil
             {
                 
             }
-            else if let sub_entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
+            else*/ if let sub_entity = NSEntityDescription.insertNewObjectForEntityForName("Attribute", inManagedObjectContext: managedObjectContext!) as? Attribute
             {
                 
                 sub_entity.name = name
