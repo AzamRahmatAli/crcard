@@ -43,7 +43,7 @@ struct Helper
     static func loadAd(viewControlleer : UIViewController, adView : GADBannerView)
     {
         
-        adView.frame = CGRectMake(viewControlleer.view.frame.size.width / 2 - 180, viewControlleer.view.frame.size.height - 50, 360, 50)
+        adView.frame = CGRectMake(viewControlleer.view.frame.size.width / 2 - 160, viewControlleer.view.frame.size.height - 50, 320, 50)
         
         viewControlleer.view.addSubview(adView)
         adView.hidden = false

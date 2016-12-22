@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import GoogleMobileAds
 
-class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
     
     
 
@@ -46,6 +46,12 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        discription.delegate = self
+        cardName.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreateCardViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         Helper.loadAd(self, adView: bannerView)
         imagePicker.delegate = self
         Helper.addMenuButton(self)
@@ -90,7 +96,10 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         //print(atrImage)
               // Do any additional setup after loading the view.
     }
-
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
     func receivedDataNotification(object: AnyObject) {
         let name = attributes.names.removeLast()
         let image = attributes.images.removeLast()
@@ -399,5 +408,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         newCard.dp = UIImageJPEGRepresentation(self.userImage.image!, 1.0)//back by UIImage(data: imageData)
         //}
     }
-    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

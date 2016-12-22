@@ -55,7 +55,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         imageView.hidden = true
         view.addSubview(imageView)
         
-        appAdForSharingImageView.frame = CGRect(x: self.view.frame.size.width / 2 - 180, y: self.view.frame.size.height - 50, width: 360, height: 50)
+        appAdForSharingImageView.frame = CGRect(x: self.view.frame.size.width / 2 - 160, y: self.view.frame.size.height - 50, width: 320, height: 50)
         appAdForSharingImageView.hidden = true
         view.addSubview(appAdForSharingImageView)
         
