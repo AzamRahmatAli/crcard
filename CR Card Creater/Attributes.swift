@@ -37,8 +37,6 @@ class Attributes {
             getOtherValue(name, controller: controller)
             
             
-            
-            
         default :
             break
         }
@@ -98,7 +96,7 @@ class Attributes {
     
     func getValue(name : String,  controller : UIViewController)
     {
-        print(index)
+        
         let alert = UIAlertController(title: name,  message: "", preferredStyle: .Alert)
         
         //2. Add the text field. You can configure it however you need.
@@ -113,6 +111,7 @@ class Attributes {
             
             if textField.text != ""
             {
+                
                 self.names.append(name)
                 
                 self.images.append(self.imageAll[self.nameAll.indexOf(name)!])

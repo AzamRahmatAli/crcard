@@ -37,6 +37,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     var updateCard : Card!
     var attributes = Attributes()
     var bannerView = GADBannerView()
+    var editAttriute = false
 
    // var atrName : [String] = []
     //var atrImage: [String] = []
@@ -101,13 +102,14 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         view.endEditing(true)
     }
     func receivedDataNotification(object: AnyObject) {
-        let name = attributes.names.removeLast()
-        let image = attributes.images.removeLast()
-        let value = attributes.values.removeLast()
-        attributes.names[index] = name
-        attributes.images[index] = image
-        attributes.values[index] = value
+        if editAttriute
+        {
+        attributes.names[index] = attributes.names.removeLast()
+        attributes.images[index] = attributes.images.removeLast()
+        attributes.values[index] = attributes.values.removeLast()
         reloadTable()
+        editAttriute = false
+        }
     }
     override func viewWillAppear(animated: Bool) {
      
@@ -360,6 +362,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     
     func editRow(sender : UIButton)
     {
+        editAttriute = true
         index = sender.tag
         self.attributes.getValueType(attributes.names[ sender.tag], controller : self)
         
@@ -405,10 +408,13 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
        /* performUIUpdatesOnMain
             {*/
         self.userImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        newCard.dp = UIImageJPEGRepresentation(self.userImage.image!, 1.0)//back by UIImage(data: imageData)
+        if let img = self.userImage.image{
+        let image = Helper.ResizeImage( img, targetSize: CGSizeMake(150, 150))
+        newCard.dp = UIImageJPEGRepresentation(image, 1.0)//back by UIImage(data: imageData)
+        }
         //}
     }
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
