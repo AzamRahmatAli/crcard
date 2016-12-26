@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F72269761DE838B3005DC76B /* CR Card Creater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CR Card Creater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72269761DE838B3005DC76B /* Card Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72269791DE838B4005DC76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F722697B1DE838B4005DC76B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F722697E1DE838B4005DC76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		F72269771DE838B3005DC76B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F72269761DE838B3005DC76B /* CR Card Creater.app */,
+				F72269761DE838B3005DC76B /* Card Creator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F72269751DE838B3005DC76B /* CR Card Creater */ = {
+		F72269751DE838B3005DC76B /* Card Creator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "CR Card Creater" */;
+			buildConfigurationList = F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "Card Creator" */;
 			buildPhases = (
 				F72269721DE838B3005DC76B /* Sources */,
 				F72269731DE838B3005DC76B /* Frameworks */,
@@ -138,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = "CR Card Creater";
+			name = "Card Creator";
 			productName = "CR Card Creater";
-			productReference = F72269761DE838B3005DC76B /* CR Card Creater.app */;
+			productReference = F72269761DE838B3005DC76B /* Card Creator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F72269711DE838B3005DC76B /* Build configuration list for PBXProject "CR Card Creater" */;
+			buildConfigurationList = F72269711DE838B3005DC76B /* Build configuration list for PBXProject "Card Creator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F72269751DE838B3005DC76B /* CR Card Creater */,
+				F72269751DE838B3005DC76B /* Card Creator */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +341,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainload.ccardcreater;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Card Creator";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CR Card Creater/CR Card Creater-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -364,7 +364,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainload.ccardcreater;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Card Creator";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CR Card Creater/CR Card Creater-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F72269711DE838B3005DC76B /* Build configuration list for PBXProject "CR Card Creater" */ = {
+		F72269711DE838B3005DC76B /* Build configuration list for PBXProject "Card Creator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F72269891DE838B4005DC76B /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "CR Card Creater" */ = {
+		F722698B1DE838B4005DC76B /* Build configuration list for PBXNativeTarget "Card Creator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F722698C1DE838B4005DC76B /* Debug */,

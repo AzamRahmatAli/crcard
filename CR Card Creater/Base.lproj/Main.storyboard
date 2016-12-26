@@ -42,13 +42,13 @@
         <!--Attributes Table View Controller-->
         <scene sceneID="OvR-BY-7wq">
             <objects>
-                <tableViewController id="bFc-7u-jde" customClass="AttributesTableViewController" customModule="CR_Card_Creater" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bFc-7u-jde" customClass="AttributesTableViewController" customModule="Card_Creator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" id="G6P-VE-q20">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="77" id="wWn-5J-2sr" customClass="CustomTableViewCell" customModule="Card_Creator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWn-5J-2sr" id="Ndn-sK-Ug4">
@@ -108,7 +108,7 @@
                                     <outlet property="addBtn" destination="yn3-Zz-DWL" id="uFt-U0-UMe"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="77" id="zfq-G5-mUt" customClass="CustomTableViewCell" customModule="Card_Creator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="169" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfq-G5-mUt" id="YY5-i8-M2R">
@@ -198,7 +198,7 @@
         <!--Card Library View Controller-->
         <scene sceneID="2ws-Wh-unY">
             <objects>
-                <viewController id="vM8-Cl-Kn6" customClass="CardLibraryViewController" customModule="CR_Card_Creater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vM8-Cl-Kn6" customClass="CardLibraryViewController" customModule="Card_Creator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KLT-RW-Bf1"/>
                         <viewControllerLayoutGuide type="bottom" id="H2y-W1-52b"/>
@@ -217,7 +217,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qBU-EJ-NbB" customClass="CustomCollectionViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qBU-EJ-NbB" customClass="CustomCollectionViewCell" customModule="Card_Creator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="113" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -456,7 +456,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CR_Card_Creater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Card_Creator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -477,7 +477,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-HE-yt6">
                                         <rect key="frame" x="8" y="8" width="312" height="27"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inu-OE-IL7" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inu-OE-IL7" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="8" width="223" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Inu-OE-IL7" secondAttribute="height" multiplier="212:27" constant="113.07407407407408" id="F8b-ox-UgZ"/>
@@ -488,7 +488,7 @@
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chU-hr-UUY" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chU-hr-UUY" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="8" width="223" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="chU-hr-UUY" secondAttribute="height" multiplier="212:27" constant="113.07407407407408" id="aKA-mG-8qJ"/>
@@ -536,7 +536,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="GK5-wJ-KzG" customClass="CustomCollectionViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="GK5-wJ-KzG" customClass="CustomCollectionViewCell" customModule="Card_Creator" customModuleProvider="target">
                                                         <rect key="frame" x="34" y="0.0" width="194" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -549,10 +549,10 @@
                                                                         <constraint firstAttribute="width" secondItem="zYY-8D-f8U" secondAttribute="height" multiplier="1:1" id="d5I-XZ-PXu"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHY-DB-S8J" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
-                                                                    <rect key="frame" x="50" y="32" width="144" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHY-DB-S8J" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="31" width="144" height="17"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="BHY-DB-S8J" secondAttribute="height" multiplier="9:1" id="XIj-rp-16m"/>
+                                                                        <constraint firstAttribute="width" secondItem="BHY-DB-S8J" secondAttribute="height" multiplier="9:1" constant="-9" id="XIj-rp-16m"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -560,10 +560,10 @@
                                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-ZP-LMD" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
-                                                                    <rect key="frame" x="50" y="32" width="144" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-ZP-LMD" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="31" width="144" height="17"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="pO0-ZP-LMD" secondAttribute="height" multiplier="9:1" id="nkh-SM-Rof"/>
+                                                                        <constraint firstAttribute="width" secondItem="pO0-ZP-LMD" secondAttribute="height" multiplier="9:1" constant="-9" id="nkh-SM-Rof"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -571,12 +571,12 @@
                                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="shadowOffset" width="-1" height="-1"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-KL-WDv" customClass="LabelWithAdaptiveTextHeight" customModule="CR_Card_Creater" customModuleProvider="target">
-                                                                    <rect key="frame" x="50" y="1" width="144" height="12"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-KL-WDv" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                                                    <rect key="frame" x="50" y="1" width="144" height="11"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="VjK-KL-WDv" secondAttribute="height" multiplier="16:1" constant="-48" id="neH-7d-tYO"/>
+                                                                        <constraint firstAttribute="width" secondItem="VjK-KL-WDv" secondAttribute="height" multiplier="16:1" constant="-32" id="neH-7d-tYO"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="6"/>
+                                                                    <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="4"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -817,7 +817,7 @@
         <!--Create Card View Controller-->
         <scene sceneID="aPu-Hc-b2J">
             <objects>
-                <viewController id="AHk-Fg-PTx" customClass="CreateCardViewController" customModule="CR_Card_Creater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AHk-Fg-PTx" customClass="CreateCardViewController" customModule="Card_Creator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WkO-Yt-ite"/>
                         <viewControllerLayoutGuide type="bottom" id="Hrf-ai-BKm"/>
@@ -1104,7 +1104,7 @@
                                             <constraint firstAttribute="height" constant="142" id="Azp-UF-ICh"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" rowHeight="71" id="xsh-5g-NEn" customClass="CustomTableViewCell" customModule="CR_Card_Creater" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" rowHeight="71" id="xsh-5g-NEn" customClass="CustomTableViewCell" customModule="Card_Creator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="304" height="71"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xsh-5g-NEn" id="Aea-5z-Mt1">
@@ -1392,7 +1392,7 @@
         <!--Menu Table View Controller-->
         <scene sceneID="3E8-Sl-SDL">
             <objects>
-                <tableViewController id="mi7-mm-tC5" customClass="MenuTableViewController" customModule="CR_Card_Creater" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mi7-mm-tC5" customClass="MenuTableViewController" customModule="Card_Creator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fwe-ES-gGW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1412,9 +1412,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dele" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
-                                                    <rect key="frame" x="49" y="22" width="196" height="121"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRCard Creater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-YR-f8G">
                                                     <rect key="frame" x="49" y="151" width="196" height="21"/>
                                                     <constraints>
@@ -1424,6 +1421,9 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="TDR-bv-m08">
+                                                    <rect key="frame" x="49" y="22" width="196" height="121"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TDR-bv-m08" firstAttribute="trailing" secondItem="OBB-YR-f8G" secondAttribute="trailing" id="6aK-GF-Zl6"/>
@@ -1571,7 +1571,8 @@
     <resources>
         <image name="Capture" width="241" height="266"/>
         <image name="action_bar_background_right" width="583" height="190"/>
-        <image name="addd" width="128" height="128"/>
+        <image name="addd" width="131" height="131"/>
+        <image name="appicon" width="250" height="250"/>
         <image name="attribute_pane" width="917" height="165"/>
         <image name="attribute_selection_add_button" width="280" height="180"/>
         <image name="attribute_selection_add_button_inactive" width="280" height="180"/>
@@ -1586,7 +1587,6 @@
         <image name="card_template" width="1080" height="1340"/>
         <image name="close_button" width="84" height="84"/>
         <image name="dark_blue_background" width="1035" height="1200"/>
-        <image name="dele" width="144" height="144"/>
         <image name="edit_button" width="84" height="84"/>
         <image name="edit_card_icon_background" width="300" height="362"/>
         <image name="edit_card_icon_overlay_normal" width="320" height="386"/>
@@ -1598,7 +1598,7 @@
         <image name="edit_rarity_rare" width="507" height="121"/>
         <image name="edit_type_troop" width="507" height="121"/>
         <image name="elixir_5_icon" width="85" height="100"/>
-        <image name="ic_view_list" width="96" height="96"/>
+        <image name="ic_view_list" width="200" height="200"/>
         <image name="icons_stats_battle" width="88" height="88"/>
         <image name="icons_stats_hit_speed" width="88" height="88"/>
         <image name="label_rare_troop" width="579" height="118"/>

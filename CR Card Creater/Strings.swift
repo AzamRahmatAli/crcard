@@ -10,7 +10,7 @@ import Foundation
 
 enum StringFor : String
 {
-    case appName = "CRCard"
+    case appName = "Card Creator"
     case adMobID = "ca-app-pub-3940256099942544/2934735716"
 }
 
