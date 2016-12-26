@@ -76,7 +76,13 @@ struct Helper
         
         return newImage
     }
-    
+    static func FIRAnalyticsLogEvent(id : String , value : String)
+    {
+        FIRAnalytics.logEventWithName(kFIREventSelectContent, parameters: [
+            kFIRParameterItemID : id as NSObject,
+            kFIRParameterContentType : value as NSObject
+            ])
+    }
 }
 class LabelWithAdaptiveTextHeight: UILabel {
     

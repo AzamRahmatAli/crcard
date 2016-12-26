@@ -175,6 +175,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         {
             
             assignValues(entity)
+            print("rarity_\(entity.rarity!)")
+            Helper.FIRAnalyticsLogEvent("rarity_\(entity.rarity!)", value: "rarity_\(entity.rarity!)")
+            Helper.FIRAnalyticsLogEvent("total_cards", value: "total_cards")
             updateCard = entity
         }
         

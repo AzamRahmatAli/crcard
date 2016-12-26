@@ -104,6 +104,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func receivedDataNotification(object: AnyObject) {
         if editAttriute
         {
+           
         attributes.names[index] = attributes.names.removeLast()
         attributes.images[index] = attributes.images.removeLast()
         attributes.values[index] = attributes.values.removeLast()
@@ -370,6 +371,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     func reloadTable() {
+        dismissKeyboard()
         //print(attributes.names)
         tableHeight.constant = CGFloat(attributes.names.count * 70 )
         if attributes.names.count < 12
