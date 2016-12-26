@@ -100,6 +100,8 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
     func dismissKeyboard()
     {
         view.endEditing(true)
+        
+    
     }
     func receivedDataNotification(object: AnyObject) {
         if editAttriute
@@ -112,8 +114,11 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         editAttriute = false
         }
     }
+    override func viewWillDisappear(animated: Bool) {
+        dismissKeyboard()
+    }
     override func viewWillAppear(animated: Bool) {
-     
+        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         if attributes.names.count >= 12
         {
@@ -371,7 +376,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     func reloadTable() {
-        dismissKeyboard()
+        
         //print(attributes.names)
         tableHeight.constant = CGFloat(attributes.names.count * 70 )
         if attributes.names.count < 12
@@ -420,4 +425,5 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
         textField.resignFirstResponder()
         return true
     }
+    
 }
