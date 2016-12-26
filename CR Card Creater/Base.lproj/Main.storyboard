@@ -523,11 +523,25 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UZ-cs-Xca">
                                         <rect key="frame" x="8" y="187" width="312" height="211"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tK-of-Eyn">
+                                                <rect key="frame" x="288" y="0.0" width="16" height="203"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8tK-of-Eyn" secondAttribute="height" multiplier="30:203" constant="-14.000000000000004" id="8xr-pR-Cl1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-w4-DLT">
+                                                <rect key="frame" x="8" y="0.0" width="16" height="203"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yy7-w4-DLT" secondAttribute="height" multiplier="30:203" constant="-14.000000000000004" id="S2w-3r-lJ4"/>
+                                                </constraints>
+                                            </view>
                                             <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fbu-HZ-mdX">
-                                                <rect key="frame" x="26" y="11" width="262" height="171"/>
+                                                <rect key="frame" x="32" y="16" width="248" height="160"/>
                                                 <color key="backgroundColor" red="0.383539672" green="0.42226688769999998" blue="0.51135345970000001" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Fbu-HZ-mdX" secondAttribute="height" multiplier="296:175" constant="-27.234285714285704" id="fOJ-bw-awf"/>
+                                                    <constraint firstAttribute="width" secondItem="Fbu-HZ-mdX" secondAttribute="height" multiplier="296:175" constant="-22.628571428571433" id="fOJ-bw-awf"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="TVJ-Ri-wOv">
                                                     <size key="itemSize" width="194" height="49"/>
@@ -537,7 +551,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="GK5-wJ-KzG" customClass="CustomCollectionViewCell" customModule="Card_Creator" customModuleProvider="target">
-                                                        <rect key="frame" x="34" y="0.0" width="194" height="49"/>
+                                                        <rect key="frame" x="27" y="0.0" width="194" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                             <rect key="frame" x="0.0" y="0.0" width="194" height="49"/>
@@ -572,9 +586,9 @@
                                                                     <size key="shadowOffset" width="-1" height="-1"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-KL-WDv" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
-                                                                    <rect key="frame" x="50" y="1" width="144" height="11"/>
+                                                                    <rect key="frame" x="50" y="1" width="130" height="11"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="VjK-KL-WDv" secondAttribute="height" multiplier="16:1" constant="-32" id="neH-7d-tYO"/>
+                                                                        <constraint firstAttribute="width" secondItem="VjK-KL-WDv" secondAttribute="height" multiplier="16:1" constant="-46" id="neH-7d-tYO"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="4"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -591,7 +605,7 @@
                                                             <constraint firstItem="zYY-8D-f8U" firstAttribute="leading" secondItem="GK5-wJ-KzG" secondAttribute="leadingMargin" constant="-7" id="Hyy-cG-4yt"/>
                                                             <constraint firstItem="BHY-DB-S8J" firstAttribute="leading" secondItem="zYY-8D-f8U" secondAttribute="trailing" constant="2" id="MR5-rg-PUe"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="pO0-ZP-LMD" secondAttribute="bottom" constant="-7" id="MfY-Wp-oN2"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="VjK-KL-WDv" secondAttribute="trailing" constant="-8" id="NMJ-yA-1jY"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="VjK-KL-WDv" secondAttribute="trailing" constant="6" id="NMJ-yA-1jY"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="pO0-ZP-LMD" secondAttribute="trailing" constant="-8" id="OUk-qq-Vk7"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="zYY-8D-f8U" secondAttribute="bottom" constant="-7" id="Zq7-3L-Mn3"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="BHY-DB-S8J" secondAttribute="bottom" constant="-7" id="bZ2-3Y-O1q"/>
@@ -615,9 +629,16 @@
                                         <color key="backgroundColor" red="1" green="0.22524203528900588" blue="0.24396814565491121" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Fbu-HZ-mdX" secondAttribute="trailing" constant="24" id="Gno-YG-VxI"/>
-                                            <constraint firstItem="Fbu-HZ-mdX" firstAttribute="top" secondItem="8UZ-cs-Xca" secondAttribute="top" constant="11" id="oDh-Hq-FFp"/>
-                                            <constraint firstItem="Fbu-HZ-mdX" firstAttribute="leading" secondItem="8UZ-cs-Xca" secondAttribute="leading" constant="26" id="uoD-ed-vfh"/>
+                                            <constraint firstItem="yy7-w4-DLT" firstAttribute="width" secondItem="yy7-w4-DLT" secondAttribute="height" multiplier="30:203" constant="-14.000000000000004" id="5gs-2L-cK5"/>
+                                            <constraint firstAttribute="bottom" secondItem="yy7-w4-DLT" secondAttribute="bottom" constant="8" id="KkI-Yf-hvr"/>
+                                            <constraint firstItem="Fbu-HZ-mdX" firstAttribute="leading" secondItem="yy7-w4-DLT" secondAttribute="trailing" constant="8" id="LKc-cs-Dui"/>
+                                            <constraint firstAttribute="trailing" secondItem="8tK-of-Eyn" secondAttribute="trailing" constant="8" id="NDq-uN-jZa"/>
+                                            <constraint firstItem="8tK-of-Eyn" firstAttribute="leading" secondItem="Fbu-HZ-mdX" secondAttribute="trailing" constant="8" id="NQ0-T8-3jb"/>
+                                            <constraint firstAttribute="bottom" secondItem="8tK-of-Eyn" secondAttribute="bottom" constant="8" id="YMD-2a-Dpt"/>
+                                            <constraint firstItem="yy7-w4-DLT" firstAttribute="top" secondItem="8UZ-cs-Xca" secondAttribute="top" id="dQy-ef-Imd"/>
+                                            <constraint firstItem="Fbu-HZ-mdX" firstAttribute="top" secondItem="8UZ-cs-Xca" secondAttribute="top" constant="16" id="oDh-Hq-FFp"/>
+                                            <constraint firstItem="8tK-of-Eyn" firstAttribute="top" secondItem="8UZ-cs-Xca" secondAttribute="top" id="oo2-ib-Acb"/>
+                                            <constraint firstItem="yy7-w4-DLT" firstAttribute="leading" secondItem="8UZ-cs-Xca" secondAttribute="leading" constant="8" id="y2F-zR-aiO"/>
                                             <constraint firstAttribute="width" secondItem="8UZ-cs-Xca" secondAttribute="height" multiplier="16:11" constant="5.0909090909090651" id="zP4-6l-vDJ"/>
                                         </constraints>
                                     </view>
