@@ -19,8 +19,15 @@
 		F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */; };
 		F77A5A3B1DEECC790078A293 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */; };
 		F7ADDCC71DF59CCF00C106FA /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ADDCC61DF59CCF00C106FA /* Attributes.swift */; };
-		F7BA39A41E0A3BF500C9B262 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */; };
 		F7BD8BDA1DF0158D000BA6EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */; };
+		F7DE707A1E11226A007487DD /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70731E11226A007487DD /* FirebaseAnalytics.framework */; };
+		F7DE707B1E11226A007487DD /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70741E11226A007487DD /* FirebaseCore.framework */; };
+		F7DE707C1E11226A007487DD /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70751E11226A007487DD /* FirebaseInstanceID.framework */; };
+		F7DE707D1E11226A007487DD /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70761E11226A007487DD /* GoogleInterchangeUtilities.framework */; };
+		F7DE707E1E11226A007487DD /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70771E11226A007487DD /* GoogleMobileAds.framework */; };
+		F7DE707F1E11226A007487DD /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70781E11226A007487DD /* GoogleSymbolUtilities.framework */; };
+		F7DE70801E11226A007487DD /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE70791E11226A007487DD /* GoogleToolboxForMac.framework */; };
+		F7DE708D1E112566007487DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7DE708B1E112566007487DD /* GoogleService-Info.plist */; };
 		F7E7CFA21DF92E5900A0C047 /* CardLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */; };
 		F7E7CFA61DF92F6E00A0C047 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */; };
 		F7E7CFA81DF9302700A0C047 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CFA71DF9302700A0C047 /* Helper.swift */; };
@@ -46,9 +53,18 @@
 		F777E7871DF57C9D003F4960 /* AttributesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesTableViewController.swift; sourceTree = "<group>"; };
 		F77A5A3A1DEECC790078A293 /* CreateCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardViewController.swift; sourceTree = "<group>"; };
 		F7ADDCC61DF59CCF00C106FA /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F7BD8BD91DF0158D000BA6EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F7C252531DE86025003746D1 /* Supercell-magic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supercell-magic-webfont.ttf"; sourceTree = "<group>"; };
+		F7DE70731E11226A007487DD /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		F7DE70741E11226A007487DD /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		F7DE70751E11226A007487DD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F7DE70761E11226A007487DD /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		F7DE70771E11226A007487DD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		F7DE70781E11226A007487DD /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		F7DE70791E11226A007487DD /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		F7DE708A1E112566007487DD /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = "CR Card Creater/Firebase.h"; sourceTree = "<group>"; };
+		F7DE708B1E112566007487DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "CR Card Creater/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7DE708C1E112566007487DD /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "CR Card Creater/module.modulemap"; sourceTree = "<group>"; };
 		F7E7CFA11DF92E5900A0C047 /* CardLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLibraryViewController.swift; sourceTree = "<group>"; };
 		F7E7CFA31DF92F6D00A0C047 /* CR Card Creater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CR Card Creater-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7E7CFA41DF92F6E00A0C047 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -67,7 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7BA39A41E0A3BF500C9B262 /* GoogleMobileAds.framework in Frameworks */,
+				F7DE707A1E11226A007487DD /* FirebaseAnalytics.framework in Frameworks */,
+				F7DE707B1E11226A007487DD /* FirebaseCore.framework in Frameworks */,
+				F7DE707C1E11226A007487DD /* FirebaseInstanceID.framework in Frameworks */,
+				F7DE707D1E11226A007487DD /* GoogleInterchangeUtilities.framework in Frameworks */,
+				F7DE707E1E11226A007487DD /* GoogleMobileAds.framework in Frameworks */,
+				F7DE707F1E11226A007487DD /* GoogleSymbolUtilities.framework in Frameworks */,
+				F7DE70801E11226A007487DD /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +99,7 @@
 		F722696D1DE838B3005DC76B = {
 			isa = PBXGroup;
 			children = (
-				F7BA39A31E0A3BF500C9B262 /* GoogleMobileAds.framework */,
+				F7DE70771E11226A007487DD /* GoogleMobileAds.framework */,
 				F72269781DE838B4005DC76B /* CR Card Creater */,
 				F72269771DE838B3005DC76B /* Products */,
 			);
@@ -94,6 +116,7 @@
 		F72269781DE838B4005DC76B /* CR Card Creater */ = {
 			isa = PBXGroup;
 			children = (
+				F7DE70851E11228D007487DD /* firebase */,
 				F7E7CFA31DF92F6D00A0C047 /* CR Card Creater-Bridging-Header.h */,
 				F7E7CFA41DF92F6E00A0C047 /* SWRevealViewController.h */,
 				F7E7CFA51DF92F6E00A0C047 /* SWRevealViewController.m */,
@@ -121,6 +144,23 @@
 				F74FF2951E0A697F00B86738 /* TempraryCard.swift */,
 			);
 			path = "CR Card Creater";
+			sourceTree = "<group>";
+		};
+		F7DE70851E11228D007487DD /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F7DE708A1E112566007487DD /* Firebase.h */,
+				F7DE708B1E112566007487DD /* GoogleService-Info.plist */,
+				F7DE708C1E112566007487DD /* module.modulemap */,
+				F7DE70731E11226A007487DD /* FirebaseAnalytics.framework */,
+				F7DE70741E11226A007487DD /* FirebaseCore.framework */,
+				F7DE70751E11226A007487DD /* FirebaseInstanceID.framework */,
+				F7DE70761E11226A007487DD /* GoogleInterchangeUtilities.framework */,
+				F7DE70781E11226A007487DD /* GoogleSymbolUtilities.framework */,
+				F7DE70791E11226A007487DD /* GoogleToolboxForMac.framework */,
+			);
+			name = firebase;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +224,7 @@
 			files = (
 				F77985031DE8749C009C8B98 /* Supercell-magic-webfont.ttf in Resources */,
 				F72269871DE838B4005DC76B /* LaunchScreen.storyboard in Resources */,
+				F7DE708D1E112566007487DD /* GoogleService-Info.plist in Resources */,
 				F72269841DE838B4005DC76B /* Assets.xcassets in Resources */,
 				F722697F1DE838B4005DC76B /* Main.storyboard in Resources */,
 			);
@@ -280,6 +321,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,6 +362,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -336,10 +379,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CR",
+					Card,
+					Creater/Firebase/Analytics,
 				);
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainload.ccardcreater;
 				PRODUCT_NAME = "Card Creator";
 				PROVISIONING_PROFILE = "";
@@ -359,10 +406,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CR",
+					Card,
+					Creater/Firebase/Analytics,
 				);
 				INFOPLIST_FILE = "CR Card Creater/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainload.ccardcreater;
 				PRODUCT_NAME = "Card Creator";
 				PROVISIONING_PROFILE = "";
