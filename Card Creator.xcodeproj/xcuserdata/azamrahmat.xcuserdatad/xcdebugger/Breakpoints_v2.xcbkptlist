@@ -27,13 +27,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CR Card Creater/Attributes.swift"
-            timestampString = "504103473.321262"
+            filePath = "CR Card Creater/ViewController.swift"
+            timestampString = "504441532.536532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "getValue(_:controller:)"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "saveButton(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

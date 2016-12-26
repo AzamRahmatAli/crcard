@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6EB72BE7EBB839A687752CF78D1C09CABBAF7453",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6EB72BE7EBB839A687752CF78D1C09CABBAF7453" : 0,
+    "C1C988305F546B920E47983567310BA0160A321E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B3A11D06-FBDB-4F57-8022-1C9B0DD96014",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6EB72BE7EBB839A687752CF78D1C09CABBAF7453" : "CR%20Card%20Creater\/",
+    "C1C988305F546B920E47983567310BA0160A321E" : "mybudget\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Card Creator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Card Creator.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AzamRahmatAli\/crcard.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6EB72BE7EBB839A687752CF78D1C09CABBAF7453"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AzamRahmatAli\/iosbudget.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C1C988305F546B920E47983567310BA0160A321E"
+    }
+  ]
+}
