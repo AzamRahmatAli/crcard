@@ -411,7 +411,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
             {*/
         self.userImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         if let img = self.userImage.image{
-        let image = Helper.ResizeImage( img, targetSize: CGSizeMake(150, 150))
+        let image = Helper.ResizeImage( img, targetSize: CGSizeMake(300, 300))
         newCard.dp = UIImageJPEGRepresentation(image, 1.0)//back by UIImage(data: imageData)
         }
         //}

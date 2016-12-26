@@ -1394,7 +1394,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.082352941176470587" green="0.36078431372549019" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1408,7 +1408,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXj-Df-Z3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205" y="220"/>
+            <point key="canvasLocation" x="806" y="226"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="3E8-Sl-SDL">
@@ -1538,7 +1538,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQd-cB-ZTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257" y="698"/>
+            <point key="canvasLocation" x="139" y="796"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="NxQ-bI-ckh">
@@ -1561,7 +1561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHv-yW-b97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257" y="107"/>
+            <point key="canvasLocation" x="325" y="182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sls-Kg-xCu">
@@ -1573,7 +1573,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.31372549019607843" green="0.33725490196078434" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.36078431370000003" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1586,7 +1586,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV5-Ko-nVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="939"/>
+            <point key="canvasLocation" x="550" y="987"/>
         </scene>
     </scenes>
     <resources>
@@ -1625,8 +1625,8 @@
         <image name="label_rare_troop" width="579" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z0w-00-txi"/>
         <segue reference="weF-ch-ngS"/>
         <segue reference="sev-eT-XbJ"/>
+        <segue reference="HUk-LL-xlH"/>
     </inferredMetricsTieBreakers>
 </document>
