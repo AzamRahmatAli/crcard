@@ -60,6 +60,27 @@ class MenuTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if Helper.cardCreatedOrUpdated
+        {
+            let alertController: UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            
+            
+            
+            let saveActionButton: UIAlertAction = UIAlertAction(title: "Yes", style: .Default)
+            { action -> Void in
+                Helper.cardCreatedOrUpdated = false
+            }
+            alertController.addAction(saveActionButton)
+            let notSaveActionButton: UIAlertAction = UIAlertAction(title: "No", style: .Default)
+            { action -> Void in
+                Helper.cardCreatedOrUpdated = false
+            }
+            alertController.addAction(notSaveActionButton)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+        
         if(indexPath.row == 0)
         {
             
@@ -83,6 +104,7 @@ class MenuTableViewController: UITableViewController {
         else if(indexPath.row == 4)
         {            switchColor(indexPath.row)
     }
+        }
     }
     
   

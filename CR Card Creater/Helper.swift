@@ -12,6 +12,8 @@ import UIKit
 
 struct Helper
 {
+    
+    static var cardCreatedOrUpdated = false
     static let colors: [UIColor] = [UIColor(red: 254/255, green: 129/255, blue: 0, alpha: 1),UIColor(red: 38/255, green: 151/255, blue: 213/255, alpha: 1),UIColor(red: 50/255, green: 195/255, blue: 0, alpha: 1),UIColor(red: 255/255, green: 33/255, blue: 67/255, alpha: 1),UIColor(red: 69/255, green: 68/255, blue: 205/255, alpha: 1)]
     
     static func addMenuButton(controller : UIViewController)
@@ -83,61 +85,4 @@ struct Helper
             kFIRParameterContentType : value as NSObject
             ])
     }
-}
-class LabelWithAdaptiveTextHeight: UILabel {
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        font = fontToFitHeight()
-    }
-    
-    // Returns an UIFont that fits the new label's height.
-    private func fontToFitHeight() -> UIFont {
-        
-        var minFontSize: CGFloat = /*DISPLAY_FONT_MINIMUM // CGFloat*/ 4
-        var maxFontSize: CGFloat = /*DISPLAY_FONT_BIG     // CGFloat*/ 67
-        var fontSizeAverage: CGFloat = 0
-        var textAndLabelHeightDiff: CGFloat = 0
-        
-        while (minFontSize <= maxFontSize) {
-            
-            fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 2
-            
-            // Abort if text happens to be nil
-            guard text?.characters.count > 0 else {
-                break
-            }
-            
-            if let labelText: NSString = text {
-                let labelHeight = frame.size.height
-                
-                let testStringHeight = labelText.sizeWithAttributes(
-                    [NSFontAttributeName: font.fontWithSize(fontSizeAverage)]
-                    ).height
-                
-                textAndLabelHeightDiff = labelHeight - testStringHeight
-                
-                if (fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize) {
-                    if (textAndLabelHeightDiff < 0) {
-                        return font.fontWithSize(fontSizeAverage - 1)
-                    }
-                    return font.fontWithSize(fontSizeAverage)
-                }
-                
-                if (textAndLabelHeightDiff < 0) {
-                    maxFontSize = fontSizeAverage - 1
-                    
-                } else if (textAndLabelHeightDiff > 0) {
-                    minFontSize = fontSizeAverage + 1
-                    
-                } else {
-                    return font.fontWithSize(fontSizeAverage)
-                }
-            }
-        }
-        return font.fontWithSize(fontSizeAverage)
-    }
-    
-    
-  
 }

@@ -322,7 +322,7 @@ class CreateCardViewController: UIViewController, UITableViewDataSource, UITable
                 return
         }
         
-          
+        Helper.cardCreatedOrUpdated = true
        
         performSegueWithIdentifier("createCard", sender: nil)
     }
