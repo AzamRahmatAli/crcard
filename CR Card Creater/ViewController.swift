@@ -26,16 +26,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var border: UIImageView!
     @IBOutlet weak var rarity: UIImageView!
     
+    @IBOutlet weak var appStoreAdView: UIView!
+    @IBOutlet weak var barButtonItem: UIBarButtonItem!
     var updateCard : Card!
     var tempCard : TempraryCard!
     var attributes : Attributes!
     var nevigationFromNewCard = false
     var bannerView = GADBannerView()
     let imageView = UIImageView(image: UIImage(named: "saving_background"))
-    let appAdForSharingImageView = UIImageView(image: UIImage(named: "edit_layout_add_attribute_button"))
+    //let appAdForSharingImageView = UIImageView(image: UIImage(named: "edit_layout_add_attribute_button"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        appStoreAdView.hidden = true
+        barButtonItem.setTitleTextAttributes([
+            NSFontAttributeName : UIFont(name: "Supercell-Magic", size: 14)!,
+            NSForegroundColorAttributeName : UIColor.whiteColor()],
+                                              forState: UIControlState.Normal)
         
         /* self.bannerView.frame = CGRectMake(0, self.view.frame.size.height - 50, 360, 50)
          self.view.addSubview(self.bannerView)
@@ -55,9 +62,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         imageView.hidden = true
         view.addSubview(imageView)
         
-        appAdForSharingImageView.frame = CGRect(x: self.view.frame.size.width / 2 - 160, y: self.view.frame.size.height - 50, width: 320, height: 50)
-        appAdForSharingImageView.hidden = true
-        view.addSubview(appAdForSharingImageView)
+        //appAdForSharingImageView.frame = CGRect(x: self.view.frame.size.width / 2 - 160, y: self.view.frame.size.height - 50, width: 320, height: 50)
+        //appAdForSharingImageView.hidden = true
+        //view.addSubview(appAdForSharingImageView)
         
         
         
@@ -98,7 +105,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.shareAndSaveButtonView.hidden = true
         self.navigationController?.navigationBarHidden = true
         bannerView.hidden = true
-        self.appAdForSharingImageView.hidden = false
+        appStoreAdView.hidden = false
+        //self.appAdForSharingImageView.hidden = false
         // }
         
         /*  let bounds = UIScreen.mainScreen().bounds
@@ -124,11 +132,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 self.presentViewController(activityViewController, animated: true, completion: nil)
                 
             }
-            
+                self.appStoreAdView.hidden = true
                 self.shareAndSaveButtonView.hidden = false
                 self.bannerView.hidden = false
                 self.navigationController?.navigationBarHidden = false
-                self.appAdForSharingImageView.hidden = true
+                //self.appAdForSharingImageView.hidden = true
             
         }
         

@@ -36,6 +36,9 @@
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
             <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
+            <string>Supercell-Magic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -796,9 +799,77 @@
                                     <constraint firstItem="uLd-Il-laK" firstAttribute="bottom" secondItem="feu-Iv-YT8" secondAttribute="bottom" id="xax-kY-noU"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s17-4S-w4G">
+                                <rect key="frame" x="-4" y="492" width="328" height="76"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="iG2-5Z-Hhd">
+                                        <rect key="frame" x="251" y="8" width="69" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="iG2-5Z-Hhd" secondAttribute="height" multiplier="23:20" id="Zqe-yh-K97"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3t-me-3Vg" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                        <rect key="frame" x="31" y="31" width="212" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="z3t-me-3Vg" secondAttribute="height" multiplier="53:3" id="vpC-8K-Rbj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="6"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Creator for cr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kP-P9-oLv" customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                        <rect key="frame" x="31" y="46" width="212" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6kP-P9-oLv" secondAttribute="height" multiplier="212:17" constant="-62.352941176470608" id="EHh-ac-0fK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get it on App Store  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-Bp-vmr" userLabel="get it on App Store " customClass="LabelWithAdaptiveTextHeight" customModule="Card_Creator" customModuleProvider="target">
+                                        <rect key="frame" x="135" y="8" width="108" height="11"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28434806033793109" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lgd-Bp-vmr" secondAttribute="height" multiplier="23:3" constant="23.666666666666657" id="tVy-0W-tyG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Supercell-Magic" family="Supercell-Magic" pointSize="7"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.08235294118" green="0.36078431370000003" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iG2-5Z-Hhd" firstAttribute="leading" secondItem="z3t-me-3Vg" secondAttribute="trailing" constant="8" symbolic="YES" id="3Up-dc-GUZ"/>
+                                    <constraint firstAttribute="width" secondItem="s17-4S-w4G" secondAttribute="height" multiplier="160:37" id="45n-U6-Sv8"/>
+                                    <constraint firstItem="iG2-5Z-Hhd" firstAttribute="trailing" secondItem="s17-4S-w4G" secondAttribute="trailingMargin" id="4cl-3H-wbO"/>
+                                    <constraint firstItem="6kP-P9-oLv" firstAttribute="bottom" secondItem="s17-4S-w4G" secondAttribute="bottomMargin" id="FB2-bx-WW8"/>
+                                    <constraint firstItem="iG2-5Z-Hhd" firstAttribute="leading" secondItem="lgd-Bp-vmr" secondAttribute="trailing" constant="8" symbolic="YES" id="Fv3-uL-6pz"/>
+                                    <constraint firstItem="6kP-P9-oLv" firstAttribute="bottom" secondItem="iG2-5Z-Hhd" secondAttribute="bottom" id="HqG-nO-X48"/>
+                                    <constraint firstItem="lgd-Bp-vmr" firstAttribute="top" secondItem="s17-4S-w4G" secondAttribute="topMargin" id="ICG-5V-0NE"/>
+                                    <constraint firstItem="lgd-Bp-vmr" firstAttribute="top" secondItem="iG2-5Z-Hhd" secondAttribute="top" id="bg0-Q5-Rah"/>
+                                    <constraint firstItem="z3t-me-3Vg" firstAttribute="leading" secondItem="6kP-P9-oLv" secondAttribute="leading" id="fPo-bG-TFQ"/>
+                                    <constraint firstItem="iG2-5Z-Hhd" firstAttribute="leading" secondItem="6kP-P9-oLv" secondAttribute="trailing" constant="8" symbolic="YES" id="oEP-VN-0gA"/>
+                                    <constraint firstItem="z3t-me-3Vg" firstAttribute="top" secondItem="lgd-Bp-vmr" secondAttribute="bottom" constant="12" id="ul1-JI-6Rr"/>
+                                    <constraint firstItem="6kP-P9-oLv" firstAttribute="top" secondItem="z3t-me-3Vg" secondAttribute="bottom" constant="3" id="wvJ-JT-zrb"/>
+                                    <constraint firstItem="z3t-me-3Vg" firstAttribute="leading" secondItem="s17-4S-w4G" secondAttribute="leading" constant="31" id="ysG-cc-aBO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s17-4S-w4G" secondAttribute="bottom" id="2tz-xc-hzZ"/>
                             <constraint firstItem="AuP-fu-G3l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7yz-9h-rf3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Y1-vn-Vdz" secondAttribute="trailing" constant="-20" id="A7Y-Cs-Waa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vcf-3V-Q8Q" secondAttribute="trailing" constant="-28" id="D7u-qs-dGb"/>
@@ -807,7 +878,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="AuP-fu-G3l" secondAttribute="trailing" constant="-20" id="XhV-cC-Q26"/>
                             <constraint firstItem="Vcf-3V-Q8Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="199" id="gfD-2n-Ffl"/>
                             <constraint firstItem="AuP-fu-G3l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gtP-hM-1Pt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s17-4S-w4G" secondAttribute="trailing" constant="-20" id="o5N-yT-jaa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Y1-vn-Vdz" secondAttribute="bottom" id="qDZ-AP-jqW"/>
+                            <constraint firstItem="s17-4S-w4G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="wCp-Yb-jdg"/>
                             <constraint firstItem="Vcf-3V-Q8Q" firstAttribute="top" secondItem="mDf-Ge-KNV" secondAttribute="bottom" constant="-8" id="yRQ-3n-x84"/>
                         </constraints>
                     </view>
@@ -820,6 +893,8 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="appStoreAdView" destination="s17-4S-w4G" id="Ls2-Ub-GMu"/>
+                        <outlet property="barButtonItem" destination="0vh-WQ-5Cz" id="pJK-aj-X4T"/>
                         <outlet property="border" destination="Ah6-NS-Mpp" id="Az8-HE-xDO"/>
                         <outlet property="discription" destination="eco-d5-1pj" id="z4a-J9-L3r"/>
                         <outlet property="dp" destination="uRx-re-OTU" id="wyl-bc-InP"/>
@@ -1625,8 +1700,8 @@
         <image name="label_rare_troop" width="579" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Z0w-00-txi"/>
         <segue reference="weF-ch-ngS"/>
         <segue reference="sev-eT-XbJ"/>
-        <segue reference="HUk-LL-xlH"/>
     </inferredMetricsTieBreakers>
 </document>
